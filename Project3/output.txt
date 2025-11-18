@@ -1,0 +1,94 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define pi 3.14159
+#define BEEP '\a'
+#define size  10
+#define STOP '|'
+#include <stdio.h>
+#include <string.h>// 包含getchar 与putchar函数
+#include <math.h>
+#include <ctype.h> //包含可以检测字符类型的函数
+#include <stdbool.h> //为 bool false true提供定义
+
+int main()
+{
+	int ch;
+	while ((ch = getchar()) != EOF)
+	{
+		putchar(ch);
+
+	}
+	return 0;
+}
+
+
+
+
+
+
+/*
+int main()
+{
+	char c;
+	char prev;
+	long n_chars = 0L;
+	int n_lines = 0;
+	int n_words = 0;
+	int p_lines = 0;
+	bool inword = false;
+
+	printf("shuru zifucuan\n");
+	prev = '\n';
+	while ((c = getchar()) != STOP)
+	{
+		n_chars++;
+		if (c == '\n')
+			n_lines++;
+		if (!isspace(c) && !inword)
+		{
+			inword = true;
+			n_words++;
+		}
+		if (isspace(c) && inword)
+			inword = false;
+		prev = c;
+	}
+	if (prev != '\n')
+		p_lines = 1;
+	printf("字符 = %ld,words = %d,lines = %d ", n_chars, n_words, n_lines);
+	printf(" %d", p_lines);
+	return 0;
+}
+*/
+/*
+printf("%d its factors are ", number);
+			printf("%d ", yzi);
+*/
+
+
+
+/*
+double power(double n, int p);
+int main()
+{
+	double x, xpow;
+	int exp;
+	printf("1\n");
+
+	while (scanf("%lf%d", &x, &exp) == 2)
+	{
+		xpow = power(x, exp);
+		printf("%10lf\n",xpow);
+		.;.
+	}
+	return 0;
+}
+double power(double n, int p)
+{
+	double pow = 1;
+	int i;
+
+	for (i = 1; i <= p; i++)
+		pow *= n;
+	return pow;
+}
+*/
