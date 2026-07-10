@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix 字幕翻译</title>
+  <style>
+    :root {
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      color: #202124;
+      background: #fff;
+    }
+
+    body {
+      width: 300px;
+      margin: 0;
+      padding: 16px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      gap: 8px 10px;
+      margin: 0 0 16px;
+      font-size: 13px;
+    }
+
+    dt {
+      color: #5f6368;
+    }
+
+    dd {
+      margin: 0;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-weight: 700;
+    }
+
+    .toggle input {
+      width: 18px;
+      height: 18px;
+    }
+
+    button {
+      width: 100%;
+      min-height: 36px;
+      margin-top: 8px;
+      border: 1px solid #c7cdd4;
+      border-radius: 6px;
+      background: #fff;
+      color: #202124;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    button.primary {
+      border-color: #1a73e8;
+      background: #1a73e8;
+      color: #fff;
+    }
+
+    .status {
+      min-height: 18px;
+      margin-top: 10px;
+      color: #0b8043;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .status.error {
+      color: #b3261e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Netflix 字幕翻译</h1>
+
+  <dl>
+    <dt>状态</dt>
+    <dd id="enabledText">-</dd>
+    <dt>API Key</dt>
+    <dd id="apiKeyText">-</dd>
+    <dt>模型</dt>
+    <dd id="modelText">-</dd>
+    <dt>显示模式</dt>
+    <dd id="displayModeText">-</dd>
+    <dt>隐藏原字幕</dt>
+    <dd id="hideNativeText">-</dd>
+    <dt>字幕来源</dt>
+    <dd id="subtitleSourceText">-</dd>
+    <dt>预翻译</dt>
+    <dd id="pretranslatedText">-</dd>
+    <dt>缓存</dt>
+    <dd id="cacheText">-</dd>
+    <dt>页面接管</dt>
+    <dd id="pageControlText">-</dd>
+    <dt>Build</dt>
+    <dd id="buildText">-</dd>
+    <dt>隐藏命中</dt>
+    <dd id="nativeHitText">-</dd>
+    <dt>最后原字幕</dt>
+    <dd id="nativeLastText">-</dd>
+  </dl>
+
+  <label class="toggle">
+    <input id="enabledToggle" type="checkbox">
+    <span>启用字幕翻译</span>
+  </label>
+
+  <button id="openOptions" type="button" class="primary">打开设置</button>
+  <button id="openPretranslate" type="button">打开整集预翻译</button>
+  <button id="clearOverlay" type="button">清空当前页面字幕</button>
+
+  <div id="status" class="status" role="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

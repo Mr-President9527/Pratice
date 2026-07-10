@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>整集预翻译</title>
+  <style>
+    :root {
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      color: #202124;
+      background: #f6f7f9;
+    }
+
+    body {
+      margin: 0;
+      padding: 28px;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px;
+      border: 1px solid #dde1e6;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 32px rgba(20, 28, 40, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .note {
+      margin: 0 0 22px;
+      color: #5f6368;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    button {
+      box-sizing: border-box;
+      min-height: 38px;
+      border: 1px solid #c7cdd4;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font: inherit;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    button {
+      cursor: pointer;
+      min-width: 130px;
+      border-color: #1a73e8;
+      background: #1a73e8;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    button.secondary {
+      border-color: #c7cdd4;
+      background: #fff;
+      color: #202124;
+    }
+
+    button.danger {
+      border-color: #b3261e;
+      background: #b3261e;
+      color: #fff;
+    }
+
+    progress {
+      width: 100%;
+      height: 16px;
+    }
+
+    .summary,
+    .status {
+      margin-top: 14px;
+      color: #3c4043;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .status.error {
+      color: #b3261e;
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 14px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>整集预翻译</h1>
+    <p class="note">选择本地 SRT/VTT 字幕文件，插件会分批调用 DeepSeek 翻译并保存到本地 IndexedDB。不会从 Netflix 抓取完整字幕轨道。</p>
+
+    <div class="grid">
+      <label>
+        <span>字幕文件</span>
+        <input id="subtitleFile" type="file" accept=".srt,.vtt,text/vtt">
+      </label>
+
+      <label>
+        <span>视频 Key</span>
+        <input id="videoKey" type="text" placeholder="例如 netflix-70196252">
+      </label>
+
+      <label>
+        <span>目标语言</span>
+        <select id="targetLanguage">
+          <option value="zh-CN">简体中文 zh-CN</option>
+          <option value="zh-TW">繁体中文 zh-TW</option>
+        </select>
+      </label>
+
+      <label>
+        <span>模型</span>
+        <select id="model">
+          <option value="deepseek-v4-flash">deepseek-v4-flash</option>
+          <option value="deepseek-v4-pro">deepseek-v4-pro</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="parseFile" type="button" class="secondary">解析字幕</button>
+      <button id="startTranslate" type="button">开始预翻译</button>
+      <button id="pauseTranslate" type="button" class="secondary">暂停</button>
+      <button id="deleteSet" type="button" class="danger">删除当前字幕集</button>
+    </div>
+
+    <progress id="progress" value="0" max="100"></progress>
+    <div id="summary" class="summary"></div>
+    <div id="status" class="status" role="status"></div>
+  </main>
+
+  <script src="subtitle-parser.js"></script>
+  <script src="pretranslate.js"></script>
+</body>
+</html>
