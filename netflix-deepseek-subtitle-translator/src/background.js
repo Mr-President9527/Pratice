@@ -10,9 +10,9 @@ const STORAGE_KEYS = {
 const CACHE_VERSION = "v6";
 const CACHE_LIMIT = 1000;
 const DEEPSEEK_ENDPOINT = "https://api.deepseek.com/chat/completions";
-const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-cue-clear-61";
-const CONTENT_BUILD_ID = "2026-07-10-cue-clear-61";
-const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-cue-clear-61";
+const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-audit-62";
+const CONTENT_BUILD_ID = "2026-07-10-audit-62";
+const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-audit-62";
 
 const DEFAULT_SETTINGS = {
   enabled: true,
@@ -35,6 +35,8 @@ const memoryCache = new Map();
 const inFlightRequests = new Map();
 const injectionThrottle = new Map();
 const injectionScheduleThrottle = new Map();
+let cacheMutationQueue = Promise.resolve();
+let cacheGeneration = 0;
 
 chrome.runtime.onInstalled.addListener(async () => {
   const { settings } = await chrome.storage.local.get(STORAGE_KEYS.settings);
@@ -283,7 +285,7 @@ async function handleMessage(message, sender) {
         })
       };
     case "CLEAR_CACHE":
-      await chrome.storage.local.set({ [STORAGE_KEYS.cache]: {} });
+      await clearTranslationCache();
       return { cacheCount: 0 };
     case "GET_STATUS":
       return { status: await getStatus() };
@@ -396,6 +398,7 @@ async function translateWithSettings(normalizedSource, settings, forceNetwork = 
     return inFlightRequests.get(cacheKey);
   }
 
+  const requestCacheGeneration = cacheGeneration;
   const requestPromise = requestDeepSeek(normalizedSource, settings, context)
     .then(async (translation) => {
       const cleanTranslation = sanitizeTranslationText(translation, settings.targetLanguage, normalizedSource);
@@ -407,7 +410,7 @@ async function translateWithSettings(normalizedSource, settings, forceNetwork = 
         model: settings.model,
         createdAt: Date.now(),
         lastUsedAt: Date.now()
-      });
+      }, requestCacheGeneration);
       return cleanTranslation;
     })
     .finally(() => inFlightRequests.delete(cacheKey));
@@ -592,25 +595,34 @@ async function readCacheEntry(cacheKey) {
     memoryCache.delete(cacheKey);
   }
 
+  const readGeneration = cacheGeneration;
   const cache = await getCache();
+  if (readGeneration !== cacheGeneration) return "";
   const entry = cache[cacheKey];
   if (!entry || !entry.translation) return "";
   const clean = sanitizeTranslationText(entry.translation, entry.targetLanguage, entry.sourceText);
   if (!clean) {
-    delete cache[cacheKey];
     memoryCache.delete(cacheKey);
-    await chrome.storage.local.set({ [STORAGE_KEYS.cache]: cache });
+    await mutatePersistentCache((latestCache) => {
+      delete latestCache[cacheKey];
+    });
     return "";
   }
   entry.translation = clean;
   entry.lastUsedAt = Date.now();
   memoryCache.set(cacheKey, entry);
   trimMemoryCache();
-  await chrome.storage.local.set({ [STORAGE_KEYS.cache]: cache });
+  await mutatePersistentCache((latestCache) => {
+    const latestEntry = latestCache[cacheKey];
+    if (latestEntry && latestEntry.translation) {
+      latestEntry.lastUsedAt = entry.lastUsedAt;
+    }
+  });
   return clean;
 }
 
-async function writeCacheEntry(cacheKey, entry) {
+async function writeCacheEntry(cacheKey, entry, expectedGeneration = cacheGeneration) {
+  if (expectedGeneration !== cacheGeneration) return;
   const clean = sanitizeTranslationText(
     entry && entry.translation,
     entry && entry.targetLanguage,
@@ -618,12 +630,34 @@ async function writeCacheEntry(cacheKey, entry) {
   );
   if (!clean) return;
   const cleanEntry = { ...entry, translation: clean };
+  if (expectedGeneration !== cacheGeneration) return;
   memoryCache.set(cacheKey, cleanEntry);
   trimMemoryCache();
-  const cache = await getCache();
-  cache[cacheKey] = cleanEntry;
-  await trimCache(cache);
-  await chrome.storage.local.set({ [STORAGE_KEYS.cache]: cache });
+  await mutatePersistentCache(async (cache) => {
+    if (expectedGeneration !== cacheGeneration) return;
+    cache[cacheKey] = cleanEntry;
+    await trimCache(cache);
+  });
+}
+
+async function clearTranslationCache() {
+  cacheGeneration += 1;
+  memoryCache.clear();
+  await mutatePersistentCache((cache) => {
+    for (const key of Object.keys(cache)) delete cache[key];
+  });
+}
+
+function mutatePersistentCache(mutator) {
+  const operation = cacheMutationQueue
+    .catch(() => {})
+    .then(async () => {
+      const cache = await getCache();
+      await mutator(cache);
+      await chrome.storage.local.set({ [STORAGE_KEYS.cache]: cache });
+    });
+  cacheMutationQueue = operation.catch(() => {});
+  return operation;
 }
 
 async function getCache() {
@@ -664,6 +698,7 @@ function trimMemoryCache() {
 
 async function translateBatch(items, options = {}) {
   const settings = { ...(await getSettings()), ...sanitizeBatchOptions(options) };
+  const requestCacheGeneration = cacheGeneration;
   if (!settings.apiKey) {
     throw new Error("NO_API_KEY");
   }
@@ -708,7 +743,7 @@ async function translateBatch(items, options = {}) {
         model: settings.model,
         createdAt: Date.now(),
         lastUsedAt: Date.now()
-      });
+      }, requestCacheGeneration);
       results.push({ id: item.id, text });
     }
   } catch (error) {

@@ -71,6 +71,25 @@ assert.match(contentSource, /advancedSubtitleFallback !== true\) return "";[\s\S
 assert.match(contentSource, /clearCurrentSubtitleState\(\{ ignoreSourceText: true \}\)/);
 assert.doesNotMatch(contentSource, /PENDING_TRANSLATION_GRACE_MS/);
 
+const cueSandbox = {
+  state: {
+    settings: { subtitleOffsetMs: 0 },
+    pretranslatedCues: [
+      { id: "1", start: 1, end: 2 },
+      { id: "2", start: 4, end: 5 },
+      { id: "3", start: 8, end: 9 }
+    ]
+  }
+};
+vm.runInNewContext([
+  extractFunction("getCueByCurrentTime"),
+  "globalThis.getCue = getCueByCurrentTime;"
+].join("\n"), cueSandbox);
+assert.equal(cueSandbox.getCue(4.5).id, "2");
+assert.equal(cueSandbox.getCue(6), null);
+cueSandbox.state.settings.subtitleOffsetMs = 1000;
+assert.equal(cueSandbox.getCue(3.5).id, "2");
+
 const quiesceSandbox = {
   state: {
     extensionContextInvalidated: false,

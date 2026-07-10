@@ -108,18 +108,13 @@ async function startPretranslation() {
     query: { videoKey, targetLanguage, model }
   });
 
-  const existingByCue = new Map();
-  if (existing && existing.ok && Array.isArray(existing.cues)) {
-    for (const cue of existing.cues) {
-      if (cue.translation) {
-        existingByCue.set(String(cue.cueId || cue.id), cue.translation);
-      }
-    }
-  }
+  const existingByCue = buildExistingTranslationMap(
+    existing && existing.ok && Array.isArray(existing.cues) ? existing.cues : []
+  );
 
   const workingCues = parsedCues.map((cue) => ({
     ...cue,
-    translation: existingByCue.get(String(cue.id)) || cue.translation || ""
+    translation: getReusableTranslation(cue, existingByCue) || cue.translation || ""
   }));
 
   let translatedCount = workingCues.filter((cue) => cue.translation).length;
@@ -174,6 +169,32 @@ async function saveCues(videoKey, targetLanguage, model, cues) {
   if (!response || !response.ok) {
     throw new Error(response && response.error ? response.error : "保存预翻译字幕失败");
   }
+}
+
+function buildExistingTranslationMap(cues) {
+  const entries = new Map();
+  for (const cue of cues || []) {
+    const id = String(cue.cueId || cue.id || "");
+    const translation = String(cue.translation || "").trim();
+    if (!id || !translation) continue;
+    entries.set(id, {
+      sourceText: normalizeCueSourceText(cue.sourceText || cue.text),
+      translation
+    });
+  }
+  return entries;
+}
+
+function getReusableTranslation(cue, existingByCue) {
+  const existing = existingByCue.get(String(cue && cue.id || ""));
+  if (!existing) return "";
+  return existing.sourceText === normalizeCueSourceText(cue && (cue.sourceText || cue.text))
+    ? existing.translation
+    : "";
+}
+
+function normalizeCueSourceText(text) {
+  return String(text || "").replace(/\s+/g, " ").trim();
 }
 
 async function deleteCurrentSet() {

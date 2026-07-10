@@ -17,9 +17,9 @@ const elements = {
   status: document.getElementById("status")
 };
 
-const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-cue-clear-61";
-const CONTENT_BUILD_ID = "2026-07-10-cue-clear-61";
-const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-cue-clear-61";
+const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-audit-62";
+const CONTENT_BUILD_ID = "2026-07-10-audit-62";
+const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-audit-62";
 
 document.addEventListener("DOMContentLoaded", loadStatus);
 elements.enabledToggle.addEventListener("change", toggleEnabled);

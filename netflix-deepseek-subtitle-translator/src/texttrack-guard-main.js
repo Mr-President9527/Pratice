@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-  const BUILD_ID = "2026-07-10-cue-clear-61";
+  const BUILD_ID = "2026-07-10-audit-62";
   const STATE_KEY = "__NDST_TEXT_TRACK_GUARD__";
   const MAIN_STYLE_ID = "netflix-deepseek-main-native-subtitle-suppression";
   const RETRY_DELAYS_MS = [0, 25, 75, 150, 300, 600, 1000, 1600, 2400];

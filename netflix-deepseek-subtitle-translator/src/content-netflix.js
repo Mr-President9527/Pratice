@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-const BUILD_ID = "2026-07-10-cue-clear-61";
+const BUILD_ID = "2026-07-10-audit-62";
 if (
   document.documentElement.dataset.ndstContentNetflix === "loaded" &&
   document.documentElement.dataset.ndstBuildId === BUILD_ID
@@ -439,4 +439,2446 @@ function cleanupCurrentInstance() {
     state.nativeSuppressionFrame = 0;
   }
   removeNativeTextTrackGuards();
-  window.c€ûº“⁄$z{-ÆÈ‹j◊ù∆U7V'FóF∆U&V7Bá&V7Bí∞¢ñbÇ&V7B«¬&V7BÁvñGFÇ¬Ç«¬&V7BÊÜVñváB¬bí&WGW&‚f«6S∞¢ñbá&V7BÊ&˜GFˆ“√“«¬&V7BÁF˜„“vñÊF˜rÊñÊÊW$ÜVñváBí&WGW&‚f«6S∞¢ñbá&V7BÁ&ñváB√“«¬&V7BÊ∆VgB„“vñÊF˜rÊñÊÊW%vñGFÇí&WGW&‚f«6S∞¢ñbá&V7BÁF˜¬vñÊF˜rÊñÊÊW$ÜVñváB¢„CRí&WGW&‚f«6S∞¢&WGW&‚G'VS∞ß–†–¶gVÊ7Fñˆ‚7ñÊ4˜fW&∆ïFÙÊFófU7V'FóF∆RÜV∆V÷VÁG2í∞–¢ñbÇ7FFRÊ˜fW&∆í«¬V∆V÷VÁG2Ê∆VÊwFÇí&WGW&„∞–¢6ˆÁ7B&V7G2“V∆V÷VÁG0–¢Ê÷ÇÜV∆V÷VÁBí”‚V∆V÷VÁBÊvWD&˜VÊFñÊt6∆ñVÁE&V7BÇíê–¢Êfñ«FW"Çá&V7Bí”‚&V7BÁvñGFÇ‚"bb&V7BÊÜVñváB‚"ì∞–¢ñbÇ&V7G2Ê∆VÊwFÇí&WGW&„∞–†–¢6ˆÁ7B∆VgB“÷FÇÊ÷ñ‚Ç‚‚Á&V7G2Ê÷Çá&V7Bí”‚&V7BÊ∆VgBíì∞–¢6ˆÁ7B&ñváB“÷FÇÊ÷ÇÇ‚‚Á&V7G2Ê÷Çá&V7Bí”‚&V7BÁ&ñváBíì∞–¢6ˆÁ7B&˜GFˆ““÷FÇÊ÷ÇÇ‚‚Á&V7G2Ê÷Çá&V7Bí”‚&V7BÊ&˜GFˆ“íì∞–¢6ˆÁ7B6VÁFW%Ç“Ü∆VgB≤&ñváBíÚ#∞–¢6ˆÁ7BvñGFÇ“÷FÇÊ÷Çá&ñváB“∆VgB≤ìb¬3cì∞–†–¢7FFRÊ˜fW&∆íÁ7Gñ∆RÊ∆VgB“G¥÷FÇÁ&˜VÊBÜ6VÁFW%Çó◊Ü∞–¢7FFRÊ˜fW&∆íÁ7Gñ∆RÊ&˜GFˆ““G¥÷FÇÊ÷ÇÉ#B¬÷FÇÁ&˜VÊBávñÊF˜rÊñÊÊW$ÜVñváB“&˜GFˆ“íó◊Ü∞–¢7FFRÊ˜fW&∆íÁ7Gñ∆RÊ÷ÖvñGFÇ“G¥÷FÇÊ÷ñ‚Ñ÷FÇÁ&˜VÊBávñGFÇí¬÷FÇÁ&˜VÊBávñÊF˜rÊñÊÊW%vñGFÇ¢„ííó◊Ü∞–ß––†–¶gVÊ7Fñˆ‚ÜñFTÊFófU7V'FóF∆W2Çí∞¢'VÊTÊFófU7V'FóF∆TV∆V÷VÁG2Çì∞¢ñbá7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2Á6ó¶Rí∞¢7ñÊ4ÊFófT÷6∑5Fı7V'FóF∆TV∆V÷VÁG2Ñ'&íÊg&ˆ“á7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2íì∞¢–¢f˜"Ü6ˆÁ7BV∆V÷VÁBˆb7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2í∞¢ñbÇV∆V÷VÁB«¬V∆V÷VÁBÊó46ˆÊÊV7FVBí6ˆÁFñÁVS∞–¢ñbÇV∆V÷VÁBÊ6∆74∆ó7BÊ6ˆÁFñÁ2Ç&ÊG7B÷ÊFófR◊7V'FóF∆R÷ÜñFFV‚"íí∞–¢V∆V÷VÁBÊ6∆74∆ó7BÊFBÇ&ÊG7B÷ÊFófR◊7V'FóF∆R÷ÜñFFV‚"ì∞–¢7FFRÊÊFófTÜñFFV‰6˜VÁB≥“∞–¢––¢ñbÇ7FFRÊÊFófU7V'FóF∆U7Gñ∆T66ÜRÊÜ2ÜV∆V÷VÁBíí∞–¢7FFRÊÊFófU7V'FóF∆U7Gñ∆T66ÜRÁ6WBÜV∆V÷VÁB¬∞–¢˜6óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&˜6óGí"í¿–¢˜6óGï&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&˜6óGí"í¿–¢fó6ñ&ñ∆óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ'fó6ñ&ñ∆óGí"í¿–¢fó6ñ&ñ∆óGï&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ'fó6ñ&ñ∆óGí"í¿–¢6ˆ∆˜#¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&6ˆ∆˜""í¿–¢6ˆ∆˜%&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&6ˆ∆˜""í¿–¢vV&∂óEFWáDfñ∆ƒ6ˆ∆˜#¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ"◊vV&∂óB◊FWáB÷fñ∆¬÷6ˆ∆˜""í¿–¢vV&∂óEFWáDfñ∆ƒ6ˆ∆˜%&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ"◊vV&∂óB◊FWáB÷fñ∆¬÷6ˆ∆˜""í¿–¢vV&∂óEFWáE7G&ˆ∂T6ˆ∆˜#¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ"◊vV&∂óB◊FWáB◊7G&ˆ∂R÷6ˆ∆˜""í¿–¢vV&∂óEFWáE7G&ˆ∂T6ˆ∆˜%&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ"◊vV&∂óB◊FWáB◊7G&ˆ∂R÷6ˆ∆˜""í¿–¢FWáE6ÜF˜s¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ'FWáB◊6ÜF˜r"í¿–¢FWáE6ÜF˜u&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ'FWáB◊6ÜF˜r"í¿–¢&6∂w&˜VÊC¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&&6∂w&˜VÊB"í¿¢&6∂w&˜VÊE&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&&6∂w&˜VÊB"í¿¢&6∂w&˜VÊD6ˆ∆˜#¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&&6∂w&˜VÊB÷6ˆ∆˜""í¿¢&6∂w&˜VÊD6ˆ∆˜%&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&&6∂w&˜VÊB÷6ˆ∆˜""í¿¢&6∂w&˜VÊDñ÷vS¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&&6∂w&˜VÊB÷ñ÷vR"í¿¢&6∂w&˜VÊDñ÷vU&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&&6∂w&˜VÊB÷ñ÷vR"í¿¢&˜&FW$6ˆ∆˜#¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&&˜&FW"÷6ˆ∆˜""í¿¢&˜&FW$6ˆ∆˜%&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&&˜&FW"÷6ˆ∆˜""í¿–¢&˜Ö6ÜF˜s¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&&˜Ç◊6ÜF˜r"í¿¢&˜Ö6ÜF˜u&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&&˜Ç◊6ÜF˜r"í¿¢fñ«FW#¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&fñ«FW""í¿¢fñ«FW%&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&fñ«FW""í¿¢6∆óFÉ¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&6∆ó◊FÇ"í¿¢6∆óFÖ&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&6∆ó◊FÇ"í¿¢vV&∂óD6∆óFÉ¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ"◊vV&∂óB÷6∆ó◊FÇ"í¿¢vV&∂óD6∆óFÖ&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ"◊vV&∂óB÷6∆ó◊FÇ"í¿¢˜fW&f∆˜s¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRÇ&˜fW&f∆˜r"í¿¢˜fW&f∆˜u&ñ˜&óGì¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíÇ&˜fW&f∆˜r"ê¢“ì∞¢–¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&˜6óGí"¬#"ì∞–¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬'fó6ñ&ñ∆óGí"¬&ÜñFFV‚"ì∞–¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&6ˆ∆˜""¬'G&Á7&VÁB"ì∞–¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬"◊vV&∂óB◊FWáB÷fñ∆¬÷6ˆ∆˜""¬'G&Á7&VÁB"ì∞–¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬"◊vV&∂óB◊FWáB◊7G&ˆ∂R÷6ˆ∆˜""¬'G&Á7&VÁB"ì∞–¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬'FWáB◊6ÜF˜r"¬&ÊˆÊR"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&&6∂w&˜VÊB"¬'G&Á7&VÁB"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&&6∂w&˜VÊB÷6ˆ∆˜""¬'G&Á7&VÁB"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&&6∂w&˜VÊB÷ñ÷vR"¬&ÊˆÊR"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&&˜&FW"÷6ˆ∆˜""¬'G&Á7&VÁB"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&&˜Ç◊6ÜF˜r"¬&ÊˆÊR"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&fñ«FW""¬&˜6óGíÉí"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&6∆ó◊FÇ"¬&ñÁ6WBÉSRí"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬"◊vV&∂óB÷6∆ó◊FÇ"¬&ñÁ6WBÉSRí"ì∞¢6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&˜fW&f∆˜r"¬&ÜñFFV‚"ì∞¢&V6˜&DÊFófTÜñFFV‰6ÊFñFFRÜV∆V÷VÁBì∞¢–ß–†¶gVÊ7Fñˆ‚'VÊTÊFófU7V'FóF∆TV∆V÷VÁG2Çí∞¢ñbÇ7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2Á6ó¶Rí&WGW&„∞¢6ˆÁ7B∂WB“µ”∞¢f˜"Ü6ˆÁ7BV∆V÷VÁBˆb7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2í∞¢ñbÇV∆V÷VÁB«¬V∆V÷VÁBÊó46ˆÊÊV7FVB«¬V∆V÷VÁBÊ6∆˜6W7BÜ2G¥ıdU$ƒïÙîG÷íí6ˆÁFñÁVS∞¢ñbÇó4ñÁ6ñFU∆ñW%&ˆ˜BÜV∆V÷VÁBíí6ˆÁFñÁVS∞¢∂WBÁW6ÇÜV∆V÷VÁBì∞¢ñbÜ∂WBÊ∆VÊwFÇ„“‘ÖÙ‰DïdUı5T%DïDƒUÙTƒT‘TÂE2í'&V≥∞¢–¢7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2“ÊWr6WBÜ∂WBì∞ß–†–¶gVÊ7Fñˆ‚&V6˜&DÊFófTÜñFFV‰6ÊFñFFRÜV∆V÷VÁBí∞–¢ñbÇFˆ7V÷VÁBÊFˆ7V÷VÁDV∆V÷VÁBí&WGW&„∞–¢6ˆÁ7BFF6WB“Fˆ7V÷VÁBÊFˆ7V÷VÁDV∆V÷VÁBÊFF6WC∞–¢FF6WBÊÊG7D6ˆÁFVÁDÊFófTÜñFFV‰6˜VÁB“7G&ñÊrá7FFRÊÊFófTÜñFFV‰6˜VÁBì∞–¢FF6WBÊÊG7D6ˆÁFVÁDÊFófT∆7DÜñFFV‰B“7G&ñÊrÑFFRÊÊ˜rÇíì∞–¢FF6WBÊÊG7D6ˆÁFVÁDÊFófT∆7DÜñFFVÂFWáB“Ê˜&÷∆ó¶U7V'FóF∆UFWáBÜV∆V÷VÁBÊñÊÊW%FWáB«¬V∆V÷VÁBÁFWáD6ˆÁFVÁBíÁ6∆ñ6RÉ¬Éì∞–¢FF6WBÊÊG7D6ˆÁFVÁDÊFófT∆7DÜñFFV‰6∆72“7G&ñÊrÜV∆V÷VÁBÊ6∆74Ê÷R«¬""íÁ6∆ñ6RÉ¬#ì∞–¢FF6WBÊÊG7D6ˆÁFVÁDÊFófT∆7DÜñFFVÂVñ“V∆V÷VÁBÊvWDGG&ñ'WFRÇ&FF◊Vñ"í«¬"#∞–ß––†–¶gVÊ7Fñˆ‚6WDñ◊˜'FÁE7Gñ∆TñdÊVVFVBÜV∆V÷VÁB¬&˜W'Gí¬f«VRí∞–¢ñbÄ–¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gïf«VRá&˜W'Gíí””“f«VRb`–¢V∆V÷VÁBÁ7Gñ∆RÊvWE&˜W'Gï&ñ˜&óGíá&˜W'Gíí””“&ñ◊˜'FÁB –¢í∞–¢&WGW&„∞–¢––¢V∆V÷VÁBÁ7Gñ∆RÁ6WE&˜W'Gíá&˜W'Gí¬f«VR¬&ñ◊˜'FÁB"ì∞–ß––†–¶gVÊ7Fñˆ‚&W7F˜&TÊFófU7V'FóF∆W2Ü6∆V"“G'VRí∞–¢f˜"Ü6ˆÁ7BV∆V÷VÁBˆb7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2í∞–¢6ˆÁ7B66ÜVB“7FFRÊÊFófU7V'FóF∆U7Gñ∆T66ÜRÊvWBÜV∆V÷VÁBì∞–¢ñbÇV∆V÷VÁBí6ˆÁFñÁVS∞–¢V∆V÷VÁBÊ6∆74∆ó7BÁ&V÷˜fRÇ&ÊG7B÷ÊFófR◊7V'FóF∆R÷ÜñFFV‚"ì∞–¢ñbÇ66ÜVBí6ˆÁFñÁVS∞–¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&˜6óGí"¬66ÜVBÊ˜6óGí¬66ÜVBÊ˜6óGï&ñ˜&óGíì∞–¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬'fó6ñ&ñ∆óGí"¬66ÜVBÁfó6ñ&ñ∆óGí¬66ÜVBÁfó6ñ&ñ∆óGï&ñ˜&óGíì∞–¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&6ˆ∆˜""¬66ÜVBÊ6ˆ∆˜"¬66ÜVBÊ6ˆ∆˜%&ñ˜&óGíì∞–¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬"◊vV&∂óB◊FWáB÷fñ∆¬÷6ˆ∆˜""¬66ÜVBÁvV&∂óEFWáDfñ∆ƒ6ˆ∆˜"¬66ÜVBÁvV&∂óEFWáDfñ∆ƒ6ˆ∆˜%&ñ˜&óGíì∞–¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬"◊vV&∂óB◊FWáB◊7G&ˆ∂R÷6ˆ∆˜""¬66ÜVBÁvV&∂óEFWáE7G&ˆ∂T6ˆ∆˜"¬66ÜVBÁvV&∂óEFWáE7G&ˆ∂T6ˆ∆˜%&ñ˜&óGíì∞–¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬'FWáB◊6ÜF˜r"¬66ÜVBÁFWáE6ÜF˜r¬66ÜVBÁFWáE6ÜF˜u&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&&6∂w&˜VÊB"¬66ÜVBÊ&6∂w&˜VÊB¬66ÜVBÊ&6∂w&˜VÊE&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&&6∂w&˜VÊB÷6ˆ∆˜""¬66ÜVBÊ&6∂w&˜VÊD6ˆ∆˜"¬66ÜVBÊ&6∂w&˜VÊD6ˆ∆˜%&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&&6∂w&˜VÊB÷ñ÷vR"¬66ÜVBÊ&6∂w&˜VÊDñ÷vR¬66ÜVBÊ&6∂w&˜VÊDñ÷vU&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&&˜&FW"÷6ˆ∆˜""¬66ÜVBÊ&˜&FW$6ˆ∆˜"¬66ÜVBÊ&˜&FW$6ˆ∆˜%&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&&˜Ç◊6ÜF˜r"¬66ÜVBÊ&˜Ö6ÜF˜r¬66ÜVBÊ&˜Ö6ÜF˜u&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&fñ«FW""¬66ÜVBÊfñ«FW"¬66ÜVBÊfñ«FW%&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&6∆ó◊FÇ"¬66ÜVBÊ6∆óFÇ¬66ÜVBÊ6∆óFÖ&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬"◊vV&∂óB÷6∆ó◊FÇ"¬66ÜVBÁvV&∂óD6∆óFÇ¬66ÜVBÁvV&∂óD6∆óFÖ&ñ˜&óGíì∞¢&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&˜fW&f∆˜r"¬66ÜVBÊ˜fW&f∆˜r¬66ÜVBÊ˜fW&f∆˜u&ñ˜&óGíì∞¢–¢ñbÜ6∆V"í7FFRÊÊFófU7V'FóF∆TV∆V÷VÁG2Ê6∆V"Çì∞–ß––†–¶gVÊ7Fñˆ‚&W7F˜&U7Gñ∆U&˜W'GíÜV∆V÷VÁB¬&˜W'Gí¬f«VR¬&ñ˜&óGíí∞–¢ñbáf«VRí∞–¢V∆V÷VÁBÁ7Gñ∆RÁ6WE&˜W'Gíá&˜W'Gí¬f«VR¬&ñ˜&óGí«¬""ì∞–¢“V«6R∞–¢V∆V÷VÁBÁ7Gñ∆RÁ&V÷˜fU&˜W'Gíá&˜W'Gíì∞–¢––ß––†–¶7ñÊ2gVÊ7Fñˆ‚∆ˆE&WG&Á6∆FVD7VW2Çí∞–¢ñbÇ7FFRÁ6WGFñÊw2í&WGW&‚µ”∞–¢6ˆÁ7BfñFVÙ∂Wí“vWD7W'&VÁEfñFVÙ∂WíÇì∞–¢ñbÇfñFVÙ∂Wíí&WGW&‚µ”∞–¢G'í∞–¢6ˆÁ7B&W7ˆÁ6R“vóB6á&ˆ÷RÁ'VÁFñ÷RÁ6VÊD÷W76vRá∞–¢GóS¢$ƒÙEı$UE$Â4ƒDTEÙ5TU2"¿–¢VW'ì¢∞–¢fñFVÙ∂Wí¿–¢F&vWD∆ÊwVvS¢7FFRÁ6WGFñÊw2ÁF&vWD∆ÊwVvR«¬'¶Ç‘4‚"¿–¢÷ˆFV√¢7FFRÁ6WGFñÊw2Ê÷ˆFV¬«¬&FVW6VV≤◊cB÷f∆6Ç –¢––¢“ì∞–¢ñbÇ&W7ˆÁ6R«¬&W7ˆÁ6RÊˆ≤«¬&W7ˆÁ6RÁ6WBí∞–¢7FFRÁ&WG&Á6∆FVE6WB“ÁV∆√∞–¢&WGW&‚µ”∞–¢––¢7FFRÁ&WG&Á6∆FVE6WB“&W7ˆÁ6RÁ6WC∞–¢&WGW&‚&W7ˆÁ6RÊ7VW2«¬µ”∞–¢“6F6ÇÜW'&˜"í∞¢ñbáVñW66TñÁf∆ñFFVDWáFVÁ6ñˆ‰6ˆÁFWáBÜW'&˜"íí&WGW&‚µ”∞¢6ˆÁ6ˆ∆RÊW'&˜"Ç%¥ÊWFf∆óÇFVW6VV≤G&Á6∆F˜%“∆ˆB&WG&Á6∆FVB7VW2fñ∆VB"¬W'&˜"ì∞¢7FFRÁ&WG&Á6∆FVE6WB“ÁV∆√∞–¢&WGW&‚µ”∞–¢––ß––†–¶gVÊ7Fñˆ‚vWD7VT'î7W'&VÁEFñ÷RÜ7W'&VÁEFñ÷Rí∞–¢ñbÇÁV÷&W"Êó4fñÊóFRÜ7W'&VÁEFñ÷Ríí&WGW&‚ÁV∆√∞–¢6ˆÁ7Bˆfg6WE6V6ˆÊG2“ÁV÷&W"Çá7FFRÁ6WGFñÊw2bb7FFRÁ6WGFñÊw2Á7V'FóF∆Tˆfg6WD◊2í«¬íÚ∞–¢6ˆÁ7BFßW7FVEFñ÷R“7W'&VÁEFñ÷R≤ˆfg6WE6V6ˆÊG3∞–¢&WGW&‚7FFRÁ&WG&Á6∆FVD7VW2ÊfñÊBÇÜ7VRí”‚FßW7FVEFñ÷R„“7VRÁ7F'BbbFßW7FVEFñ÷R√“7VRÊVÊBí«¬ÁV∆√∞–ß––†–¶gVÊ7Fñˆ‚&VÊFW%&WG&Á6∆FVE7V'FóF∆RÜ7VRí∞–¢ñbÇ7VRí∞–¢ñbÇ7FFRÁ&WG&Á6∆FVD7VW2Ê∆VÊwFÇí∞–¢WFFT˜fW&∆íÇ.k*i»ûXÀûòXﬁy®Ni ŒYÀö(N{˚æä˘ZŸ~[ô^˚»Œä˚~Z˚ŒXZR5%BıeEBhânXà~YπÓZÈÓi{njä[»Ú"¬""¬&ÜñÁB"ì∞–¢&WGW&„∞–¢––¢7FFRÊ∆7E&WG&Á6∆FVD7VTñB“"#∞–¢66ÜVGV∆T6∆V"Çì∞–¢&WGW&„∞–¢––¢6ˆÁ7B7VTñB“7G&ñÊrÜ7VRÊ7VTñB«¬7VRÊñB«¬G∂7VRÁ7F'G““G∂7VRÊVÊG÷ì∞–¢ñbÜ7VTñB””“7FFRÊ∆7E&WG&Á6∆FVD7VTñBí&WGW&„∞–¢7FFRÊ∆7E&WG&Á6∆FVD7VTñB“7VTñC∞¢7FFRÁ&WVW7E6WVVÊ6R≥“∞¢6Ê6V≈66ÜVGV∆VD6∆V"Çì∞¢7FFRÊ∆7E7V'FóF∆TB“FFRÊÊ˜rÇì∞¢7FFRÊ∆7E6˜W&6UFWáB“7VRÁ6˜W&6UFWáB«¬7VRÁFWáB«¬"#∞¢7FFRÊ∆7EG&Á6∆Fñˆ‚“7VRÁG&Á6∆Fñˆ‚«¬7VRÁFWáB«¬"#∞¢7FFRÊ∆7EG&Á6∆FñˆÂ6˜W&6UFWáB“7FFRÊ∆7E6˜W&6UFWáC∞¢WFFT˜fW&∆íá7FFRÊ∆7E6˜W&6UFWáB¬7FFRÊ∆7EG&Á6∆Fñˆ‚¬'&VGí"ì∞ß–†–¶gVÊ7Fñˆ‚vWD7W'&VÁEfñFVıFñ÷RÇí∞–¢6ˆÁ7BfñFVÚ“Fˆ7V÷VÁBÁVW'ï6V∆V7F˜"Ç'fñFVÚ"ì∞–¢&WGW&‚fñFVÚÚfñFVÚÊ7W'&VÁEFñ÷R¢Ê„∞–ß––†–¶gVÊ7Fñˆ‚vWD7W'&VÁEfñFVÙ∂WíÇí∞¢6ˆÁ7B÷F6Ç“∆ˆ6Fñˆ‚ÁFÜÊ÷RÊ÷F6ÇÇı¬˜vF6Ö¬ÚÖ∆B≤íÚì∞¢&WGW&‚÷F6ÇÚÊWFf∆óÇ“G∂÷F6Ö≥◊÷¢"#∞ß–†¶gVÊ7Fñˆ‚&ñÊDÊFófUFWáEG&6¥wV&G2Çí∞¢ñbÇ6Ü˜V∆DÜñFTÊFófU7V'FóF∆W2Çí«¬ó4ÊWFf∆óÖvF6ÖvRÇíí&WGW&„∞¢6ˆÁ7BfñFV˜2“'&íÊg&ˆ“ÜFˆ7V÷VÁBÁVW'ï6V∆V7F˜$∆¬Ç'fñFVÚ"íì∞¢f˜"Ü6ˆÁ7BfñFVÚˆbfñFV˜2í∞¢FDÊFófTwV&D∆ó7FVÊW"áfñFVÚ¬&∆ˆFVF÷WFFF"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢FDÊFófTwV&D∆ó7FVÊW"áfñFVÚ¬&∆ˆFVFFF"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢FDÊFófTwV&D∆ó7FVÊW"áfñFVÚ¬'∆í"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢FDÊFófTwV&D∆ó7FVÊW"áfñFVÚ¬'6VV∂ñÊr"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢FDÊFófTwV&D∆ó7FVÊW"áfñFVÚ¬'6VV∂VB"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢6ˆÁ7BFWáEG&6∑2“fñFVÚÁFWáEG&6∑3∞¢ñbáFWáEG&6∑2bbFWáEG&6∑2ÊFDWfVÁD∆ó7FVÊW"í∞¢FDÊFófTwV&D∆ó7FVÊW"áFWáEG&6∑2¬&6ÜÊvR"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢FDÊFófTwV&D∆ó7FVÊW"áFWáEG&6∑2¬&FGG&6≤"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢FDÊFófTwV&D∆ó7FVÊW"áFWáEG&6∑2¬'&V÷˜fWG&6≤"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢–¢–¢f˜"Ü6ˆÁ7BG&6≤ˆbvWEfñFVıFWáEG&6∑2Çíí∞¢ñbÇó57V'FóF∆UFWáEG&6≤áG&6≤í«¬G&6≤ÊFDWfVÁD∆ó7FVÊW"í6ˆÁFñÁVS∞¢FDÊFófTwV&D∆ó7FVÊW"áG&6≤¬&7VV6ÜÊvR"¬ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíì∞¢–ß–†¶gVÊ7Fñˆ‚FDÊFófTwV&D∆ó7FVÊW"áF&vWB¬GóR¬∆ó7FVÊW"í∞¢ñbÇF&vWB«¬F&vWBÊFDWfVÁD∆ó7FVÊW"í&WGW&„∞¢6ˆÁ7BWÜó7G2“7FFRÊÊFófUG&6¥WfVÁD∆ó7FVÊW'2Á6ˆ÷RÇÜVÁG'íí”‡¢VÁG'íÁF&vWB””“F&vWBbbVÁG'íÁGóR””“GóRbbVÁG'íÊ∆ó7FVÊW"””“∆ó7FVÊW ¢ì∞¢ñbÜWÜó7G2í&WGW&„∞¢F&vWBÊFDWfVÁD∆ó7FVÊW"áGóR¬∆ó7FVÊW"ì∞¢7FFRÊÊFófUG&6¥WfVÁD∆ó7FVÊW'2ÁW6Çá≤F&vWB¬GóR¬∆ó7FVÊW"“ì∞ß–†¶gVÊ7Fñˆ‚&V÷˜fTÊFófUFWáEG&6¥wV&G2Çí∞¢f˜"Ü6ˆÁ7BVÁG'íˆb7FFRÊÊFófUG&6¥WfVÁD∆ó7FVÊW'2í∞¢G'í∞¢VÁG'íÁF&vWBÁ&V÷˜fTWfVÁD∆ó7FVÊW"ÜVÁG'íÁGóR¬VÁG'íÊ∆ó7FVÊW"ì∞¢“6F6ÇÜW'&˜"í∞¢ÚÚñvÊ˜&RFWF6ÜVB÷VFñˆ&¶V7G2‡¢–¢–¢7FFRÊÊFófUG&6¥WfVÁD∆ó7FVÊW'2“µ”∞ß–†¶gVÊ7Fñˆ‚ÜÊF∆TÊFófU7V'FóF∆UG&6¥7FófóGíÇí∞¢ñbÇ6Ü˜V∆DÜñFTÊFófU7V'FóF∆W2Çí«¬ó4ÊWFf∆óÖvF6ÖvRÇíí&WGW&„∞¢Fˆ7V÷VÁBÊFˆ7V÷VÁDV∆V÷VÁBÊFF6WBÊÊG7DÜñFTÊFófU7V'FóF∆W2“'G'VR#∞¢Ê˜Fñgî÷ñÂFWáEG&6¥wV&BÇì∞¢&‘ÊFófTf∆6Ö&˜FV7Fñˆ‚Éìì∞¢7W&W74ÊFófUfñFVıFWáEG&6∑2Çì∞¢6ˆÁ7B7FófT7VTV∆V÷VÁG2“fñÊDÊFófU7V'FóF∆TV∆V÷VÁG4÷F6ÜñÊt7FófT7VW2á≤f˜&6S¢G'VR“ì∞¢ñbÜ7FófT7VTV∆V÷VÁG2Ê∆VÊwFÇí∞¢ÜñFTÊFófU7V'FóF∆TV∆V÷VÁG4Ê˜rÜ7FófT7VTV∆V÷VÁG2ì∞¢–¢7F'DÊFófU7W&W76ñˆ‰g&÷TwV&BÉì∞¢VWVTÊFófTÜñFU&V«íÇì∞¢66ÜVGV∆Tñ÷÷VFñFT66ÜVE&VÊFW"Éì∞¢66ÜVGV∆U66‚Éì∞ß–†¶gVÊ7Fñˆ‚7W&W74ÊFófUfñFVıFWáEG&6∑2Çí∞¢f˜"Ü6ˆÁ7BG&6≤ˆbvWEfñFVıFWáEG&6∑2Çíí∞¢ñbÇó57V'FóF∆UFWáEG&6≤áG&6≤íí6ˆÁFñÁVS∞¢G'í∞¢ñbÖ7G&ñÊráG&6≤Ê÷ˆFR«¬""íÁFÙ∆˜vW$66RÇí”“'6Ü˜vñÊr"í6ˆÁFñÁVS∞¢ñbÇ7FFRÊÊFófUFWáEG&6¥÷ˆFT66ÜRÊÜ2áG&6≤íí∞¢7FFRÊÊFófUFWáEG&6¥÷ˆFT66ÜRÁ6WBáG&6≤¬G&6≤Ê÷ˆFRì∞¢–¢ÚÚÜñFFV‚G&6∑27Fñ∆¬WFFR7FófT7VW2¬'WBFÜR'&˜w6W"FˆW2Ê˜B&VÊFW"FÜVó"ÊFófR7VR&˜ÜW2‡¢G&6≤Ê÷ˆFR“&ÜñFFV‚#∞¢“6F6ÇÜW'&˜"í∞¢ÚÚñvÊ˜&RG&6∑2FÜBFó6V"˜"&V¶V7B÷ˆFR6ÜÊvW2GW&ñÊr∆ñW"WFFW2‡¢–¢–ß–†¶gVÊ7Fñˆ‚&W7F˜&TÊFófUfñFVıFWáEG&6∑4ñd∆∆˜vVBÇí∞¢ñbÜó4ÊWFf∆óÖvF6ÖvRÇíbb6Ü˜V∆DÜñFTÊFófU7V'FóF∆W2Çíí∞¢7W&W74ÊFófUfñFVıFWáEG&6∑2Çì∞¢Ê˜Fñgî÷ñÂFWáEG&6¥wV&BÇì∞¢&WGW&„∞¢–¢&W7F˜&TÊFófUfñFVıFWáEG&6∑2Çì∞ß–†¶gVÊ7Fñˆ‚&W7F˜&TÊFófUfñFVıFWáEG&6∑2Çí∞¢f˜"Ü6ˆÁ7BG&6≤ˆbvWEfñFVıFWáEG&6∑2Çíí∞¢ñbÇ7FFRÊÊFófUFWáEG&6¥÷ˆFT66ÜRÊÜ2áG&6≤íí6ˆÁFñÁVS∞¢6ˆÁ7B&Wfñ˜W4÷ˆFR“7FFRÊÊFófUFWáEG&6¥÷ˆFT66ÜRÊvWBáG&6≤ì∞¢G'í∞¢G&6≤Ê÷ˆFR“&Wfñ˜W4÷ˆFR«¬'6Ü˜vñÊr#∞¢“6F6ÇÜW'&˜"í∞¢ÚÚñvÊ˜&RG&6∑2FÜBFó6V&VB˜"&V¶V7B÷ˆFR6ÜÊvW2‡¢–¢–¢7FFRÊÊFófUFWáEG&6¥÷ˆFT66ÜR“ÊWrvV¥÷Çì∞ß–†¶gVÊ7Fñˆ‚vWEfñFVıFWáEG&6∑2Çí∞¢6ˆÁ7BG&6∑2“µ”∞¢f˜"Ü6ˆÁ7BfñFVÚˆb'&íÊg&ˆ“ÜFˆ7V÷VÁBÁVW'ï6V∆V7F˜$∆¬Ç'fñFVÚ"ííí∞¢ñbÇfñFVÚ«¬fñFVÚÁFWáEG&6∑2í6ˆÁFñÁVS∞¢G&6∑2ÁW6ÇÇ‚‚‰'&íÊg&ˆ“áfñFVÚÁFWáEG&6∑2íì∞¢–¢&WGW&‚G&6∑3∞ß–†¶gVÊ7Fñˆ‚ó57V'FóF∆UFWáEG&6≤áG&6≤í∞¢ñbÇG&6≤í&WGW&‚f«6S∞¢6ˆÁ7B∂ñÊB“7G&ñÊráG&6≤Ê∂ñÊB«¬""íÁFÙ∆˜vW$66RÇì∞¢&WGW&‚∂ñÊB””“'7V'FóF∆W2"«¬∂ñÊB””“&6FñˆÁ2"«¬∂ñÊB””“&FW67&óFñˆÁ2"«¬∂ñÊC∞ß–†ß“íÇì∞†–†
+  window.clearInterval(state.nativeSuppressionInterval);
+  window.clearInterval(state.pretranslatedTimer);
+  window.clearInterval(state.liveRecognitionInterval);
+  window.clearInterval(state.locationPollTimer);
+  window.clearTimeout(state.nativeFlashProtectionTimer);
+  state.nativeFlashProtectionTimer = 0;
+  state.nativeFlashProtectionUntil = 0;
+  window.clearTimeout(state.debounceTimer);
+  window.clearTimeout(state.cacheRenderTimer);
+  window.clearTimeout(state.observerAttachTimer);
+  window.clearTimeout(state.observerProcessTimer);
+  state.observerProcessTimer = 0;
+  state.pendingMutations = [];
+  window.clearTimeout(state.clearTimer);
+  window.clearTimeout(state.hintTimer);
+  window.clearTimeout(state.errorTimer);
+  window.clearTimeout(state.locationChangeTimer);
+  clearNativeHideReapplyTimers();
+  clearNativeHideBurstTimers();
+  if (state.locationNotifyHandler) {
+    window.removeEventListener("popstate", state.locationNotifyHandler);
+    window.removeEventListener("hashchange", state.locationNotifyHandler);
+    window.removeEventListener("ndst-locationchange", state.locationNotifyHandler);
+  }
+  if (state.fullscreenChangeHandler) {
+    document.removeEventListener("fullscreenchange", state.fullscreenChangeHandler);
+    document.removeEventListener("webkitfullscreenchange", state.fullscreenChangeHandler);
+  }
+  for (const [method, original] of Object.entries(state.originalHistoryMethods)) {
+    if (typeof original === "function" && history[method] && history[method].__ndstWrapped) {
+      history[method] = original;
+    }
+  }
+  if (state.storageChangeHandler && chrome.storage && chrome.storage.onChanged) {
+    chrome.storage.onChanged.removeListener(state.storageChangeHandler);
+  }
+  if (window[CONTENT_CLEANUP_KEY] === cleanupCurrentInstance) {
+    delete window[CONTENT_CLEANUP_KEY];
+  }
+}
+
+function clearOverlayOnly() {
+  if (!state.overlay) return;
+  const sourceElement = state.overlay.querySelector(".ndst-source");
+  const translationElement = state.overlay.querySelector(".ndst-translation");
+  const statusElement = state.overlay.querySelector(".ndst-status");
+  state.overlay.dataset.status = "empty";
+  if (sourceElement) sourceElement.textContent = "";
+  if (translationElement) translationElement.textContent = "";
+  if (statusElement) statusElement.textContent = "";
+}
+
+function ensureNativeSubtitleMask() {
+  const display = "none";
+  const globalMask = ensureMaskElement(NATIVE_MASK_ID, document.documentElement);
+  applyNativeMaskInlineStyle(globalMask, "global");
+  setImportantStyleIfNeeded(globalMask, "display", display);
+
+  const host = getNativeMaskHost();
+  const playerMask = ensureMaskElement(NATIVE_PLAYER_MASK_ID, host);
+  applyNativeMaskInlineStyle(playerMask, "player");
+  setImportantStyleIfNeeded(playerMask, "display", display);
+  return playerMask;
+}
+
+function ensureMaskElement(id, host) {
+  let mask = document.getElementById(id);
+  if (!mask) {
+    mask = document.createElement("div");
+    mask.id = id;
+    mask.setAttribute("aria-hidden", "true");
+  }
+  if (mask.parentElement !== host) {
+    host.appendChild(mask);
+  }
+  return mask;
+}
+
+function getNativeMaskHost() {
+  const fullscreenElement = getFullscreenElement();
+  if (fullscreenElement && fullscreenElement.querySelector) {
+    return fullscreenElement;
+  }
+  const playerRoot = findPlayerRoot();
+  return playerRoot || document.documentElement;
+}
+
+function getFullscreenElement() {
+  return document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement ||
+    null;
+}
+
+function syncNativeMaskHost() {
+  const globalMask = document.getElementById(NATIVE_MASK_ID);
+  if (globalMask && globalMask.parentElement !== document.documentElement) {
+    document.documentElement.appendChild(globalMask);
+  }
+  const mask = document.getElementById(NATIVE_PLAYER_MASK_ID);
+  const host = getNativeMaskHost();
+  if (mask && mask.parentElement !== host) {
+    host.appendChild(mask);
+  }
+}
+
+function isPluginMutation(mutation) {
+  const target = mutation && mutation.target;
+  const element = target && target.nodeType === Node.TEXT_NODE ? target.parentElement : target;
+  return Boolean(element && element.closest && element.closest(`#${OVERLAY_ID}, #${NATIVE_MASK_ID}, #${NATIVE_PLAYER_MASK_ID}, .ndst-native-subtitle-hidden`));
+}
+
+function getRelevantMutations(mutations, options = {}) {
+  const allowVisualCheck = options.allowVisualCheck !== false;
+  return Array.from(mutations || []).filter((mutation) =>
+    !isPluginMutation(mutation) && mutationTouchesSubtitleLayer(mutation, allowVisualCheck)
+  );
+}
+
+function mutationTouchesSubtitleLayer(mutation, allowVisualCheck) {
+  if (!mutation) return false;
+  const target = mutation.target;
+  const targetElement = target && target.nodeType === Node.TEXT_NODE ? target.parentElement : target;
+  if (isSubtitleRelatedElement(targetElement, allowVisualCheck)) return true;
+
+  for (const node of mutation.addedNodes || []) {
+    if (isSubtitleRelatedNode(node, allowVisualCheck)) return true;
+  }
+
+  return false;
+}
+
+function isSubtitleRelatedNode(node, allowVisualCheck) {
+  const element = node && node.nodeType === Node.TEXT_NODE ? node.parentElement : node;
+  if (!element || element.nodeType !== Node.ELEMENT_NODE) return false;
+  if (isSubtitleRelatedElement(element, allowVisualCheck)) return true;
+  if (allowVisualCheck && findVisualSubtitleTextElementsFromNode(element, 48, 1).length) return true;
+  return Boolean(element.querySelector && element.querySelector(getNativeMutationSelector()));
+}
+
+function isSubtitleRelatedElement(element, allowVisualCheck) {
+  if (!element || element.nodeType !== Node.ELEMENT_NODE) return false;
+  const selector = getNativeMutationSelector();
+  if (
+    (element.matches && element.matches(selector)) ||
+    (element.closest && element.closest(selector))
+  ) {
+    return true;
+  }
+  return Boolean(allowVisualCheck && looksLikeVisualSubtitleElement(element));
+}
+
+function getNativeMutationSelector() {
+  if (isAdvancedSubtitleFallbackEnabled()) {
+    return `${NATIVE_SUBTITLE_LAYER_SELECTOR},${BROAD_SUBTITLE_LAYER_SELECTOR}`;
+  }
+  return NATIVE_SUBTITLE_LAYER_SELECTOR;
+}
+
+function isAdvancedSubtitleFallbackEnabled() {
+  return Boolean(state.settings && state.settings.advancedSubtitleFallback === true);
+}
+
+function setNativeMaskEnabled(enabled) {
+  const value = enabled ? "true" : "false";
+  if (document.documentElement.dataset.ndstNativeMask !== value) {
+    document.documentElement.dataset.ndstNativeMask = value;
+  }
+  notifyMainTextTrackGuard();
+  const mask = ensureNativeSubtitleMask();
+  setImportantStyleIfNeeded(mask, "display", "none");
+  if (enabled) {
+    suppressNativeVideoTextTracks();
+    queueNativeHideReapply();
+  } else {
+    clearNativeHideReapplyTimers();
+    restoreNativeVideoTextTracksIfAllowed();
+  }
+}
+
+function armNativeSuppressionForCurrentWatchPage() {
+  if (!isNetflixWatchPage()) return;
+  if (!shouldPreHideNativeForRoute()) return;
+  document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+  notifyMainTextTrackGuard();
+  setNativeMaskEnabled(true);
+  armNativeFlashProtection(1100);
+}
+
+function notifyMainTextTrackGuard() {
+  try {
+    window.dispatchEvent(new Event("ndst-texttrack-guard-sync"));
+  } catch (error) {
+    // Ignore cross-world event dispatch failures.
+  }
+}
+
+function applyNativeMaskInlineStyle(mask, mode) {
+  const commonStyles = {
+    position: "fixed",
+    left: "50%",
+    bottom: "6.5%",
+    width: "min(72vw, 980px)",
+    height: "clamp(54px, 9vh, 112px)",
+    transform: "translateX(-50%)",
+    "z-index": "2147483646",
+    "pointer-events": "none",
+    "border-radius": "6px",
+    background: "transparent"
+  };
+  const playerStyles = mode === "player" ? {
+    position: "absolute"
+  } : {};
+  const styles = { ...commonStyles, ...playerStyles };
+  for (const [property, value] of Object.entries(styles)) {
+    setImportantStyleIfNeeded(mask, property, value);
+  }
+}
+
+function startNativeSuppressionObserver() {
+  bindNativeTextTrackGuards();
+  suppressNativeVideoTextTracks();
+  startNativeSuppressionLoop();
+  armNativeFlashProtection(900);
+}
+
+function startNativeSuppressionLoop() {
+  if (state.nativeSuppressionInterval || !shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  state.nativeSuppressionInterval = window.setInterval(() => {
+    if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) {
+      window.clearInterval(state.nativeSuppressionInterval);
+      state.nativeSuppressionInterval = 0;
+      return;
+    }
+    suppressNativeVideoTextTracks();
+    suppressNativeSubtitleFlash([], {
+      includeVisualSubtitleCandidates: isNativeFlashProtectionActive()
+    });
+  }, 900);
+}
+
+function armNativeFlashProtection(durationMs = 800) {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  const duration = Math.min(1500, Math.max(250, Number(durationMs) || 800));
+  state.nativeFlashProtectionUntil = Math.max(
+    state.nativeFlashProtectionUntil || 0,
+    Date.now() + duration
+  );
+  startNativeAttributeProtectionObserver();
+  startNativeSuppressionFrameGuard(4);
+  queueNativeHideBurst();
+  queueNativeHideReapply();
+  scheduleNativeFlashProtectionStop();
+}
+
+function scheduleNativeFlashProtectionStop() {
+  window.clearTimeout(state.nativeFlashProtectionTimer);
+  const remaining = Math.max(0, (state.nativeFlashProtectionUntil || 0) - Date.now());
+  state.nativeFlashProtectionTimer = window.setTimeout(stopNativeAttributeProtectionObserver, remaining + 80);
+}
+
+function isNativeFlashProtectionActive() {
+  return shouldHideNativeSubtitles() &&
+    isNetflixWatchPage() &&
+    Date.now() <= (state.nativeFlashProtectionUntil || 0);
+}
+
+function startNativeAttributeProtectionObserver() {
+  const playerRoot = findPlayerRoot();
+  if (!playerRoot) return;
+  if (state.nativeSuppressionObserver && state.nativeSuppressionObserverRoot === playerRoot) return;
+  if (state.nativeSuppressionObserver) {
+    state.nativeSuppressionObserver.disconnect();
+  }
+  state.nativeSuppressionObserverRoot = playerRoot;
+  state.nativeSuppressionObserver = new MutationObserver((mutations) => {
+    if (!isNativeFlashProtectionActive()) return;
+    const relevantMutations = getRelevantMutations(mutations, {
+      allowVisualCheck: true
+    });
+    enqueueObservedSubtitleMutations(relevantMutations, 20);
+  });
+  state.nativeSuppressionObserver.observe(playerRoot, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+}
+
+function forceImmediateNativeSubtitlePrehide() {
+  if (!isNetflixWatchPage()) return;
+  if (!shouldHideNativeSubtitles()) {
+    restoreNativeSubtitles();
+    return;
+  }
+  document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+  notifyMainTextTrackGuard();
+  bindNativeTextTrackGuards();
+  suppressNativeVideoTextTracks();
+  suppressNativeSubtitleFlash([], {
+    includeBroadSubtitleSelector: Boolean(state.settings && state.settings.advancedSubtitleFallback),
+    includeVisualSubtitleCandidates: true
+  });
+  startNativeSuppressionFrameGuard(2);
+  queueNativeHideBurst();
+  queueNativeHideReapply();
+}
+
+function armNativePrehideGrace(durationMs = 5000) {
+  if (!isNetflixWatchPage()) return;
+  const duration = Math.min(10000, Math.max(500, Number(durationMs) || 5000));
+  state.nativePrehideUntil = Date.now() + duration;
+  document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+  notifyMainTextTrackGuard();
+}
+
+function stopNativeAttributeProtectionObserver() {
+  state.nativeFlashProtectionTimer = 0;
+  if (isNativeFlashProtectionActive()) {
+    scheduleNativeFlashProtectionStop();
+    return;
+  }
+  state.nativeFlashProtectionUntil = 0;
+  if (state.nativeSuppressionObserver) {
+    state.nativeSuppressionObserver.disconnect();
+    state.nativeSuppressionObserver = null;
+  }
+  state.nativeSuppressionObserverRoot = null;
+}
+
+function startNativeSuppressionFrameGuard(frameBudget = 2) {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  state.nativeSuppressionFrameBudget = Math.max(
+    state.nativeSuppressionFrameBudget || 0,
+    Math.max(1, Math.min(4, Number(frameBudget) || 1))
+  );
+  if (state.nativeSuppressionFrame) return;
+  state.nativeSuppressionFrame = window.requestAnimationFrame(runNativeSuppressionFrameGuard);
+}
+
+function runNativeSuppressionFrameGuard() {
+  state.nativeSuppressionFrame = 0;
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) {
+    state.nativeSuppressionFrameBudget = 0;
+    return;
+  }
+  bindNativeTextTrackGuards();
+  suppressNativeVideoTextTracks();
+  suppressNativeSubtitleFlash([], { includeVisualSubtitleCandidates: true });
+  state.nativeSuppressionFrameBudget = Math.max(0, (state.nativeSuppressionFrameBudget || 0) - 1);
+  if (state.nativeSuppressionFrameBudget > 0) {
+    state.nativeSuppressionFrame = window.requestAnimationFrame(runNativeSuppressionFrameGuard);
+  }
+}
+
+function ensureNativeSubtitleSuppressionStyle() {
+  let style = document.getElementById(NATIVE_SUPPRESSION_STYLE_ID);
+  if (!style) {
+    style = document.createElement("style");
+    style.id = NATIVE_SUPPRESSION_STYLE_ID;
+    (document.head || document.documentElement).appendChild(style);
+  }
+  if (style.dataset.ndstBuildId === BUILD_ID) return;
+  style.dataset.ndstBuildId = BUILD_ID;
+  style.textContent = `${buildNativeSubtitleSuppressionSelector()} {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  filter: opacity(0) !important;
+  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::cue {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  text-shadow: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: scale(0) !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-container,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-display,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-region,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-region-container {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  background: transparent !important;
+  text-shadow: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: scale(0) !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-background {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  background: transparent !important;
+  text-shadow: none !important;
+  transform: scale(0) !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-cue,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-cue-background {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  text-shadow: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: scale(0) !important;
+}
+`;
+}
+
+function buildNativeSubtitleSuppressionSelector() {
+  return [
+    ...STYLE_GLOBAL_SUBTITLE_SELECTORS.flatMap((selector) => [
+      `html:not([data-ndst-hide-native-subtitles="false"]) ${selector}`,
+      `html:not([data-ndst-hide-native-subtitles="false"]) ${selector} *`
+    ]),
+    ...PLAYER_ROOT_SELECTORS.flatMap((rootSelector) =>
+      STYLE_SCOPED_SUBTITLE_SELECTORS.flatMap((selector) => [
+        `html:not([data-ndst-hide-native-subtitles="false"]) ${rootSelector} ${selector}${safeBroadSelectorFilter()}`,
+        `html:not([data-ndst-hide-native-subtitles="false"]) ${rootSelector} ${selector}${safeBroadSelectorFilter()} *`
+      ])
+    ),
+    'html:not([data-ndst-hide-native-subtitles="false"]) .ndst-native-subtitle-hidden',
+    'html:not([data-ndst-hide-native-subtitles="false"]) .ndst-native-subtitle-hidden *'
+  ].join(",\n");
+}
+
+function safeBroadSelectorFilter() {
+  return [
+    ':not(button)',
+    ':not(input)',
+    ':not(select)',
+    ':not(textarea)',
+    ':not([role="button"])',
+    ':not([role="menu"])',
+    ':not([role="menuitem"])',
+    ':not([aria-label])',
+    ':not([data-uia*="control" i])',
+    ':not([data-uia*="button" i])',
+    ':not([data-uia*="progress" i])',
+    ':not([data-uia*="duration" i])',
+    ':not([data-uia*="menu" i])',
+    ':not([data-uia*="title" i])'
+  ].join("");
+}
+
+async function requestSettings() {
+  const response = await chrome.runtime.sendMessage({ type: "GET_SETTINGS" });
+  if (!response || !response.ok) {
+    return {
+      enabled: true,
+      displayMode: "chinese",
+      hideNativeSubtitles: true,
+      subtitleSourceMode: "live",
+      subtitleOffsetMs: 0,
+      advancedSubtitleFallback: false,
+      scanDebounceMs: DEFAULT_SUBTITLE_SCAN_DEBOUNCE_MS,
+      fontSize: 30,
+      bottomOffset: 9,
+      backgroundOpacity: 0
+    };
+  }
+  return response.settings;
+}
+
+function applyOverlaySettings() {
+  if (!state.overlay || !state.settings) return;
+  state.overlay.style.setProperty("--ndst-font-size", `${state.settings.fontSize || 30}px`);
+  state.overlay.style.setProperty("--ndst-bottom", `${getOverlayBottomOffset()}%`);
+  state.overlay.style.setProperty("--ndst-bg-opacity", "0");
+  state.overlay.dataset.mode = state.settings.displayMode || "chinese";
+  state.overlay.dataset.hideNativeSubtitles = shouldHideNativeSubtitles() ? "true" : "false";
+  updateSettingsDiagnostics();
+  const hideNative = shouldHideNativeSubtitles();
+  document.documentElement.dataset.ndstHideNativeSubtitles = hideNative ? "true" : "false";
+  notifyMainTextTrackGuard();
+  setNativeMaskEnabled(hideNative && isNetflixWatchPage());
+  if (hideNative && isNetflixWatchPage()) {
+    bindNativeTextTrackGuards();
+    suppressNativeVideoTextTracks();
+  } else {
+    removeNativeTextTrackGuards();
+  }
+}
+
+function updateSettingsDiagnostics() {
+  if (!state.settings) return;
+  const dataset = document.documentElement.dataset;
+  dataset.ndstSettingsEnabled = state.settings.enabled ? "true" : "false";
+  dataset.ndstSettingsHideNativeSubtitles = state.settings.hideNativeSubtitles !== false ? "true" : "false";
+  dataset.ndstSettingsReplaceOriginal = state.settings.replaceOriginal !== false ? "true" : "false";
+  dataset.ndstSettingsDisplayMode = state.settings.displayMode || "";
+  dataset.ndstSettingsSubtitleSourceMode = state.settings.subtitleSourceMode || "";
+  dataset.ndstNativeHideReason = getNativeHideReason();
+}
+
+function startPretranslatedTimer() {
+  window.clearInterval(state.pretranslatedTimer);
+  state.pretranslatedTimer = 0;
+  if (!state.settings || state.settings.subtitleSourceMode !== "pretranslated") return;
+  state.pretranslatedTimer = window.setInterval(() => {
+    if (isNetflixWatchPage() && state.settings && state.settings.enabled && state.settings.subtitleSourceMode === "pretranslated") {
+      renderPretranslatedSubtitle(getCueByCurrentTime(getCurrentVideoTime()));
+    }
+  }, 250);
+}
+
+function startLiveRecognitionWatchdog() {
+  window.clearInterval(state.liveRecognitionInterval);
+  state.liveRecognitionInterval = 0;
+  state.liveWatchdogLastSourceText = "";
+  if (
+    !state.settings ||
+    !state.settings.enabled ||
+    state.settings.subtitleSourceMode !== "live" ||
+    !isNetflixWatchPage()
+  ) {
+    return;
+  }
+
+  runLiveRecognitionWatchdog();
+  state.liveRecognitionInterval = window.setInterval(runLiveRecognitionWatchdog, 350);
+}
+
+function runLiveRecognitionWatchdog() {
+  if (state.extensionContextInvalidated) return;
+  if (
+    !state.settings ||
+    !state.settings.enabled ||
+    state.settings.subtitleSourceMode !== "live" ||
+    !isNetflixWatchPage()
+  ) {
+    return;
+  }
+
+  // Netflix replaces the player root during watch-to-watch navigation.
+  startObserver();
+  const sourceText = findFromActiveTextTrackCues() || findFromKnownSubtitleContainers();
+  if (!sourceText) {
+    state.liveWatchdogLastSourceText = "";
+    if (state.lastSourceText || state.lastTranslation || state.pendingSourceText) {
+      scheduleClear();
+    }
+    return;
+  }
+  cancelScheduledClear();
+  if (sourceText === state.pendingSourceText) return;
+  if (sourceText === state.lastSourceText) {
+    if (!hasCurrentTranslation(sourceText)) scheduleScan(0);
+    return;
+  }
+  if (sourceText === state.liveWatchdogLastSourceText) return;
+
+  state.liveWatchdogLastSourceText = sourceText;
+  scheduleImmediateCachedRender(0);
+}
+
+function startObserver() {
+  if (!isNetflixWatchPage()) return;
+  const playerRoot = findPlayerRoot();
+  if (!playerRoot) {
+    window.clearTimeout(state.observerAttachTimer);
+    state.observerAttachTimer = window.setTimeout(startObserver, 300);
+    return;
+  }
+  if (state.observer && state.observerRoot === playerRoot) return;
+  if (state.observer) {
+    state.observer.disconnect();
+    window.clearTimeout(state.observerProcessTimer);
+    state.observerProcessTimer = 0;
+    state.pendingMutations = [];
+  }
+  state.observerRoot = playerRoot;
+  state.observer = new MutationObserver((mutations) => {
+    if (!isNetflixWatchPage()) return;
+    const relevantMutations = getRelevantMutations(mutations, {
+      allowVisualCheck: isAdvancedSubtitleFallbackEnabled()
+    });
+    hideKnownNativeSubtitleMutationsImmediately(relevantMutations);
+    enqueueObservedSubtitleMutations(relevantMutations, 45);
+  });
+  state.observer.observe(playerRoot, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+}
+
+function hideKnownNativeSubtitleMutationsImmediately(relevantMutations) {
+  if (!relevantMutations || !relevantMutations.length || !shouldHideNativeSubtitles()) return;
+  const nativeElements = collectNativeSubtitleElementsFromMutations(relevantMutations);
+  if (!nativeElements.length) return;
+  hideNativeSubtitleElementsNow(nativeElements);
+}
+
+function enqueueObservedSubtitleMutations(relevantMutations, delayMs = 45) {
+  if (!relevantMutations || !relevantMutations.length) return;
+  state.pendingMutations.push(...relevantMutations);
+  if (state.pendingMutations.length > 140) {
+    state.pendingMutations = state.pendingMutations.slice(-140);
+  }
+  if (state.observerProcessTimer) return;
+  state.observerProcessTimer = window.setTimeout(processObservedSubtitleMutations, delayMs);
+}
+
+function processObservedSubtitleMutations() {
+  state.observerProcessTimer = 0;
+  if (!isNetflixWatchPage()) {
+    state.pendingMutations = [];
+    return;
+  }
+
+  const relevantMutations = state.pendingMutations.splice(0, state.pendingMutations.length);
+  if (!relevantMutations.length) return;
+
+  syncNativeMaskHost();
+  const nativeElements = collectNativeSubtitleElementsFromMutations(relevantMutations);
+  if (nativeElements.length) {
+    hideNativeSubtitleElementsNow(nativeElements);
+    startNativeSuppressionFrameGuard(1);
+    queueNativeHideReapply();
+    armNativeFlashProtection(600);
+  }
+  bindNativeTextTrackGuards();
+  suppressNativeVideoTextTracks();
+  queueNativeHideBurst();
+  scheduleImmediateCachedRender(nativeElements.length ? 0 : 75);
+  scheduleScan(getScanDebounceMs());
+}
+
+function scheduleImmediateCachedRender(delayMs) {
+  if (state.extensionContextInvalidated) return;
+  window.clearTimeout(state.cacheRenderTimer);
+  state.cacheRenderTimer = window.setTimeout(() => {
+    state.cacheRenderTimer = 0;
+    tryImmediateCachedRender();
+  }, delayMs);
+}
+
+function watchUrlChanges() {
+  if (state.urlWatcherStarted) return;
+  state.urlWatcherStarted = true;
+  state.locationNotifyHandler = () => {
+    window.clearTimeout(state.locationChangeTimer);
+    state.locationChangeTimer = window.setTimeout(() => {
+      state.locationChangeTimer = 0;
+      handleLocationChange();
+    }, 0);
+  };
+  for (const method of ["pushState", "replaceState"]) {
+    const original = history[method];
+    if (typeof original !== "function" || original.__ndstWrapped) continue;
+    state.originalHistoryMethods[method] = original;
+    const wrapped = function (...args) {
+      prepareForPotentialWatchNavigation(args[2]);
+      const result = original.apply(this, args);
+      prepareForPotentialWatchNavigation(location.href);
+      window.dispatchEvent(new Event("ndst-locationchange"));
+      return result;
+    };
+    wrapped.__ndstWrapped = true;
+    history[method] = wrapped;
+  }
+  window.addEventListener("popstate", state.locationNotifyHandler);
+  window.addEventListener("hashchange", state.locationNotifyHandler);
+  window.addEventListener("ndst-locationchange", state.locationNotifyHandler);
+  state.locationPollTimer = window.setInterval(() => {
+    handleLocationChange();
+  }, 1000);
+}
+
+function watchFullscreenChanges() {
+  if (state.fullscreenChangeHandler) return;
+  state.fullscreenChangeHandler = () => {
+    window.clearTimeout(state.fullscreenChangeTimer);
+    state.fullscreenChangeTimer = window.setTimeout(handleFullscreenChange, 80);
+  };
+  document.addEventListener("fullscreenchange", state.fullscreenChangeHandler);
+  document.addEventListener("webkitfullscreenchange", state.fullscreenChangeHandler);
+}
+
+function handleFullscreenChange() {
+  state.fullscreenChangeTimer = 0;
+  ensureOverlay();
+  syncNativeMaskHost();
+  applyOverlaySettings();
+  if (!isNetflixWatchPage()) return;
+  startObserver();
+  if (shouldHideNativeSubtitles()) {
+    document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+    notifyMainTextTrackGuard();
+    bindNativeTextTrackGuards();
+    suppressNativeVideoTextTracks();
+    startNativeSuppressionFrameGuard(1);
+    queueNativeHideReapply();
+    armNativeFlashProtection(650);
+  }
+  scheduleImmediateCachedRender(0);
+  scheduleScan(120);
+}
+
+function prepareForPotentialWatchNavigation(urlLike) {
+  if (!isWatchUrlLike(urlLike)) return;
+  if (!shouldPreHideNativeForRoute()) return;
+  document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+  notifyMainTextTrackGuard();
+  setNativeMaskEnabled(true);
+  armNativeFlashProtection(900);
+}
+
+function shouldPreHideNativeForRoute() {
+  if (!state.settings) return true;
+  if (state.settings.subtitleSourceMode === "pretranslated") return true;
+  if (state.settings.displayMode === "bilingual") return true;
+  return state.settings.hideNativeSubtitles !== false;
+}
+
+function isWatchUrlLike(urlLike) {
+  if (!urlLike) return false;
+  try {
+    const url = new URL(String(urlLike), location.href);
+    return url.hostname === location.hostname && /^\/watch\//.test(url.pathname);
+  } catch (error) {
+    return /^\/watch\//.test(String(urlLike));
+  }
+}
+
+function prehideNativeBeforeInstanceSwap() {
+  if (!/^\/watch\//.test(location.pathname)) return;
+  document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+}
+
+function handleLocationChange() {
+  if (state.currentPath === location.pathname) return;
+  state.currentPath = location.pathname;
+  state.requestSequence += 1;
+  state.lastSourceText = "";
+  state.lastTranslation = "";
+  state.lastTranslationSourceText = "";
+  state.translationContext = [];
+  state.lastPretranslatedCueId = "";
+  loadPretranslatedCues().then((cues) => {
+    state.pretranslatedCues = cues;
+  });
+  ensureOverlay();
+  if (!isNetflixWatchPage()) {
+    stopWatchPageWork();
+    return;
+  }
+  startWatchPageWork();
+  applyOverlaySettings();
+  forceImmediateNativeSubtitlePrehide();
+  scheduleScan(120);
+}
+
+function scheduleScan(delay) {
+  if (state.extensionContextInvalidated) return;
+  window.clearTimeout(state.debounceTimer);
+  state.debounceTimer = window.setTimeout(scanForSubtitle, delay);
+}
+
+function getScanDebounceMs() {
+  const value = Number(state.settings && state.settings.scanDebounceMs);
+  if (!Number.isFinite(value)) return DEFAULT_SUBTITLE_SCAN_DEBOUNCE_MS;
+  return Math.min(800, Math.max(100, value));
+}
+
+function scanForSubtitle() {
+  if (state.extensionContextInvalidated) return;
+  ensureOverlay();
+  syncNativeMaskHost();
+  if (!isNetflixWatchPage()) {
+    stopWatchPageWork();
+    return;
+  }
+  if (!state.settings || !state.settings.enabled) {
+    if (shouldHideNativeSubtitles()) {
+      setNativeMaskEnabled(true);
+      suppressNativeSubtitleFlash([], { includeVisualSubtitleCandidates: true });
+      queueNativeHideBurst();
+    } else {
+      setNativeMaskEnabled(false);
+      restoreNativeSubtitles();
+    }
+    updateOverlay("", "", "empty");
+    return;
+  }
+  if (state.settings.subtitleSourceMode === "pretranslated") {
+    suppressNativeSubtitleFlash();
+    renderPretranslatedSubtitle(getCueByCurrentTime(getCurrentVideoTime()));
+    return;
+  }
+
+  suppressNativeSubtitleFlash();
+  const sourceText = findVisibleSubtitleText();
+  if (!sourceText) {
+    scheduleNoSubtitleHint();
+    scheduleClear();
+    return;
+  }
+
+  if (state.ignoredStaleSourceText) {
+    if (sourceText === state.ignoredStaleSourceText) return;
+    state.ignoredStaleSourceText = "";
+  }
+
+  window.clearTimeout(state.hintTimer);
+  cancelScheduledClear();
+  const sameSource = sourceText === state.lastSourceText;
+  if (
+    sameSource &&
+    state.lastSubtitleAt &&
+    Date.now() - state.lastSubtitleAt >= getSubtitleMaxHoldMs(sourceText)
+  ) {
+    clearCurrentSubtitleState({ ignoreSourceText: true });
+    return;
+  }
+  if (!sameSource) state.lastSubtitleAt = Date.now();
+  hideNativeSubtitleElementsForSourceText(sourceText);
+  armNativeFlashProtection(1200);
+
+  if (sourceText === state.lastSourceText) {
+    if (!hasCurrentTranslation(sourceText) && state.pendingSourceText !== sourceText) {
+      if (shouldSkipInvalidTranslation(sourceText)) return;
+      translateCurrentSubtitle(sourceText);
+    }
+    return;
+  }
+
+  state.lastSourceText = sourceText;
+  state.pendingSourceText = "";
+  state.pendingSubtitleAt = 0;
+  if (shouldSkipInvalidTranslation(sourceText)) return;
+  translateCurrentSubtitle(sourceText);
+}
+
+async function tryImmediateCachedRender() {
+  if (state.extensionContextInvalidated) return;
+  if (!isNetflixWatchPage()) return;
+  if (!state.settings || !state.settings.enabled || state.settings.subtitleSourceMode === "pretranslated") return;
+  suppressNativeSubtitleFlash();
+  const sourceText = findVisibleSubtitleText();
+  if (!sourceText || sourceText === state.pendingSourceText) return;
+  cancelScheduledClear();
+  if (shouldSkipInvalidTranslation(sourceText)) return;
+  if (sourceText === state.lastSourceText) {
+    if (!hasCurrentTranslation(sourceText) && state.pendingSourceText !== sourceText) {
+      scheduleScan(0);
+    }
+    return;
+  }
+
+  state.pendingSourceText = sourceText;
+  state.pendingSubtitleAt = Date.now();
+  state.lastSubtitleAt = state.pendingSubtitleAt;
+  state.requestSequence += 1;
+  hideNativeSubtitleElementsForSourceText(sourceText);
+  armNativeFlashProtection(1200);
+  updateOverlay(sourceText, state.lastTranslation, "loading");
+
+  try {
+    const response = await chrome.runtime.sendMessage({
+      type: "GET_CACHED_TRANSLATION",
+      sourceText
+    });
+    if (!response || !response.ok || !response.translation) {
+      if (sourceText === state.pendingSourceText) {
+        state.lastSubtitleAt = Date.now();
+        state.lastSourceText = sourceText;
+        state.pendingSourceText = "";
+        state.pendingSubtitleAt = 0;
+        translateCurrentSubtitle(sourceText);
+      }
+      return;
+    }
+    if (sourceText !== state.pendingSourceText && sourceText !== state.lastSourceText) return;
+
+    state.lastSubtitleAt = Date.now();
+    state.lastSourceText = sourceText;
+    state.pendingSourceText = "";
+    state.pendingSubtitleAt = 0;
+    state.lastTranslation = sanitizeOverlayTranslationText(response.translation, sourceText);
+    if (!state.lastTranslation) {
+      state.pendingSourceText = "";
+      state.pendingSubtitleAt = 0;
+      markInvalidTranslation(sourceText);
+      scheduleScan(120);
+      return;
+    }
+    state.lastTranslationSourceText = sourceText;
+    rememberTranslationContext(sourceText, state.lastTranslation);
+    updateOverlay(sourceText, state.lastTranslation, "ready");
+  } catch (error) {
+    state.pendingSourceText = "";
+    state.pendingSubtitleAt = 0;
+    if (quiesceInvalidatedExtensionContext(error)) return;
+    scheduleScan(0);
+    console.error("[Netflix DeepSeek Translator] cache lookup failed", error);
+  }
+}
+
+function findVisibleSubtitleText() {
+  const activeCueText = findFromActiveTextTrackCues();
+  if (activeCueText) return activeCueText;
+  const direct = findFromKnownSubtitleContainers();
+  if (direct) return direct;
+  if (!state.settings || state.settings.advancedSubtitleFallback !== true) return "";
+  const recentlyHidden = findFromRecentlyHiddenNativeSubtitleText();
+  if (recentlyHidden) return recentlyHidden;
+  return findFromPlayerTextFallback();
+}
+
+function findFromActiveTextTrackCues() {
+  const candidates = getActiveCueTexts();
+  if (candidates.length && shouldHideNativeSubtitles()) {
+    const nativeElements = findNativeSubtitleElementsMatchingCueTexts(candidates);
+    if (nativeElements.length) {
+      hideNativeSubtitleElementsNow(nativeElements);
+    }
+  }
+  return mergeSubtitleLines(candidates);
+}
+
+function getActiveCueTexts() {
+  const candidates = [];
+  for (const track of getVideoTextTracks()) {
+    if (!isSubtitleTextTrack(track)) continue;
+    let activeCues;
+    try {
+      activeCues = track.activeCues;
+    } catch (error) {
+      activeCues = null;
+    }
+    if (!activeCues || !activeCues.length) continue;
+    for (const cue of Array.from(activeCues)) {
+      const text = getCueText(cue);
+      if (isPlausibleSubtitle(text)) candidates.push(text);
+    }
+  }
+  return Array.from(new Set(candidates));
+}
+
+function getCueText(cue) {
+  if (!cue) return "";
+  if (typeof cue.text === "string") return normalizeSubtitleText(cue.text);
+  return normalizeSubtitleText(cue.textContent || "");
+}
+
+function findFromKnownSubtitleContainers() {
+  const subtitleElements = findNativeSubtitleContainers();
+  const candidates = subtitleElements
+    .map(readSubtitleElementText)
+    .filter(isPlausibleSubtitle);
+
+  const text = mergeSubtitleLines(candidates);
+  if (text) {
+    rememberNativeSubtitleElements(subtitleElements);
+    return text;
+  }
+
+  return "";
+}
+
+function findNativeSubtitleContainers() {
+  const containers = findNativeSubtitleLayerElements({
+    includeBroadSubtitleSelector: Boolean(state.settings && state.settings.advancedSubtitleFallback)
+  });
+
+  return Array.from(new Set(containers)).filter((element) => {
+    if (!element || element.closest(`#${OVERLAY_ID}`)) return false;
+    const text = readSubtitleElementText(element);
+    if (!isPlausibleSubtitle(text)) return false;
+    if (matchesKnownSubtitleLayerSelector(element)) return true;
+    if (!isVisible(element)) return false;
+    return !isNetflixUiElement(element);
+  });
+}
+
+function findFromRecentlyHiddenNativeSubtitleText() {
+  const dataset = document.documentElement.dataset;
+  const candidates = [
+    {
+      text: dataset.ndstContentNativeLastHiddenText,
+      at: Number(dataset.ndstContentNativeLastHiddenAt || 0),
+      className: dataset.ndstContentNativeLastHiddenClass,
+      dataUia: dataset.ndstContentNativeLastHiddenUia
+    },
+    {
+      text: dataset.ndstNativeLastHiddenText,
+      at: Number(dataset.ndstNativeLastHiddenAt || 0),
+      className: dataset.ndstNativeLastHiddenClass,
+      dataUia: dataset.ndstNativeLastHiddenUia
+    }
+  ];
+  const now = Date.now();
+  for (const candidate of candidates) {
+    const text = normalizeSubtitleText(candidate.text || "");
+    if (!isTrustedRecentlyHiddenSubtitleCandidate(candidate)) continue;
+    if (!isPlausibleSubtitle(text)) continue;
+    if (candidate.at && now - candidate.at > 1800) continue;
+    return text;
+  }
+  return "";
+}
+
+function isTrustedRecentlyHiddenSubtitleCandidate(candidate) {
+  const signature = `${candidate && candidate.className || ""} ${candidate && candidate.dataUia || ""}`;
+  return /(?:player[-_]?timedtext|timed[-_]?text|text[-_]?track|player[-_]?subtitle|subtitle[-_]?(?:text|container)|captions?[-_]?(?:text|window|container))/i.test(signature);
+}
+
+function readSubtitleElementText(element) {
+  return normalizeSubtitleText((element && (element.textContent || element.innerText)) || "");
+}
+
+function findFromPlayerTextFallback() {
+  const playerRoot = findPlayerRoot();
+  if (!playerRoot) return "";
+
+  const candidates = [];
+  const walker = document.createTreeWalker(playerRoot, NodeFilter.SHOW_ELEMENT);
+  let visited = 0;
+  while (visited < 600) {
+    const element = walker.nextNode();
+    if (!element) break;
+    visited += 1;
+    if (!["DIV", "P", "SPAN"].includes(element.tagName)) continue;
+    if (!looksLikeVisualSubtitleElement(element)) continue;
+    const text = normalizeSubtitleText(element.innerText || element.textContent);
+    if (isPlausibleSubtitle(text)) candidates.push(text);
+    if (candidates.length >= 6) break;
+  }
+
+  const text = getStableFallbackText(mergeSubtitleLines(candidates));
+  if (text) {
+    rememberNativeSubtitleElements(findNativeSubtitleContainers());
+  }
+  return text;
+}
+
+function getStableFallbackText(text) {
+  if (!text) {
+    state.fallbackCandidateText = "";
+    state.fallbackCandidateCount = 0;
+    return "";
+  }
+  if (text === state.fallbackCandidateText) {
+    state.fallbackCandidateCount += 1;
+  } else {
+    state.fallbackCandidateText = text;
+    state.fallbackCandidateCount = 1;
+  }
+  return state.fallbackCandidateCount >= 2 ? text : "";
+}
+
+function isVisible(element) {
+  if (!element || element.id === OVERLAY_ID || element.closest(`#${OVERLAY_ID}`)) return false;
+  const rect = element.getBoundingClientRect();
+  if (rect.width < 2 || rect.height < 2) return false;
+  if (state.nativeSubtitleStyleCache.has(element) || isSuppressedNativeSubtitleElement(element)) {
+    return rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+  }
+  const style = window.getComputedStyle(element);
+  if (style.visibility === "hidden" || style.display === "none" || Number(style.opacity) === 0) {
+    return false;
+  }
+  return rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+}
+
+function isSuppressedNativeSubtitleElement(element) {
+  if (!shouldHideNativeSubtitles()) return false;
+  if (element.classList && element.classList.contains("ndst-native-subtitle-hidden")) return true;
+  if (element.closest && element.closest(".ndst-native-subtitle-hidden")) return true;
+  return matchesKnownSubtitleLayerSelector(element);
+}
+
+function matchesKnownSubtitleLayerSelector(element) {
+  return Boolean(
+    (element.matches && element.matches(NATIVE_SUBTITLE_LAYER_SELECTOR)) ||
+    (element.closest && element.closest(NATIVE_SUBTITLE_LAYER_SELECTOR))
+  );
+}
+
+function isNetflixUiElement(element) {
+  if (!element || !element.closest) return true;
+  if (matchesKnownSubtitleLayerSelector(element)) return false;
+  const excluded = element.closest([
+    "button",
+    "input",
+    "select",
+    "textarea",
+    '[role="button"]',
+    '[role="menu"]',
+    '[role="menuitem"]',
+    '[data-uia*="control"]',
+    '[data-uia*="button"]',
+    '[data-uia*="progress"]',
+    '[data-uia*="duration"]',
+    '[data-uia*="menu"]',
+    '[data-uia*="title"]'
+  ].join(","));
+  if (excluded) return true;
+  if (element.matches && element.matches('[aria-label]')) return true;
+
+  const rect = element.getBoundingClientRect();
+  const nearBottom = rect.top > window.innerHeight * 0.45;
+  const centeredEnough = rect.left < window.innerWidth * 0.75 && rect.right > window.innerWidth * 0.25;
+  return !(nearBottom && centeredEnough);
+}
+
+function normalizeSubtitleText(text) {
+  return String(text || "")
+    .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "")
+    .replace(/\u00a0/g, " ")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n[ \t]+/g, "\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{2,}/g, "\n")
+    .trim();
+}
+
+function isPlausibleSubtitle(text) {
+  if (!text) return false;
+  if (isCorruptSubtitleText(text)) return false;
+  if (text.length > MAX_SUBTITLE_LENGTH) return false;
+  const lines = text.split("\n").filter(Boolean);
+  if (lines.length > 3) return false;
+  if (/^\d{1,2}:\d{2}(:\d{2})?$/.test(text)) return false;
+  if (/^(Skip|Intro|Next|Episode|Pause|Play|Audio|Subtitles|Settings)$/i.test(text)) return false;
+  if (isLikelyNetflixUiText(text)) return false;
+  if (/^(Ë∑≥Ëøá|Êí≠Êîæ|ÊöÇÂÅú|Èü≥È¢ë|Â≠óÂπï|ËÆæÁΩÆ|‰∏ã‰∏ÄÈõÜ|ÁâáÂ§¥)$/.test(text)) return false;
+  return /[A-Za-z\u3040-\u30ff\u3400-\u9fff]/.test(text);
+}
+
+function isCorruptSubtitleText(text) {
+  const value = String(text || "");
+  if (!value.trim()) return true;
+  if (/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f\uE000-\uF8FF]/.test(value)) return true;
+  if (/\uFFFD/.test(value)) return true;
+  if (/√Ø¬ø¬Ω|√É|√Ç/.test(value) && value.length >= 6) return true;
+  if (/-->|WEBVTT\b|Kind:\s*|Language:\s*/i.test(value)) return true;
+  if (/\b\d{1,2}:\d{2}:\d{2}[,.]\d{1,3}\b/.test(value)) return true;
+  if (/\b(?:[2-9]\d|\d{3,}):[0-5]\d\b/.test(value)) return true;
+  const compact = value.replace(/\s+/g, "");
+  if (!compact) return true;
+  const suspicious = (compact.match(/[\uFFFD\u00a4\u00c3\u00c2\u00e5\u00e6\u00e7\u00f0\u00fe\u00d0\u00de]/g) || []).length;
+  const readable = (compact.match(/[A-Za-z0-9\u3040-\u30ff\u3400-\u9fff]/g) || []).length;
+  if (compact.length >= 8 && suspicious >= 2) return true;
+  if (compact.length >= 12 && /\d{1,2}:\d{2}/.test(compact) && suspicious >= 1) return true;
+  if (compact.length >= 12 && suspicious / compact.length > 0.18 && readable / compact.length < 0.65) {
+    return true;
+  }
+  const symbols = (compact.match(/[^\w\u3040-\u30ff\u3400-\u9fff.,!?'"Ôºå„ÄÇÔºÅÔºü„ÄÅ‚Ä¶:;()\-\[\]]/g) || []).length;
+  return compact.length >= 18 && symbols / compact.length > 0.45;
+}
+
+function sanitizeSubtitleDisplayText(text) {
+  const raw = normalizeSubtitleText(text);
+  if (isStructuredSubtitleLeak(raw)) return "";
+  let value = raw;
+  if (!value) return "";
+  value = value
+    .replace(/^\s*\d+\.\s+/, "")
+    .replace(/\*\*([^*\n]+)\*\*/g, "$1")
+    .replace(/^["'‚Äú‚Äù‚Äò‚Äô„Äå„Äé]+|["'‚Äú‚Äù‚Äò‚Äô„Äç„Äè]+$/g, "")
+    .trim();
+  return isCorruptSubtitleText(value) ? "" : value;
+}
+
+function sanitizeOverlayTranslationText(text, sourceText = "") {
+  const value = sanitizeSubtitleDisplayText(text);
+  if (!value) return "";
+  if (isTargetLanguageMismatch(value, sourceText)) return "";
+  return value;
+}
+
+function sanitizeOverlayStatusText(text) {
+  const value = sanitizeSubtitleDisplayText(text);
+  if (!value || value.length > 120) return "";
+  return value;
+}
+
+function isTargetLanguageMismatch(text, sourceText = "") {
+  if (!state.settings || !String(state.settings.targetLanguage || "").startsWith("zh")) return false;
+  const compact = String(text || "").replace(/\s+/g, "");
+  if (!compact) return true;
+  if (/[\u3400-\u9fff]/.test(compact)) return false;
+  if (isShortPreservedName(compact, sourceText)) return false;
+  if (/^(OK|O\.K\.|Yeah|Yep|No|Hi|Hello|Thanks?)\.?$/i.test(compact)) return true;
+  if (/^(Sure|Of course|No problem|Here(?:'| i)s|The translation|I(?:'| a)m|As an AI)\b/i.test(text)) {
+    return true;
+  }
+  const latin = (compact.match(/[A-Za-z]/g) || []).length;
+  return compact.length >= 4 && latin / compact.length > 0.55;
+}
+
+function isShortPreservedName(text, sourceText = "") {
+  const source = String(sourceText || "").replace(/\s+/g, " ").trim();
+  return (
+    text.length <= 18 &&
+    source.length <= 18 &&
+    /^[A-Z][A-Za-z.'‚Äô -]*[.!?]?$/.test(source) &&
+    /^[A-Z][A-Za-z.'‚Äô -]*[.!?]?$/.test(text)
+  );
+}
+
+function markInvalidTranslation(sourceText) {
+  const source = sanitizeSubtitleDisplayText(sourceText);
+  if (!source) return;
+  state.invalidTranslationSourceText = source;
+  state.invalidTranslationUntil = Date.now() + 15000;
+}
+
+function shouldSkipInvalidTranslation(sourceText) {
+  const source = sanitizeSubtitleDisplayText(sourceText);
+  return Boolean(
+    source &&
+    state.invalidTranslationSourceText === source &&
+    Date.now() < state.invalidTranslationUntil
+  );
+}
+
+function isStructuredSubtitleLeak(text) {
+  const raw = String(text || "");
+  if (!raw.trim()) return false;
+  if (/```|^\s*[{[]|\b(?:sourceText|translation|targetLanguage|model)\b\s*[:=]/i.test(raw)) return true;
+  if (/(?:ÂéüÊñá|ËØëÊñá|ÂΩìÂâçÂ≠óÂπï|‰∏äÊñá)\s*[:Ôºö]/.test(raw)) return true;
+  const lines = raw.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  if (lines.length > 3) return true;
+  const listLines = lines.filter((line) => /^(?:[-*]\s+|\d+[.)]\s+)/.test(line)).length;
+  if (listLines >= 2) return true;
+  if (/\*\*.*\*\*.*\*\*/s.test(raw)) return true;
+  return false;
+}
+
+function isLikelyNetflixUiText(text) {
+  const normalized = normalizeSubtitleText(text);
+  if (isLikelyEpisodeMetadataText(normalized)) return true;
+  if (/^(Episodes|More Like This|Trailers|Audio|Subtitles|Next Episode|Resume|Restart|My List|Rate|Details|Skip Intro|Skip Recap)$/i.test(normalized)) {
+    return true;
+  }
+  if (/^(ÂâßÈõÜ|Êõ¥Â§öÁ±ª‰ººÂΩ±Áâá|È¢ÑÂëäÁâá|Èü≥È¢ë|Â≠óÂπï|‰∏ã‰∏ÄÈõÜ|ÁªßÁª≠Êí≠Êîæ|ÈáçÊñ∞ÂºÄÂßã|ÊàëÁöÑÁâáÂçï|ËØÑÂàÜ|ËØ¶ÊÉÖ|Ë∑≥ËøáÁâáÂ§¥|Ë∑≥ËøáÂâçÊÉÖÊèêË¶Å)$/.test(normalized)) {
+    return true;
+  }
+  if (/^S\d+\s*E\d+/i.test(normalized)) return true;
+  if (/^\d+\.\s+/.test(normalized)) return true;
+  return false;
+}
+
+function isLikelyEpisodeMetadataText(text) {
+  const normalized = normalizeSubtitleText(text);
+  if (/\bS\d+\s*E\d+\b/i.test(normalized)) return true;
+  if (/\bSeason\s*\d+\b.*\bEpisode\s*\d+\b/i.test(normalized)) return true;
+  if (/Á¨¨\s*\d+\s*Â≠£\s*Á¨¨?\s*\d+\s*ÈõÜ/.test(normalized)) return true;
+  if (/Á¨¨\s*\d+\s*ÈõÜ\s*[‚Äú"„Äå„Äé]/.test(normalized)) return true;
+  if (/^\d{1,2}:\d{2}.*Á¨¨\s*\d+\s*ÈõÜ/.test(normalized)) return true;
+  return false;
+}
+
+function mergeSubtitleLines(candidates) {
+  const unique = [];
+  for (const candidate of candidates) {
+    if (!candidate || unique.includes(candidate)) continue;
+    if (unique.some((existing) => existing.includes(candidate))) continue;
+    unique.push(candidate);
+  }
+  return normalizeSubtitleText(unique.join("\n"));
+}
+
+async function translateCurrentSubtitle(sourceText) {
+  if (state.extensionContextInvalidated) return;
+  const seq = ++state.requestSequence;
+  state.pendingSourceText = sourceText;
+  state.pendingSubtitleAt = Date.now();
+
+  if (shouldHideNativeSubtitles()) {
+    armNativeFlashProtection(1400);
+    suppressNativeSubtitleFlash([], { includeVisualSubtitleCandidates: true });
+    hideNativeSubtitleElementsForSourceText(sourceText, { force: true });
+  } else {
+    restoreNativeSubtitles(false);
+  }
+  const keepPreviousTranslation =
+    state.settings &&
+    state.settings.displayMode !== "bilingual" &&
+    state.lastTranslation &&
+    !hasCurrentTranslation(sourceText);
+  updateOverlay(sourceText, keepPreviousTranslation ? state.lastTranslation : "", "loading");
+
+  try {
+    const response = await chrome.runtime.sendMessage({
+      type: "TRANSLATE_SUBTITLE",
+      sourceText,
+      context: buildTranslationContext(sourceText),
+      requestId: seq,
+      seq
+    });
+
+    if (seq !== state.requestSequence || sourceText !== state.lastSourceText) return;
+
+    if (!response || !response.ok) {
+      state.pendingSourceText = "";
+      state.pendingSubtitleAt = 0;
+      if (response && /EMPTY_TRANSLATION|BATCH_TRANSLATION_MISSING_ITEM/i.test(response.details || response.error || "")) {
+        markInvalidTranslation(sourceText);
+      }
+      showTemporaryError(response && response.error ? response.error : "ÁøªËØëËØ∑Ê±ÇÂ§±Ë¥•");
+      return;
+    }
+
+    const translation = sanitizeOverlayTranslationText(response.translation, sourceText);
+    if (!translation) {
+      state.pendingSourceText = "";
+      state.pendingSubtitleAt = 0;
+      markInvalidTranslation(sourceText);
+      return;
+    }
+    state.pendingSourceText = "";
+    state.pendingSubtitleAt = 0;
+    state.lastTranslation = translation;
+    state.lastTranslationSourceText = sourceText;
+    rememberTranslationContext(sourceText, translation);
+    updateOverlay(sourceText, translation, "ready");
+  } catch (error) {
+    if (seq !== state.requestSequence) return;
+    state.pendingSourceText = "";
+    state.pendingSubtitleAt = 0;
+    if (quiesceInvalidatedExtensionContext(error)) return;
+    console.error("[Netflix DeepSeek Translator]", error);
+    showTemporaryError("ÁøªËØëËØ∑Ê±ÇÂ§±Ë¥•ÔºåËØ∑Ê£ÄÊü•ÁΩëÁªúÊàñ API Key");
+  }
+}
+
+function quiesceInvalidatedExtensionContext(error) {
+  if (!/Extension context invalidated/i.test(String(error && error.message || error || ""))) {
+    return false;
+  }
+  if (state.extensionContextInvalidated) return true;
+
+  state.extensionContextInvalidated = true;
+  state.requestSequence += 1;
+  state.pendingSourceText = "";
+  state.pendingSubtitleAt = 0;
+  window.clearInterval(state.liveRecognitionInterval);
+  window.clearInterval(state.nativeSuppressionInterval);
+  window.clearInterval(state.pretranslatedTimer);
+  window.clearInterval(state.locationPollTimer);
+  state.liveRecognitionInterval = 0;
+  state.nativeSuppressionInterval = 0;
+  state.pretranslatedTimer = 0;
+  state.locationPollTimer = 0;
+  for (const timer of [
+    state.debounceTimer,
+    state.cacheRenderTimer,
+    state.observerAttachTimer,
+    state.observerProcessTimer,
+    state.clearTimer,
+    state.hintTimer,
+    state.errorTimer,
+    state.locationChangeTimer,
+    state.fullscreenChangeTimer,
+    state.nativeFlashProtectionTimer
+  ]) {
+    window.clearTimeout(timer);
+  }
+  clearNativeHideReapplyTimers();
+  clearNativeHideBurstTimers();
+  if (state.observer) state.observer.disconnect();
+  if (state.nativeSuppressionObserver) state.nativeSuppressionObserver.disconnect();
+  state.observer = null;
+  state.nativeSuppressionObserver = null;
+  removeNativeTextTrackGuards();
+  document.documentElement.dataset.ndstExtensionContext = "invalidated-stopped";
+  return true;
+}
+
+function buildTranslationContext(currentSourceText) {
+  const current = normalizeSubtitleText(currentSourceText);
+  return state.translationContext
+    .filter((item) => item && item.sourceText && item.sourceText !== current)
+    .slice(-3)
+    .map((item) => ({
+      sourceText: item.sourceText,
+      translation: item.translation
+    }));
+}
+
+function rememberTranslationContext(sourceText, translation) {
+  const source = sanitizeSubtitleDisplayText(sourceText);
+  const target = sanitizeOverlayTranslationText(translation, source);
+  if (!source || !target) return;
+  state.translationContext = state.translationContext
+    .filter((item) => item.sourceText !== source)
+    .concat([{ sourceText: source, translation: target }])
+    .slice(-6);
+}
+
+function hasCurrentTranslation(sourceText) {
+  const source = sanitizeSubtitleDisplayText(sourceText);
+  return Boolean(
+    source &&
+    state.lastTranslation &&
+    sanitizeSubtitleDisplayText(state.lastTranslationSourceText) === source
+  );
+}
+
+function updateOverlay(sourceText, translation, status) {
+  ensureOverlay();
+  if (!isNetflixWatchPage()) {
+    setNativeMaskEnabled(false);
+    clearOverlayOnly();
+    return;
+  }
+  const sourceElement = state.overlay.querySelector(".ndst-source");
+  const translationElement = state.overlay.querySelector(".ndst-translation");
+  const statusElement = state.overlay.querySelector(".ndst-status");
+
+  state.overlay.dataset.status = status;
+  const normalizedSourceText = status === "hint" || status === "error"
+    ? sanitizeOverlayStatusText(sourceText)
+    : sanitizeSubtitleDisplayText(sourceText);
+  const normalizedTranslation = sanitizeOverlayTranslationText(translation, normalizedSourceText || sourceText);
+  if (
+    status !== "hint" &&
+    status !== "error" &&
+    sourceText &&
+    !normalizedSourceText &&
+    !normalizedTranslation
+  ) {
+    clearOverlayOnly();
+    return;
+  }
+  const isBilingual = state.settings && state.settings.displayMode === "bilingual";
+  const shouldShowSource = isBilingual &&
+    status !== "hint" &&
+    status !== "error" &&
+    Boolean(normalizedSourceText);
+  sourceElement.textContent = shouldShowSource ? normalizedSourceText : "";
+  translationElement.textContent = normalizedTranslation;
+
+  if (status === "hint") {
+    statusElement.textContent = normalizedSourceText || "ËØ∑ÂÖàÂú® Netflix Êí≠ÊîæÂô®‰∏≠ÂºÄÂêØËã±ÊñáÊàñÊó•ÊñáÂ≠óÂπï";
+  } else if (status === "loading") {
+    statusElement.textContent = "...";
+  } else if (status === "error") {
+    statusElement.textContent = normalizedSourceText || "ÁøªËØëËØ∑Ê±ÇÂ§±Ë¥•";
+  } else {
+    statusElement.textContent = "";
+  }
+
+  if (shouldHideNativeSubtitles()) {
+    setNativeMaskEnabled(true);
+    suppressNativeSubtitleFlash();
+    queueNativeHideBurst();
+    if (sourceText && (status === "ready" || status === "loading")) {
+      hideNativeSubtitleElementsForSourceText(sourceText);
+    }
+  } else {
+    setNativeMaskEnabled(false);
+    restoreNativeSubtitles();
+  }
+}
+
+function showTemporaryError(message) {
+  window.clearTimeout(state.errorTimer);
+  updateOverlay(message, state.lastTranslation, "error");
+  state.errorTimer = window.setTimeout(() => {
+    state.errorTimer = 0;
+    if (hasCurrentTranslation(state.lastSourceText)) {
+      updateOverlay(state.lastSourceText, state.lastTranslation, "ready");
+    } else {
+      updateOverlay("", "", "empty");
+    }
+  }, 2200);
+}
+
+function scheduleClear() {
+  if (!state.lastSourceText && !state.lastTranslation && !state.pendingSourceText) return;
+  if (state.clearTimer) return;
+  const delayMs = getSubtitleClearDelayMs(state.lastSourceText || state.lastTranslationSourceText);
+  state.clearTimer = window.setTimeout(() => clearCurrentSubtitleState(), delayMs);
+}
+
+function cancelScheduledClear() {
+  if (!state.clearTimer) return;
+  window.clearTimeout(state.clearTimer);
+  state.clearTimer = 0;
+}
+
+function getSubtitleClearDelayMs(sourceText) {
+  const length = normalizeSubtitleText(sourceText).replace(/\s+/g, "").length;
+  if (length <= 6) return 250;
+  if (length <= 18) return 350;
+  if (length <= 36) return 450;
+  return 550;
+}
+
+function getSubtitleMaxHoldMs(sourceText) {
+  const length = normalizeSubtitleText(sourceText).replace(/\s+/g, "").length;
+  if (length <= 6) return 8000;
+  if (length <= 18) return 10000;
+  if (length <= 36) return 12000;
+  return MAX_SAME_SUBTITLE_HOLD_MS;
+}
+
+function clearCurrentSubtitleState({ ignoreSourceText = false } = {}) {
+  const sourceText = normalizeSubtitleText(state.lastSourceText || state.pendingSourceText);
+  state.clearTimer = 0;
+  state.lastSourceText = "";
+  state.lastTranslation = "";
+  state.lastTranslationSourceText = "";
+  state.pendingSourceText = "";
+  state.pendingSubtitleAt = 0;
+  state.lastPretranslatedCueId = "";
+  state.requestSequence += 1;
+  state.ignoredStaleSourceText = ignoreSourceText ? sourceText : "";
+  window.clearTimeout(state.errorTimer);
+  state.errorTimer = 0;
+  if (shouldHideNativeSubtitles()) {
+    suppressNativeSubtitleFlash();
+  } else {
+    restoreNativeSubtitles();
+  }
+  updateOverlay("", "", "empty");
+}
+
+function scheduleNoSubtitleHint() {
+  window.clearTimeout(state.hintTimer);
+  state.hintTimer = window.setTimeout(() => {
+    if (!state.lastSourceText) {
+      updateOverlay("ËØ∑ÂÖàÂú® Netflix Êí≠ÊîæÂô®‰∏≠ÂºÄÂêØËã±ÊñáÊàñÊó•ÊñáÂ≠óÂπï", "", "hint");
+    }
+  }, NO_SUBTITLE_HINT_DELAY_MS);
+}
+
+function shouldHideNativeSubtitles() {
+  if (state.nativePrehideUntil && Date.now() < state.nativePrehideUntil) return true;
+  if (!state.settings) {
+    return document.documentElement.dataset.ndstHideNativeSubtitles === "true";
+  }
+  return state.settings.hideNativeSubtitles !== false;
+}
+
+function getNativeHideReason() {
+  if (!state.settings) return "settings-loading";
+  if (!state.settings.enabled) return "plugin-disabled";
+  return "replace-native-forced";
+}
+
+function getOverlayBottomOffset() {
+  if (!shouldHideNativeSubtitles()) return 18;
+  const value = Number(state.settings && state.settings.bottomOffset);
+  if (!Number.isFinite(value)) return 9;
+  return Math.min(12, Math.max(8, value));
+}
+
+function rememberNativeSubtitleElements(elements) {
+  const existing = Array.from(state.nativeSubtitleElements)
+    .filter((element) => element && element.isConnected);
+  const expanded = expandNativeSubtitleElements([...existing, ...(elements || [])]);
+  state.nativeSubtitleElements = new Set(expanded.slice(-MAX_NATIVE_SUBTITLE_ELEMENTS));
+}
+
+function expandNativeSubtitleElements(elements) {
+  const expanded = [];
+  for (const element of elements || []) {
+    if (!element || !element.isConnected || element.closest(`#${OVERLAY_ID}`)) continue;
+    expanded.push(element);
+    const stableParent = findStableSubtitleContainer(element);
+    if (stableParent) expanded.push(stableParent);
+  }
+  return Array.from(new Set(expanded)).filter((element) => {
+    if (!element || !element.isConnected || element.closest(`#${OVERLAY_ID}`)) return false;
+    if (!isInsidePlayerRoot(element)) return false;
+    return !isNetflixUiElement(element);
+  });
+}
+
+function findStableSubtitleContainer(element) {
+  if (!element || !element.parentElement || matchesKnownSubtitleLayerSelector(element)) {
+    return element;
+  }
+  const baseRect = element.getBoundingClientRect();
+  if (!isUsableSubtitleRect(baseRect)) return element;
+  const baseText = normalizeSubtitleText(element.innerText || element.textContent);
+  if (!isPlausibleSubtitle(baseText)) return element;
+
+  let best = element;
+  let current = element.parentElement;
+  let depth = 0;
+  while (current && depth < 3 && isInsidePlayerRoot(current)) {
+    if (current.id === OVERLAY_ID || isNetflixUiElement(current)) break;
+    const text = normalizeSubtitleText(current.innerText || current.textContent);
+    if (!text || text.length > MAX_SUBTITLE_LENGTH * 1.35) break;
+    if (!text.includes(baseText) && !baseText.includes(text)) break;
+    const rect = current.getBoundingClientRect();
+    if (!isUsableSubtitleRect(rect)) break;
+    if (rect.width > Math.max(baseRect.width + 240, baseRect.width * 2.8)) break;
+    if (rect.height > Math.max(baseRect.height + 90, baseRect.height * 4)) break;
+    best = current;
+    if (matchesKnownSubtitleLayerSelector(current)) break;
+    current = current.parentElement;
+    depth += 1;
+  }
+  return best;
+}
+
+function findNativeSubtitleLayerElements({
+  includeBroadSubtitleSelector = false,
+  includeVisualSubtitleCandidates = false
+} = {}) {
+  const playerRoot = findPlayerRoot();
+
+  const elements = [];
+  if (playerRoot && playerRoot.querySelectorAll) {
+    elements.push(...Array.from(playerRoot.querySelectorAll(NATIVE_SUBTITLE_LAYER_SELECTOR)));
+    if (includeBroadSubtitleSelector) {
+      elements.push(...Array.from(playerRoot.querySelectorAll(BROAD_SUBTITLE_LAYER_SELECTOR))
+        .filter((element) => isVisible(element) && !isNetflixUiElement(element)));
+    }
+  }
+
+  elements.push(...findSafeGlobalNativeSubtitleLayerElements());
+
+  if (playerRoot && includeVisualSubtitleCandidates) {
+    elements.push(...findVisualSubtitleTextElements(playerRoot));
+  }
+
+  return Array.from(new Set(elements)).filter((element) => {
+    if (!element || element.closest(`#${OVERLAY_ID}`)) return false;
+    return matchesKnownSubtitleLayerSelector(element) || !isNetflixUiElement(element);
+  });
+}
+
+function findSafeGlobalNativeSubtitleLayerElements() {
+  if (!document.querySelectorAll) return [];
+  return Array.from(document.querySelectorAll(STYLE_GLOBAL_SUBTITLE_SELECTORS.join(",")));
+}
+
+function findPlayerRoot() {
+  const fullscreenElement = getFullscreenElement();
+  if (fullscreenElement && fullscreenElement.nodeType === Node.ELEMENT_NODE) {
+    if (
+      (fullscreenElement.matches && fullscreenElement.matches(PLAYER_ROOT_SELECTOR)) ||
+      fullscreenElement.tagName === "VIDEO" ||
+      (fullscreenElement.querySelector && fullscreenElement.querySelector("video"))
+    ) {
+      return fullscreenElement;
+    }
+  }
+  for (const selector of PLAYER_ROOT_SELECTORS) {
+    const element = document.querySelector(selector);
+    if (element) return element;
+  }
+  return fullscreenElement && fullscreenElement.querySelector
+    ? fullscreenElement
+    : null;
+}
+
+function getPlayerRoot() {
+  return findPlayerRoot();
+}
+
+function isInsidePlayerRoot(element) {
+  if (!element) return false;
+  const playerRoot = getPlayerRoot();
+  return playerRoot === element || Boolean(playerRoot && playerRoot.contains(element));
+}
+
+function collectNativeSubtitleElementsFromMutations(mutations) {
+  if (!mutations || !mutations.length || !shouldHideNativeSubtitles()) return [];
+  const playerRoot = findPlayerRoot();
+  if (!playerRoot) return [];
+  const selector = getNativeMutationSelector();
+  const elements = [];
+
+  for (const mutation of mutations) {
+    if (mutation.type === "attributes" && mutation.target && mutation.target.nodeType === Node.ELEMENT_NODE) {
+      collectNativeSubtitleElementsFromNode(mutation.target, selector, elements, playerRoot);
+    }
+    if (mutation.type === "characterData" && mutation.target) {
+      collectNativeSubtitleElementsFromNode(mutation.target, selector, elements, playerRoot);
+    }
+    for (const node of mutation.addedNodes || []) {
+      collectNativeSubtitleElementsFromNode(node, selector, elements, playerRoot);
+    }
+  }
+
+  return Array.from(new Set(elements)).filter((element) => {
+    if (!element || !element.isConnected || element.closest(`#${OVERLAY_ID}`)) return false;
+    if (!isInsidePlayerRoot(element)) return false;
+    return !isNetflixUiElement(element);
+  });
+}
+
+function collectNativeSubtitleElementsFromNode(node, selector, elements, playerRoot) {
+  const element = node && node.nodeType === Node.TEXT_NODE ? node.parentElement : node;
+  if (!element || element.nodeType !== Node.ELEMENT_NODE) return;
+  const insidePlayer = playerRoot === element || playerRoot.contains(element);
+  const containsPlayer = element.contains && element.contains(playerRoot);
+  if (!insidePlayer && !containsPlayer) return;
+  const scanRoot = insidePlayer ? element : playerRoot;
+
+  if (element.matches && element.matches(selector)) {
+    addNativeSubtitleCandidate(elements, element);
+  }
+  if (element.closest) {
+    const closest = element.closest(selector);
+    if (closest) addNativeSubtitleCandidate(elements, closest);
+  }
+  if (scanRoot.querySelectorAll && scanRoot !== playerRoot) {
+    const matchedElements = scanRoot.querySelectorAll(selector);
+    for (let index = 0; index < matchedElements.length && index < 24; index += 1) {
+      const matchedElement = matchedElements[index];
+      addNativeSubtitleCandidate(elements, matchedElement);
+    }
+  }
+
+  if (insidePlayer && looksLikeVisualSubtitleElement(element)) {
+    addNativeSubtitleCandidate(elements, element);
+  }
+  if (insidePlayer && scanRoot !== playerRoot) {
+    for (const visualElement of findVisualSubtitleTextElementsFromNode(scanRoot, 64, 6)) {
+      addNativeSubtitleCandidate(elements, visualElement);
+    }
+  }
+}
+
+function addNativeSubtitleCandidate(elements, element) {
+  if (!element) return;
+  elements.push(element);
+  const stableParent = findStableSubtitleContainer(element);
+  if (stableParent && stableParent !== element) {
+    elements.push(stableParent);
+  }
+}
+
+function findVisualSubtitleTextElements(playerRoot) {
+  if (!playerRoot) return [];
+  const matches = [];
+  const nodes = Array.from(playerRoot.querySelectorAll("span, div, p"));
+  for (let index = nodes.length - 1, visited = 0; index >= 0 && visited < 320; index -= 1, visited += 1) {
+    const element = nodes[index];
+    if (!looksLikeVisualSubtitleElement(element)) continue;
+    matches.push(element);
+    if (matches.length >= 16) break;
+  }
+  return matches;
+}
+
+function findVisualSubtitleTextElementsFromNode(root, maxVisits = 64, maxMatches = 6) {
+  const element = root && root.nodeType === Node.TEXT_NODE ? root.parentElement : root;
+  if (!element || element.nodeType !== Node.ELEMENT_NODE) return [];
+  const playerRoot = findPlayerRoot();
+  if (!playerRoot || (playerRoot !== element && !playerRoot.contains(element))) return [];
+  if (element.closest && element.closest(`#${OVERLAY_ID}`)) return [];
+
+  const matches = [];
+  if (looksLikeVisualSubtitleElement(element)) {
+    matches.push(element);
+    if (matches.length >= maxMatches) return matches;
+  }
+
+  if (!element.querySelector || element === playerRoot || element.contains(playerRoot)) {
+    return matches;
+  }
+
+  const walker = document.createTreeWalker(element, NodeFilter.SHOW_ELEMENT);
+  let visited = 0;
+  while (visited < maxVisits) {
+    const child = walker.nextNode();
+    if (!child) break;
+    visited += 1;
+    if (!["DIV", "P", "SPAN"].includes(child.tagName)) continue;
+    if (!looksLikeVisualSubtitleElement(child)) continue;
+    matches.push(child);
+    if (matches.length >= maxMatches) break;
+  }
+
+  return matches;
+}
+
+function looksLikeVisualSubtitleElement(element) {
+  if (!element || element.closest(`#${OVERLAY_ID}`)) return false;
+  if (!["DIV", "P", "SPAN"].includes(element.tagName)) return false;
+  const rawText = element.textContent || "";
+  if (!rawText || rawText.length > MAX_SUBTITLE_LENGTH * 2) return false;
+  const text = normalizeSubtitleText(rawText);
+  if (!isPlausibleSubtitle(text)) return false;
+  if (!isInsidePlayerRoot(element)) return false;
+  if (isNetflixUiElement(element)) return false;
+  const rect = element.getBoundingClientRect();
+  if (rect.width < 16 || rect.height < 8) return false;
+  if (rect.width > window.innerWidth * 0.9 || rect.height > window.innerHeight * 0.26) return false;
+  const inSubtitleBand = rect.top > window.innerHeight * 0.42 && rect.bottom < window.innerHeight + 4;
+  const centered = rect.left < window.innerWidth * 0.84 && rect.right > window.innerWidth * 0.16;
+  return inSubtitleBand && centered;
+}
+
+function suppressNativeSubtitleFlash(seedElements = [], {
+  includeBroadSubtitleSelector = false,
+  includeVisualSubtitleCandidates = false
+} = {}) {
+  if (!shouldHideNativeSubtitles()) return;
+  syncNativeMaskHost();
+  suppressNativeVideoTextTracks();
+  const activeCueElements = findNativeSubtitleElementsMatchingActiveCues();
+  const shouldIncludeVisual = includeVisualSubtitleCandidates || isNativeFlashProtectionActive();
+  const shouldScan = includeBroadSubtitleSelector || shouldIncludeVisual;
+  const elements = shouldScan
+    ? findNativeSubtitleLayerElements({
+      includeBroadSubtitleSelector,
+      includeVisualSubtitleCandidates: shouldIncludeVisual
+    })
+    : [];
+  const allElements = [...seedElements, ...activeCueElements, ...elements];
+  if (!allElements.length && !state.nativeSubtitleElements.size) return;
+  rememberNativeSubtitleElements([
+    ...Array.from(state.nativeSubtitleElements).filter((element) => element && element.isConnected),
+    ...allElements
+  ]);
+  syncNativeMasksToSubtitleElements(Array.from(state.nativeSubtitleElements));
+  hideNativeSubtitles();
+}
+
+function findNativeSubtitleElementsMatchingActiveCues(options = {}) {
+  return findNativeSubtitleElementsMatchingCueTexts(getActiveCueTexts(), options);
+}
+
+function hideNativeSubtitleElementsForSourceText(sourceText, options = {}) {
+  if (!sourceText || !shouldHideNativeSubtitles()) return;
+  const nativeElements = findNativeSubtitleElementsMatchingCueTexts([sourceText], options);
+  if (nativeElements.length) {
+    hideNativeSubtitleElementsNow(nativeElements);
+  }
+}
+
+function findNativeSubtitleElementsMatchingCueTexts(cueTexts, options = {}) {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return [];
+  const normalizedCueTexts = Array.from(new Set((cueTexts || [])
+    .map(normalizeSubtitleText)
+    .filter(isPlausibleSubtitle)));
+  if (!normalizedCueTexts.length) return [];
+
+  const cueKey = mergeSubtitleLines(normalizedCueTexts);
+  const now = Date.now();
+  if (!options.force && cueKey === state.nativeCueDomShieldText && now - state.nativeCueDomShieldAt < 140) {
+    return [];
+  }
+  state.nativeCueDomShieldText = cueKey;
+  state.nativeCueDomShieldAt = now;
+
+  const playerRoot = findPlayerRoot();
+  if (!playerRoot || !playerRoot.querySelectorAll) return [];
+
+  const matches = [];
+  const nodes = Array.from(playerRoot.querySelectorAll("span, div, p"));
+  for (let index = nodes.length - 1, visited = 0; index >= 0 && visited < MAX_ACTIVE_CUE_DOM_SCAN_VISITS; index -= 1, visited += 1) {
+    const element = nodes[index];
+    if (!element || element.closest(`#${OVERLAY_ID}, #${NATIVE_MASK_ID}, #${NATIVE_PLAYER_MASK_ID}`)) continue;
+    if (!isInsidePlayerRoot(element) || isNetflixUiElement(element)) continue;
+    const elementText = normalizeSubtitleText(element.innerText || element.textContent);
+    if (!elementText || elementText.length > MAX_SUBTITLE_LENGTH * 1.25) continue;
+    if (!textMatchesActiveCue(elementText, normalizedCueTexts)) continue;
+    if (!matchesKnownSubtitleLayerSelector(element) && !looksLikeVisualSubtitleElement(element)) continue;
+    addNativeSubtitleCandidate(matches, element);
+    if (matches.length >= 10) break;
+  }
+
+  return Array.from(new Set(matches)).filter((element) =>
+    element &&
+    element.isConnected &&
+    isInsidePlayerRoot(element) &&
+    !isNetflixUiElement(element)
+  );
+}
+
+function textMatchesActiveCue(elementText, cueTexts) {
+  const elementLoose = normalizeForCueTextMatch(elementText);
+  const elementTight = normalizeForCueTextMatch(elementText, true);
+  if (!elementLoose || !elementTight) return false;
+  return cueTexts.some((cueText) => {
+    const cueLoose = normalizeForCueTextMatch(cueText);
+    const cueTight = normalizeForCueTextMatch(cueText, true);
+    if (!cueLoose || !cueTight) return false;
+    if (elementLoose === cueLoose || elementTight === cueTight) return true;
+    if (cueTight.length >= 4 && elementTight.includes(cueTight)) return true;
+    return elementTight.length >= 4 && cueTight.includes(elementTight);
+  });
+}
+
+function normalizeForCueTextMatch(text, removeWhitespace = false) {
+  const normalized = normalizeSubtitleText(text)
+    .replace(/[‚Äú‚Äù]/g, '"')
+    .replace(/[‚Äò‚Äô]/g, "'")
+    .toLowerCase();
+  return removeWhitespace
+    ? normalized.replace(/\s+/g, "")
+    : normalized.replace(/\s+/g, " ");
+}
+
+function hideNativeSubtitleElementsNow(elements) {
+  if (!elements || !elements.length || !shouldHideNativeSubtitles()) return;
+  rememberNativeSubtitleElements([
+    ...Array.from(state.nativeSubtitleElements).filter((element) => element && element.isConnected),
+    ...elements
+  ]);
+  syncNativeMasksToSubtitleElements(Array.from(state.nativeSubtitleElements));
+  hideNativeSubtitles();
+  queueNativeHideReapply();
+}
+
+function queueNativeHideReapply() {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  if (state.nativeHideReapplyTimers.length) return;
+  clearNativeHideReapplyTimers();
+  for (const delay of [80, 260, 620]) {
+    let timer = 0;
+    timer = window.setTimeout(() => {
+      state.nativeHideReapplyTimers = state.nativeHideReapplyTimers.filter((entry) => entry !== timer);
+      reapplyNativeSubtitleSuppression();
+    }, delay);
+    state.nativeHideReapplyTimers.push(timer);
+  }
+}
+
+function queueNativeHideBurst() {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  if (state.nativeHideBurstTimers.length) return;
+  clearNativeHideBurstTimers();
+  for (const delay of [0, 40, 120, 260, 520]) {
+    let timer = 0;
+    timer = window.setTimeout(() => {
+      state.nativeHideBurstTimers = state.nativeHideBurstTimers.filter((entry) => entry !== timer);
+      if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+      suppressNativeVideoTextTracks();
+      suppressNativeSubtitleFlash([], { includeVisualSubtitleCandidates: true });
+    }, delay);
+    state.nativeHideBurstTimers.push(timer);
+  }
+}
+
+function clearNativeHideBurstTimers() {
+  for (const timer of state.nativeHideBurstTimers) {
+    window.clearTimeout(timer);
+  }
+  state.nativeHideBurstTimers = [];
+}
+
+function clearNativeHideReapplyTimers() {
+  for (const timer of state.nativeHideReapplyTimers) {
+    window.clearTimeout(timer);
+  }
+  state.nativeHideReapplyTimers = [];
+}
+
+function reapplyNativeSubtitleSuppression() {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  pruneNativeSubtitleElements();
+  syncNativeMaskHost();
+  suppressNativeVideoTextTracks();
+  if (isNativeFlashProtectionActive()) {
+    suppressNativeSubtitleFlash([], { includeVisualSubtitleCandidates: true });
+    return;
+  }
+  if (state.nativeSubtitleElements.size) {
+    syncNativeMasksToSubtitleElements(Array.from(state.nativeSubtitleElements));
+    hideNativeSubtitles();
+  }
+}
+
+function syncNativeMasksToSubtitleElements(elements) {
+  const bounds = getSubtitleTextBounds(elements);
+  if (!bounds) return;
+
+  const globalMask = document.getElementById(NATIVE_MASK_ID);
+  if (globalMask) {
+    setImportantStyleIfNeeded(globalMask, "position", "fixed");
+    setImportantStyleIfNeeded(globalMask, "left", `${Math.round(bounds.centerX)}px`);
+    setImportantStyleIfNeeded(globalMask, "bottom", `${Math.max(8, Math.round(window.innerHeight - bounds.bottom))}px`);
+    setImportantStyleIfNeeded(globalMask, "width", `${Math.round(bounds.width)}px`);
+    setImportantStyleIfNeeded(globalMask, "height", `${Math.round(bounds.height)}px`);
+    setImportantStyleIfNeeded(globalMask, "transform", "translateX(-50%)");
+  }
+
+  const playerMask = document.getElementById(NATIVE_PLAYER_MASK_ID);
+  const host = getNativeMaskHost();
+  if (playerMask && host && host.getBoundingClientRect) {
+    const hostRect = host.getBoundingClientRect();
+    setImportantStyleIfNeeded(playerMask, "position", "absolute");
+    setImportantStyleIfNeeded(playerMask, "left", `${Math.round(bounds.left - hostRect.left)}px`);
+    setImportantStyleIfNeeded(playerMask, "bottom", `${Math.round(hostRect.bottom - bounds.bottom)}px`);
+    setImportantStyleIfNeeded(playerMask, "width", `${Math.round(bounds.width)}px`);
+    setImportantStyleIfNeeded(playerMask, "height", `${Math.round(bounds.height)}px`);
+    setImportantStyleIfNeeded(playerMask, "transform", "none");
+  }
+}
+
+function getSubtitleTextBounds(elements) {
+  const rects = getSubtitleTextRects(elements);
+  if (!rects.length) return null;
+
+  let left = Math.min(...rects.map((rect) => rect.left));
+  let right = Math.max(...rects.map((rect) => rect.right));
+  let top = Math.min(...rects.map((rect) => rect.top));
+  let bottom = Math.max(...rects.map((rect) => rect.bottom));
+
+  const rawWidth = right - left;
+  const rawHeight = bottom - top;
+  const paddingX = Math.min(48, Math.max(18, rawWidth * 0.08));
+  const paddingY = Math.min(18, Math.max(10, rawHeight * 0.25));
+
+  left = Math.max(8, left - paddingX);
+  right = Math.min(window.innerWidth - 8, right + paddingX);
+  top = Math.max(window.innerHeight * 0.45, top - paddingY);
+  bottom = Math.min(window.innerHeight - 8, bottom + paddingY);
+
+  let width = Math.max(180, right - left);
+  width = Math.min(width, window.innerWidth * 0.76);
+  let height = Math.max(42, bottom - top);
+  height = Math.min(height, 118);
+
+  const centerX = (left + right) / 2;
+  const centerY = (top + bottom) / 2;
+  const normalizedLeft = Math.max(8, Math.min(window.innerWidth - width - 8, centerX - width / 2));
+  const normalizedTop = Math.max(window.innerHeight * 0.45, Math.min(window.innerHeight - height - 8, centerY - height / 2));
+
+  return {
+    left: normalizedLeft,
+    right: normalizedLeft + width,
+    top: normalizedTop,
+    bottom: normalizedTop + height,
+    centerX: normalizedLeft + width / 2,
+    width,
+    height
+  };
+}
+
+function getSubtitleTextRects(elements) {
+  const rects = [];
+  for (const element of elements || []) {
+    if (!element || !element.isConnected || element.closest(`#${OVERLAY_ID}`)) continue;
+    const childRects = getSubtitleLeafRects(element);
+    if (childRects.length) {
+      rects.push(...childRects);
+      continue;
+    }
+    const rect = element.getBoundingClientRect();
+    if (isUsableSubtitleRect(rect)) rects.push(rect);
+  }
+  return rects;
+}
+
+function getSubtitleLeafRects(element) {
+  if (!element.querySelectorAll) return [];
+  return Array.from(element.querySelectorAll("span, div, p"))
+    .slice(0, 80)
+    .filter((child) => {
+      if (!child || child.closest(`#${OVERLAY_ID}`)) return false;
+      const text = normalizeSubtitleText(child.innerText || child.textContent);
+      return isPlausibleSubtitle(text);
+    })
+    .map((child) => child.getBoundingClientRect())
+    .filter(isUsableSubtitleRect);
+}
+
+function isUsableSubtitleRect(rect) {
+  if (!rect || rect.width < 8 || rect.height < 6) return false;
+  if (rect.bottom <= 0 || rect.top >= window.innerHeight) return false;
+  if (rect.right <= 0 || rect.left >= window.innerWidth) return false;
+  if (rect.top < window.innerHeight * 0.45) return false;
+  return true;
+}
+
+function syncOverlayToNativeSubtitle(elements) {
+  if (!state.overlay || !elements.length) return;
+  const rects = elements
+    .map((element) => element.getBoundingClientRect())
+    .filter((rect) => rect.width > 2 && rect.height > 2);
+  if (!rects.length) return;
+
+  const left = Math.min(...rects.map((rect) => rect.left));
+  const right = Math.max(...rects.map((rect) => rect.right));
+  const bottom = Math.max(...rects.map((rect) => rect.bottom));
+  const centerX = (left + right) / 2;
+  const width = Math.max(right - left + 96, 360);
+
+  state.overlay.style.left = `${Math.round(centerX)}px`;
+  state.overlay.style.bottom = `${Math.max(24, Math.round(window.innerHeight - bottom))}px`;
+  state.overlay.style.maxWidth = `${Math.min(Math.round(width), Math.round(window.innerWidth * 0.9))}px`;
+}
+
+function hideNativeSubtitles() {
+  pruneNativeSubtitleElements();
+  if (state.nativeSubtitleElements.size) {
+    syncNativeMasksToSubtitleElements(Array.from(state.nativeSubtitleElements));
+  }
+  for (const element of state.nativeSubtitleElements) {
+    if (!element || !element.isConnected) continue;
+    if (!element.classList.contains("ndst-native-subtitle-hidden")) {
+      element.classList.add("ndst-native-subtitle-hidden");
+      state.nativeHiddenCount += 1;
+    }
+    if (!state.nativeSubtitleStyleCache.has(element)) {
+      state.nativeSubtitleStyleCache.set(element, {
+        opacity: element.style.getPropertyValue("opacity"),
+        opacityPriority: element.style.getPropertyPriority("opacity"),
+        visibility: element.style.getPropertyValue("visibility"),
+        visibilityPriority: element.style.getPropertyPriority("visibility"),
+        color: element.style.getPropertyValue("color"),
+        colorPriority: element.style.getPropertyPriority("color"),
+        webkitTextFillColor: element.style.getPropertyValue("-webkit-text-fill-color"),
+        webkitTextFillColorPriority: element.style.getPropertyPriority("-webkit-text-fill-color"),
+        webkitTextStrokeColor: element.style.getPropertyValue("-webkit-text-stroke-color"),
+        webkitTextStrokeColorPriority: element.style.getPropertyPriority("-webkit-text-stroke-color"),
+        textShadow: element.style.getPropertyValue("text-shadow"),
+        textShadowPriority: element.style.getPropertyPriority("text-shadow"),
+        background: element.style.getPropertyValue("background"),
+        backgroundPriority: element.style.getPropertyPriority("background"),
+        backgroundColor: element.style.getPropertyValue("background-color"),
+        backgroundColorPriority: element.style.getPropertyPriority("background-color"),
+        backgroundImage: element.style.getPropertyValue("background-image"),
+        backgroundImagePriority: element.style.getPropertyPriority("background-image"),
+        borderColor: element.style.getPropertyValue("border-color"),
+        borderColorPriority: element.style.getPropertyPriority("border-color"),
+        boxShadow: element.style.getPropertyValue("box-shadow"),
+        boxShadowPriority: element.style.getPropertyPriority("box-shadow"),
+        filter: element.style.getPropertyValue("filter"),
+        filterPriority: element.style.getPropertyPriority("filter"),
+        clipPath: element.style.getPropertyValue("clip-path"),
+        clipPathPriority: element.style.getPropertyPriority("clip-path"),
+        webkitClipPath: element.style.getPropertyValue("-webkit-clip-path"),
+        webkitClipPathPriority: element.style.getPropertyPriority("-webkit-clip-path"),
+        overflow: element.style.getPropertyValue("overflow"),
+        overflowPriority: element.style.getPropertyPriority("overflow")
+      });
+    }
+    setImportantStyleIfNeeded(element, "opacity", "0");
+    setImportantStyleIfNeeded(element, "visibility", "hidden");
+    setImportantStyleIfNeeded(element, "color", "transparent");
+    setImportantStyleIfNeeded(element, "-webkit-text-fill-color", "transparent");
+    setImportantStyleIfNeeded(element, "-webkit-text-stroke-color", "transparent");
+    setImportantStyleIfNeeded(element, "text-shadow", "none");
+    setImportantStyleIfNeeded(element, "background", "transparent");
+    setImportantStyleIfNeeded(element, "background-color", "transparent");
+    setImportantStyleIfNeeded(element, "background-image", "none");
+    setImportantStyleIfNeeded(element, "border-color", "transparent");
+    setImportantStyleIfNeeded(element, "box-shadow", "none");
+    setImportantStyleIfNeeded(element, "filter", "opacity(0)");
+    setImportantStyleIfNeeded(element, "clip-path", "inset(50%)");
+    setImportantStyleIfNeeded(element, "-webkit-clip-path", "inset(50%)");
+    setImportantStyleIfNeeded(element, "overflow", "hidden");
+    recordNativeHiddenCandidate(element);
+  }
+}
+
+function pruneNativeSubtitleElements() {
+  if (!state.nativeSubtitleElements.size) return;
+  const kept = [];
+  for (const element of state.nativeSubtitleElements) {
+    if (!element || !element.isConnected || element.closest(`#${OVERLAY_ID}`)) continue;
+    if (!isInsidePlayerRoot(element)) continue;
+    kept.push(element);
+    if (kept.length >= MAX_NATIVE_SUBTITLE_ELEMENTS) break;
+  }
+  state.nativeSubtitleElements = new Set(kept);
+}
+
+function recordNativeHiddenCandidate(element) {
+  if (!document.documentElement) return;
+  const dataset = document.documentElement.dataset;
+  dataset.ndstContentNativeHiddenCount = String(state.nativeHiddenCount);
+  dataset.ndstContentNativeLastHiddenAt = String(Date.now());
+  dataset.ndstContentNativeLastHiddenText = normalizeSubtitleText(element.innerText || element.textContent).slice(0, 80);
+  dataset.ndstContentNativeLastHiddenClass = String(element.className || "").slice(0, 120);
+  dataset.ndstContentNativeLastHiddenUia = element.getAttribute("data-uia") || "";
+}
+
+function setImportantStyleIfNeeded(element, property, value) {
+  if (
+    element.style.getPropertyValue(property) === value &&
+    element.style.getPropertyPriority(property) === "important"
+  ) {
+    return;
+  }
+  element.style.setProperty(property, value, "important");
+}
+
+function restoreNativeSubtitles(clear = true) {
+  for (const element of state.nativeSubtitleElements) {
+    const cached = state.nativeSubtitleStyleCache.get(element);
+    if (!element) continue;
+    element.classList.remove("ndst-native-subtitle-hidden");
+    if (!cached) continue;
+    restoreStyleProperty(element, "opacity", cached.opacity, cached.opacityPriority);
+    restoreStyleProperty(element, "visibility", cached.visibility, cached.visibilityPriority);
+    restoreStyleProperty(element, "color", cached.color, cached.colorPriority);
+    restoreStyleProperty(element, "-webkit-text-fill-color", cached.webkitTextFillColor, cached.webkitTextFillColorPriority);
+    restoreStyleProperty(element, "-webkit-text-stroke-color", cached.webkitTextStrokeColor, cached.webkitTextStrokeColorPriority);
+    restoreStyleProperty(element, "text-shadow", cached.textShadow, cached.textShadowPriority);
+    restoreStyleProperty(element, "background", cached.background, cached.backgroundPriority);
+    restoreStyleProperty(element, "background-color", cached.backgroundColor, cached.backgroundColorPriority);
+    restoreStyleProperty(element, "background-image", cached.backgroundImage, cached.backgroundImagePriority);
+    restoreStyleProperty(element, "border-color", cached.borderColor, cached.borderColorPriority);
+    restoreStyleProperty(element, "box-shadow", cached.boxShadow, cached.boxShadowPriority);
+    restoreStyleProperty(element, "filter", cached.filter, cached.filterPriority);
+    restoreStyleProperty(element, "clip-path", cached.clipPath, cached.clipPathPriority);
+    restoreStyleProperty(element, "-webkit-clip-path", cached.webkitClipPath, cached.webkitClipPathPriority);
+    restoreStyleProperty(element, "overflow", cached.overflow, cached.overflowPriority);
+  }
+  if (clear) state.nativeSubtitleElements.clear();
+}
+
+function restoreStyleProperty(element, property, value, priority) {
+  if (value) {
+    element.style.setProperty(property, value, priority || "");
+  } else {
+    element.style.removeProperty(property);
+  }
+}
+
+async function loadPretranslatedCues() {
+  if (!state.settings) return [];
+  const videoKey = getCurrentVideoKey();
+  if (!videoKey) return [];
+  try {
+    const response = await chrome.runtime.sendMessage({
+      type: "LOAD_PRETRANSLATED_CUES",
+      query: {
+        videoKey,
+        targetLanguage: state.settings.targetLanguage || "zh-CN",
+        model: state.settings.model || "deepseek-v4-flash"
+      }
+    });
+    if (!response || !response.ok || !response.set) {
+      state.pretranslatedSet = null;
+      return [];
+    }
+    state.pretranslatedSet = response.set;
+    return response.cues || [];
+  } catch (error) {
+    if (quiesceInvalidatedExtensionContext(error)) return [];
+    console.error("[Netflix DeepSeek Translator] load pretranslated cues failed", error);
+    state.pretranslatedSet = null;
+    return [];
+  }
+}
+
+function getCueByCurrentTime(currentTime) {
+  if (!Number.isFinite(currentTime)) return null;
+  const offsetSeconds = Number((state.settings && state.settings.subtitleOffsetMs) || 0) / 1000;
+  const adjustedTime = currentTime + offsetSeconds;
+  let low = 0;
+  let high = state.pretranslatedCues.length - 1;
+  while (low <= high) {
+    const middle = Math.floor((low + high) / 2);
+    const cue = state.pretranslatedCues[middle];
+    if (adjustedTime < cue.start) {
+      high = middle - 1;
+    } else if (adjustedTime > cue.end) {
+      low = middle + 1;
+    } else {
+      return cue;
+    }
+  }
+  return null;
+}
+
+function renderPretranslatedSubtitle(cue) {
+  if (!cue) {
+    if (!state.pretranslatedCues.length) {
+      updateOverlay("Ê≤°ÊúâÂåπÈÖçÁöÑÊú¨Âú∞È¢ÑÁøªËØëÂ≠óÂπïÔºåËØ∑ÂØºÂÖ• SRT/VTT ÊàñÂàáÂõûÂÆûÊó∂Ê®°Âºè", "", "hint");
+      return;
+    }
+    state.lastPretranslatedCueId = "";
+    scheduleClear();
+    return;
+  }
+  const cueId = String(cue.cueId || cue.id || `${cue.start}-${cue.end}`);
+  if (cueId === state.lastPretranslatedCueId) return;
+  state.lastPretranslatedCueId = cueId;
+  state.requestSequence += 1;
+  cancelScheduledClear();
+  state.lastSubtitleAt = Date.now();
+  state.lastSourceText = cue.sourceText || cue.text || "";
+  state.lastTranslation = cue.translation || cue.text || "";
+  state.lastTranslationSourceText = state.lastSourceText;
+  updateOverlay(state.lastSourceText, state.lastTranslation, "ready");
+}
+
+function getCurrentVideoTime() {
+  const video = document.querySelector("video");
+  return video ? video.currentTime : NaN;
+}
+
+function getCurrentVideoKey() {
+  const match = location.pathname.match(/\/watch\/(\d+)/);
+  return match ? `netflix-${match[1]}` : "";
+}
+
+function bindNativeTextTrackGuards() {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  const videos = Array.from(document.querySelectorAll("video"));
+  for (const video of videos) {
+    addNativeGuardListener(video, "loadedmetadata", handleNativeSubtitleTrackActivity);
+    addNativeGuardListener(video, "loadeddata", handleNativeSubtitleTrackActivity);
+    addNativeGuardListener(video, "play", handleNativeSubtitleTrackActivity);
+    addNativeGuardListener(video, "seeking", handleNativeSubtitleTrackActivity);
+    addNativeGuardListener(video, "seeked", handleNativeSubtitleTrackActivity);
+    const textTracks = video.textTracks;
+    if (textTracks && textTracks.addEventListener) {
+      addNativeGuardListener(textTracks, "change", handleNativeSubtitleTrackActivity);
+      addNativeGuardListener(textTracks, "addtrack", handleNativeSubtitleTrackActivity);
+      addNativeGuardListener(textTracks, "removetrack", handleNativeSubtitleTrackActivity);
+    }
+  }
+  for (const track of getVideoTextTracks()) {
+    if (!isSubtitleTextTrack(track) || !track.addEventListener) continue;
+    addNativeGuardListener(track, "cuechange", handleNativeSubtitleTrackActivity);
+  }
+}
+
+function addNativeGuardListener(target, type, listener) {
+  if (!target || !target.addEventListener) return;
+  const exists = state.nativeTrackEventListeners.some((entry) =>
+    entry.target === target && entry.type === type && entry.listener === listener
+  );
+  if (exists) return;
+  target.addEventListener(type, listener);
+  state.nativeTrackEventListeners.push({ target, type, listener });
+}
+
+function removeNativeTextTrackGuards() {
+  for (const entry of state.nativeTrackEventListeners) {
+    try {
+      entry.target.removeEventListener(entry.type, entry.listener);
+    } catch (error) {
+      // Ignore detached media objects.
+    }
+  }
+  state.nativeTrackEventListeners = [];
+}
+
+function handleNativeSubtitleTrackActivity() {
+  if (!shouldHideNativeSubtitles() || !isNetflixWatchPage()) return;
+  document.documentElement.dataset.ndstHideNativeSubtitles = "true";
+  notifyMainTextTrackGuard();
+  armNativeFlashProtection(900);
+  suppressNativeVideoTextTracks();
+  const activeCueElements = findNativeSubtitleElementsMatchingActiveCues({ force: true });
+  if (activeCueElements.length) {
+    hideNativeSubtitleElementsNow(activeCueElements);
+  }
+  startNativeSuppressionFrameGuard(1);
+  queueNativeHideReapply();
+  scheduleImmediateCachedRender(0);
+  scheduleScan(100);
+}
+
+function suppressNativeVideoTextTracks() {
+  for (const track of getVideoTextTracks()) {
+    if (!isSubtitleTextTrack(track)) continue;
+    try {
+      if (String(track.mode || "").toLowerCase() !== "showing") continue;
+      if (!state.nativeTextTrackModeCache.has(track)) {
+        state.nativeTextTrackModeCache.set(track, track.mode);
+      }
+      // Hidden tracks still update activeCues, but the browser does not render their native cue boxes.
+      track.mode = "hidden";
+    } catch (error) {
+      // Ignore tracks that disappear or reject mode changes during player updates.
+    }
+  }
+}
+
+function restoreNativeVideoTextTracksIfAllowed() {
+  if (isNetflixWatchPage() && shouldHideNativeSubtitles()) {
+    suppressNativeVideoTextTracks();
+    notifyMainTextTrackGuard();
+    return;
+  }
+  restoreNativeVideoTextTracks();
+}
+
+function restoreNativeVideoTextTracks() {
+  for (const track of getVideoTextTracks()) {
+    if (!state.nativeTextTrackModeCache.has(track)) continue;
+    const previousMode = state.nativeTextTrackModeCache.get(track);
+    try {
+      track.mode = previousMode || "showing";
+    } catch (error) {
+      // Ignore tracks that disappeared or reject mode changes.
+    }
+  }
+  state.nativeTextTrackModeCache = new WeakMap();
+}
+
+function getVideoTextTracks() {
+  const tracks = [];
+  for (const video of Array.from(document.querySelectorAll("video"))) {
+    if (!video || !video.textTracks) continue;
+    tracks.push(...Array.from(video.textTracks));
+  }
+  return tracks;
+}
+
+function isSubtitleTextTrack(track) {
+  if (!track) return false;
+  const kind = String(track.kind || "").toLowerCase();
+  return kind === "subtitles" || kind === "captions" || kind === "descriptions" || !kind;
+}
+
+})();

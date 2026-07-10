@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-  const BUILD_ID = "2026-07-10-cue-clear-61";
+  const BUILD_ID = "2026-07-10-audit-62";
   const STYLE_ID = "netflix-deepseek-native-subtitle-suppression";
   const MASK_ID = "netflix-deepseek-native-subtitle-mask";
   const OVERLAY_ID = "netflix-deepseek-subtitle-overlay";
