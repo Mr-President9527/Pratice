@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Netflix DeepSeek Subtitle Translator",
-  "description": "Translate visible Netflix subtitles to Chinese with DeepSeek and show them as an overlay.",
-  "version": "0.1.84",
+  "name": "Netflix & YouTube DeepSeek Subtitle Translator",
+  "description": "Translate visible Netflix and YouTube subtitles to Chinese with DeepSeek and show them as an overlay.",
+  "version": "0.2.0",
   "permissions": ["storage", "scripting", "webNavigation"],
   "host_permissions": [
     "https://www.netflix.com/*",
+    "https://www.youtube.com/*",
     "https://api.deepseek.com/*"
   ],
   "background": {
@@ -25,10 +26,17 @@
       "css": ["src/overlay.css"],
       "run_at": "document_start",
       "all_frames": false
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/content-youtube.js"],
+      "css": ["src/youtube-overlay.css"],
+      "run_at": "document_start",
+      "all_frames": false
     }
   ],
   "action": {
-    "default_title": "Netflix Subtitle Translator",
+    "default_title": "Netflix & YouTube Subtitle Translator",
     "default_popup": "src/popup.html"
   },
   "options_page": "src/options.html",

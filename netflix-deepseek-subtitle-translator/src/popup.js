@@ -1,6 +1,7 @@
 "use strict";
 
 const elements = {
+  platformText: document.getElementById("platformText"),
   enabledText: document.getElementById("enabledText"),
   apiKeyText: document.getElementById("apiKeyText"),
   modelText: document.getElementById("modelText"),
@@ -20,6 +21,7 @@ const elements = {
 const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-audit-62";
 const CONTENT_BUILD_ID = "2026-07-10-audit-62";
 const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-audit-62";
+const YOUTUBE_BUILD_ID = "2026-07-11-youtube-2";
 
 document.addEventListener("DOMContentLoaded", loadStatus);
 elements.enabledToggle.addEventListener("change", toggleEnabled);
@@ -50,7 +52,7 @@ function renderStatus(status) {
 }
 
 async function loadPretranslatedStatus(status) {
-  const videoKey = await getActiveNetflixVideoKey();
+  const videoKey = await getActiveVideoKey();
   if (!videoKey) {
     elements.pretranslatedText.textContent = "未匹配页面";
     return;
@@ -77,11 +79,20 @@ async function loadPretranslatedStatus(status) {
 
 async function loadPageDiagnostics() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab || !tab.id || !tab.url || !tab.url.startsWith("https://www.netflix.com/")) {
-    elements.pageControlText.textContent = "非 Netflix 页面";
+  const platform = tab && tab.url ? getSupportedPlatform(tab.url) : "";
+  elements.platformText.textContent = platform === "netflix"
+    ? "Netflix"
+    : platform === "youtube" ? "YouTube" : "不支持";
+  if (!tab || !tab.id || !platform) {
+    elements.pageControlText.textContent = "非支持页面";
     elements.buildText.textContent = "-";
     elements.nativeHitText.textContent = "-";
     elements.nativeLastText.textContent = "-";
+    return;
+  }
+
+  if (platform === "youtube") {
+    await loadYouTubePageDiagnostics(tab.id);
     return;
   }
 
@@ -90,7 +101,7 @@ async function loadPageDiagnostics() {
     if (!response || !response.ok || !response.diagnostics) {
       const injectedResponse = await injectAndReadPageDiagnostics(tab.id);
       if (!injectedResponse || !injectedResponse.ok || !injectedResponse.diagnostics) {
-        renderMissingDiagnostics();
+        renderMissingDiagnostics("netflix");
         return;
       }
       renderPageDiagnostics(injectedResponse.diagnostics);
@@ -116,7 +127,24 @@ async function loadPageDiagnostics() {
     } catch (injectError) {
       console.error("[Netflix DeepSeek Translator] inject failed", injectError);
     }
-    renderMissingDiagnostics();
+    renderMissingDiagnostics("netflix");
+  }
+}
+
+async function loadYouTubePageDiagnostics(tabId) {
+  try {
+    let response = await getPageDiagnosticsFromTab(tabId).catch(() => null);
+    if (!response || !response.ok || !response.diagnostics ||
+        response.diagnostics.buildId !== YOUTUBE_BUILD_ID) {
+      response = await injectAndReadYouTubeDiagnostics(tabId);
+    }
+    if (!response || !response.ok || !response.diagnostics) {
+      renderMissingDiagnostics("youtube");
+      return;
+    }
+    renderYouTubeDiagnostics(response.diagnostics);
+  } catch (error) {
+    renderMissingDiagnostics("youtube");
   }
 }
 
@@ -165,6 +193,29 @@ async function injectAndReadPageDiagnostics(tabId) {
   return getPageDiagnosticsFromTab(tabId);
 }
 
+async function injectAndReadYouTubeDiagnostics(tabId) {
+  if (!chrome.scripting || !chrome.scripting.executeScript || !chrome.scripting.insertCSS) {
+    return null;
+  }
+  await chrome.scripting.insertCSS({
+    target: { tabId },
+    files: ["src/youtube-overlay.css"]
+  });
+  const results = await chrome.scripting.executeScript({
+    target: { tabId },
+    func: () => document.documentElement.dataset.ndstYoutubeBuildId || ""
+  });
+  const currentBuild = results && results[0] ? results[0].result : "";
+  if (currentBuild !== YOUTUBE_BUILD_ID) {
+    await chrome.scripting.executeScript({
+      target: { tabId },
+      files: ["src/content-youtube.js"]
+    });
+  }
+  await delay(180);
+  return getPageDiagnosticsFromTab(tabId);
+}
+
 function isPageDiagnosticsCurrent(diagnostics) {
   return Boolean(
     diagnostics &&
@@ -205,11 +256,19 @@ function delay(ms) {
   });
 }
 
-function renderMissingDiagnostics() {
+function renderMissingDiagnostics(platform = "") {
   elements.pageControlText.textContent = "未接管";
   elements.buildText.textContent = "not injected";
   elements.nativeHitText.textContent = "0";
-  elements.nativeLastText.textContent = "内容脚本未注入";
+  elements.nativeLastText.textContent = `${platform === "youtube" ? "YouTube" : "Netflix"} 内容脚本未注入`;
+}
+
+function renderYouTubeDiagnostics(diagnostics) {
+  const hidden = diagnostics.hideNativeSubtitles === "true";
+  elements.pageControlText.textContent = `已接管 / ${hidden ? "隐藏中" : "未隐藏"}`;
+  elements.buildText.textContent = diagnostics.buildId || "youtube?";
+  elements.nativeHitText.textContent = `${Number(diagnostics.nativeCaptionCount || 0)} 个 / 可见 ${Number(diagnostics.nativeVisibleCount || 0)}`;
+  elements.nativeLastText.textContent = diagnostics.sourceText || diagnostics.overlayText || "-";
 }
 
 function renderPageDiagnostics(diagnostics) {
@@ -264,7 +323,7 @@ function getNativeHideOffReason(diagnostics) {
 
 async function toggleEnabled() {
   if (elements.enabledToggle.checked) {
-    await prehideActiveNetflixTab();
+    await prehideActiveSupportedTab();
   }
 
   const settingsResponse = await chrome.runtime.sendMessage({ type: "GET_SETTINGS" });
@@ -290,10 +349,26 @@ async function toggleEnabled() {
   showStatus(elements.enabledToggle.checked ? "已启用" : "已暂停");
 }
 
-async function prehideActiveNetflixTab() {
+async function prehideActiveSupportedTab() {
   if (!chrome.scripting || !chrome.scripting.executeScript || !chrome.scripting.insertCSS) return;
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab || !tab.id || !tab.url || !tab.url.startsWith("https://www.netflix.com/watch/")) return;
+  const platform = tab && tab.url ? getSupportedPlatform(tab.url) : "";
+  if (!tab || !tab.id || !platform) return;
+
+  if (platform === "youtube") {
+    await chrome.scripting.insertCSS({
+      target: { tabId: tab.id },
+      files: ["src/youtube-overlay.css"]
+    }).catch(() => {});
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["src/content-youtube.js"]
+    }).catch(() => {});
+    await chrome.tabs.sendMessage(tab.id, { type: "PREHIDE_NATIVE_SUBTITLES" }).catch(() => {});
+    return;
+  }
+
+  if (!tab.url.startsWith("https://www.netflix.com/watch/")) return;
 
   await chrome.scripting.insertCSS({
     target: { tabId: tab.id },
@@ -348,21 +423,44 @@ function openOptions() {
 }
 
 async function openPretranslate() {
-  const videoKey = await getActiveNetflixVideoKey();
+  const videoKey = await getActiveVideoKey();
   const pageUrl = videoKey
     ? chrome.runtime.getURL(`src/pretranslate.html?videoKey=${encodeURIComponent(videoKey)}`)
     : chrome.runtime.getURL("src/pretranslate.html");
   await chrome.tabs.create({ url: pageUrl });
 }
 
-async function getActiveNetflixVideoKey() {
+async function getActiveVideoKey() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab || !tab.url) return "";
 
   try {
     const url = new URL(tab.url);
-    const match = url.pathname.match(/\/watch\/(\d+)/);
-    return match ? `netflix-${match[1]}` : "";
+    if (url.hostname === "www.netflix.com") {
+      const match = url.pathname.match(/\/watch\/(\d+)/);
+      return match ? `netflix-${match[1]}` : "";
+    }
+    if (url.hostname === "www.youtube.com") {
+      if (url.pathname === "/watch") {
+        const id = url.searchParams.get("v");
+        return id ? `youtube-${id}` : "";
+      }
+      const match = url.pathname.match(/^\/(?:shorts|live)\/([^/?#]+)/);
+      return match ? `youtube-${match[1]}` : "";
+    }
+    return "";
+  } catch (error) {
+    return "";
+  }
+}
+
+function getSupportedPlatform(urlValue) {
+  try {
+    const url = new URL(urlValue);
+    if (url.protocol !== "https:") return "";
+    if (url.hostname === "www.netflix.com") return "netflix";
+    if (url.hostname === "www.youtube.com") return "youtube";
+    return "";
   } catch (error) {
     return "";
   }
@@ -370,8 +468,9 @@ async function getActiveNetflixVideoKey() {
 
 async function clearCurrentOverlay() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab || !tab.id || !tab.url || !tab.url.startsWith("https://www.netflix.com/")) {
-    showStatus("请先切换到 Netflix 页面", true);
+  const platform = tab && tab.url ? getSupportedPlatform(tab.url) : "";
+  if (!tab || !tab.id || !platform) {
+    showStatus("请先切换到 Netflix 或 YouTube 页面", true);
     return;
   }
 
@@ -379,7 +478,7 @@ async function clearCurrentOverlay() {
     await chrome.tabs.sendMessage(tab.id, { type: "CLEAR_OVERLAY" });
     showStatus("当前页面字幕已清空");
   } catch (error) {
-    showStatus("当前 Netflix 页面未加载内容脚本", true);
+    showStatus(`当前 ${platform === "youtube" ? "YouTube" : "Netflix"} 页面未加载内容脚本`, true);
   }
 }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Netflix DeepSeek Subtitle Translator 设置</title>
+  <title>Netflix & YouTube DeepSeek Subtitle Translator 设置</title>
   <style>
     :root {
       color-scheme: light;
@@ -160,8 +160,8 @@
 </head>
 <body>
   <main>
-    <h1>Netflix DeepSeek Subtitle Translator</h1>
-    <p class="subtitle">配置 DeepSeek API、字幕来源和 Netflix 覆盖字幕显示方式。API Key 只保存在本地浏览器存储中。</p>
+    <h1>Netflix & YouTube DeepSeek Subtitle Translator</h1>
+    <p class="subtitle">配置 DeepSeek API、字幕来源和覆盖字幕显示方式。API Key 只保存在本地浏览器存储中。</p>
 
     <form id="options-form">
       <fieldset>
@@ -199,7 +199,7 @@
           <label>
             <span>字幕来源</span>
             <select id="subtitleSourceMode">
-              <option value="live">实时识别 Netflix 当前字幕</option>
+              <option value="live">实时识别当前平台字幕</option>
               <option value="pretranslated">本地预翻译字幕</option>
             </select>
           </label>
@@ -243,12 +243,12 @@
 
       <label class="checkbox-row">
         <input id="hideNativeSubtitles" type="checkbox">
-        <span>隐藏 Netflix 原生字幕</span>
+        <span>隐藏平台原生字幕</span>
       </label>
 
       <label class="checkbox-row">
         <input id="advancedSubtitleFallback" type="checkbox">
-        <span>启用高级字幕 fallback</span>
+        <span>启用 Netflix 高级字幕 fallback</span>
       </label>
 
       <div class="actions">
