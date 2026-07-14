@@ -18,8 +18,8 @@ const elements = {
   status: document.getElementById("status")
 };
 
-const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-audit-62";
-const CONTENT_BUILD_ID = "2026-07-10-audit-62";
+const TEXTTRACK_GUARD_BUILD_ID = "2026-07-14-hint-1";
+const CONTENT_BUILD_ID = "2026-07-14-hint-1";
 const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-audit-62";
 const YOUTUBE_BUILD_ID = "2026-07-11-youtube-2";
 

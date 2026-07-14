@@ -8,7 +8,7 @@ const root = path.join(__dirname, "..");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "manifest.json"), "utf8"));
 
 assert.equal(manifest.manifest_version, 3);
-assert.equal(manifest.version, "0.2.1");
+assert.equal(manifest.version, "0.2.2");
 assert.deepEqual(
   [...manifest.host_permissions].sort(),
   [

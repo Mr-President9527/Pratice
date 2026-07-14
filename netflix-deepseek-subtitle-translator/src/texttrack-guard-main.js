@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-  const BUILD_ID = "2026-07-10-audit-62";
+  const BUILD_ID = "2026-07-14-hint-1";
   const STATE_KEY = "__NDST_TEXT_TRACK_GUARD__";
   const MAIN_STYLE_ID = "netflix-deepseek-main-native-subtitle-suppression";
   const RETRY_DELAYS_MS = [0, 25, 75, 150, 300, 600, 1000, 1600, 2400];
@@ -44,6 +44,8 @@
     state.trackNodeObserver = null;
     state.trackNodeObserverStarted = false;
     state.eventsAttached = false;
+    state.patched = false;
+    state.addTextTrackPatched = false;
     state.shortBurstPending = false;
     state.trackCueGuarded = new WeakSet();
     state.forcedHiddenTracks = new WeakSet();
@@ -188,15 +190,19 @@ html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-tr
           return state.originalDescriptor.get.call(this);
         },
         set(value) {
+          const subtitleTrack = isSubtitleTextTrack(this);
           const shouldBlock = typeof state.shouldBlockShowingMode === "function" &&
             state.shouldBlockShowingMode(this, value);
           const nextValue = shouldBlock ? "hidden" : value;
           if (nextValue !== value) {
             state.forcedHiddenTracks.add(this);
             state.blockedCount += 1;
-            markGuardState("blocked");
           }
-          return state.originalDescriptor.set.call(this, nextValue);
+          const result = state.originalDescriptor.set.call(this, nextValue);
+          if (subtitleTrack) {
+            markGuardState(nextValue !== value ? "blocked" : "track-mode-change");
+          }
+          return result;
         }
       });
       state.patched = true;
@@ -384,6 +390,27 @@ html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-tr
     currentRoot.dataset.ndstTextTrackGuardBuildId = BUILD_ID;
     currentRoot.dataset.ndstTextTrackGuardStatus = status;
     currentRoot.dataset.ndstTextTrackGuardBlockedCount = String(state.blockedCount || 0);
+    currentRoot.dataset.ndstTextTrackGuardEnabledCount = String(countEnabledSubtitleTracks());
     currentRoot.dataset.ndstTextTrackGuardAddTrack = state.addTextTrackPatched ? "true" : "false";
+  }
+
+  function countEnabledSubtitleTracks() {
+    let count = 0;
+    const videos = document.querySelectorAll ? document.querySelectorAll("video") : [];
+    for (const video of Array.from(videos)) {
+      const tracks = video && video.textTracks ? Array.from(video.textTracks) : [];
+      for (const track of tracks) {
+        if (!isSubtitleTextTrack(track)) continue;
+        try {
+          const mode = String(track.mode || "").toLowerCase();
+          if (mode === "showing" || (mode === "hidden" && state.forcedHiddenTracks.has(track))) {
+            count += 1;
+          }
+        } catch (error) {
+          // Ignore tracks that disappear during player replacement.
+        }
+      }
+    }
+    return count;
   }
 })();

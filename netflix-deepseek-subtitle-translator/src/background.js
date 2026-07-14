@@ -13,8 +13,8 @@ const DEEPSEEK_ENDPOINT = "https://api.deepseek.com/chat/completions";
 const API_REQUEST_TIMEOUT_MS = 8000;
 const API_MAX_ATTEMPTS = 2;
 const API_RETRYABLE_STATUS_CODES = new Set([408, 425, 429, 500, 502, 503, 504]);
-const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-audit-62";
-const CONTENT_BUILD_ID = "2026-07-10-audit-62";
+const TEXTTRACK_GUARD_BUILD_ID = "2026-07-14-hint-1";
+const CONTENT_BUILD_ID = "2026-07-14-hint-1";
 const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-audit-62";
 
 const DEFAULT_SETTINGS = {

@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-const BUILD_ID = "2026-07-10-audit-62";
+const BUILD_ID = "2026-07-14-hint-1";
 if (
   document.documentElement.dataset.ndstContentNetflix === "loaded" &&
   document.documentElement.dataset.ndstBuildId === BUILD_ID
@@ -15,6 +15,7 @@ const NATIVE_PLAYER_MASK_ID = "netflix-deepseek-native-subtitle-player-mask";
 const CONTENT_CLEANUP_KEY = "__NDST_CONTENT_CLEANUP__";
 const DEFAULT_SUBTITLE_SCAN_DEBOUNCE_MS = 250;
 const NO_SUBTITLE_HINT_DELAY_MS = 2500;
+const NO_SUBTITLE_HINT_TEXT = "请先在 Netflix 播放器中开启英文或日文字幕";
 const MAX_SAME_SUBTITLE_HOLD_MS = 14000;
 const MAX_SUBTITLE_LENGTH = 220;
 const MAX_NATIVE_SUBTITLE_ELEMENTS = 48;
@@ -57,6 +58,13 @@ const BROAD_SUBTITLE_LAYER_SELECTORS = [
 ];
 const NATIVE_SUBTITLE_LAYER_SELECTOR = NATIVE_SUBTITLE_LAYER_SELECTORS.join(",");
 const BROAD_SUBTITLE_LAYER_SELECTOR = BROAD_SUBTITLE_LAYER_SELECTORS.join(",");
+const SUBTITLE_ENABLEMENT_LAYER_SELECTOR = [
+  ".player-timedtext",
+  ".player-timedtext-text-container",
+  ".player-subtitle-text",
+  '[data-uia*="player-timedtext" i]',
+  '[data-uia="player-subtitle-text"]'
+].join(",");
 const STYLE_GLOBAL_SUBTITLE_SELECTORS = [
   ".player-timedtext",
   ".player-timedtext-text-container",
@@ -252,7 +260,9 @@ function getPageDiagnostics() {
     textTrackGuardBuildId: dataset.ndstTextTrackGuardBuildId || "",
     textTrackGuardStatus: dataset.ndstTextTrackGuardStatus || "",
     textTrackGuardBlockedCount: Number(dataset.ndstTextTrackGuardBlockedCount || 0),
+    textTrackGuardEnabledCount: Number(dataset.ndstTextTrackGuardEnabledCount || 0),
     textTrackGuardAddTrack: dataset.ndstTextTrackGuardAddTrack || "",
+    nativeSubtitleEnabledState: getNativeSubtitleEnabledState(),
     hideNativeSubtitles: dataset.ndstHideNativeSubtitles,
     settingsEnabled: dataset.ndstSettingsEnabled || "",
     settingsHideNativeSubtitles: dataset.ndstSettingsHideNativeSubtitles || "",
@@ -415,6 +425,7 @@ function stopWatchPageWork() {
   state.pendingMutations = [];
   window.clearTimeout(state.clearTimer);
   window.clearTimeout(state.hintTimer);
+  state.hintTimer = 0;
   window.clearTimeout(state.errorTimer);
   window.clearTimeout(state.locationChangeTimer);
   clearNativeHideReapplyTimers();
@@ -454,6 +465,7 @@ function cleanupCurrentInstance() {
   state.pendingMutations = [];
   window.clearTimeout(state.clearTimer);
   window.clearTimeout(state.hintTimer);
+  state.hintTimer = 0;
   window.clearTimeout(state.errorTimer);
   window.clearTimeout(state.locationChangeTimer);
   clearNativeHideReapplyTimers();
@@ -1209,6 +1221,7 @@ function handleLocationChange() {
   state.lastSourceText = "";
   state.lastTranslation = "";
   state.lastTranslationSourceText = "";
+  state.lastSubtitleAt = 0;
   state.translationContext = [];
   state.lastPretranslatedCueId = "";
   loadPretranslatedCues().then((cues) => {
@@ -1277,6 +1290,7 @@ function scanForSubtitle() {
   }
 
   window.clearTimeout(state.hintTimer);
+  state.hintTimer = 0;
   cancelScheduledClear();
   const sameSource = sourceText === state.lastSourceText;
   if (
@@ -1910,7 +1924,7 @@ function updateOverlay(sourceText, translation, status) {
   translationElement.textContent = normalizedTranslation;
 
   if (status === "hint") {
-    statusElement.textContent = normalizedSourceText || "请先在 Netflix 播放器中开启英文或日文字幕";
+    statusElement.textContent = normalizedSourceText || NO_SUBTITLE_HINT_TEXT;
   } else if (status === "loading") {
     statusElement.textContent = "...";
   } else if (status === "error") {
@@ -1996,12 +2010,91 @@ function clearCurrentSubtitleState({ ignoreSourceText = false } = {}) {
 }
 
 function scheduleNoSubtitleHint() {
-  window.clearTimeout(state.hintTimer);
+  const enabledState = getNativeSubtitleEnabledState();
+  document.documentElement.dataset.ndstNativeSubtitleEnabledState = enabledState;
+  if (enabledState !== "disabled") {
+    window.clearTimeout(state.hintTimer);
+    state.hintTimer = 0;
+    clearNoSubtitleHintOverlay();
+    return;
+  }
+  if (state.hintTimer) return;
   state.hintTimer = window.setTimeout(() => {
-    if (!state.lastSourceText) {
-      updateOverlay("请先在 Netflix 播放器中开启英文或日文字幕", "", "hint");
+    state.hintTimer = 0;
+    if (
+      !state.lastSourceText &&
+      !state.pendingSourceText &&
+      getNativeSubtitleEnabledState() === "disabled"
+    ) {
+      updateOverlay(NO_SUBTITLE_HINT_TEXT, "", "hint");
     }
   }, NO_SUBTITLE_HINT_DELAY_MS);
+}
+
+function getNativeSubtitleEnabledState() {
+  const dataset = document.documentElement.dataset;
+  const guardMarkerPresent = Object.prototype.hasOwnProperty.call(
+    dataset,
+    "ndstTextTrackGuardEnabledCount"
+  );
+  const guardEnabledCount = guardMarkerPresent
+    ? Number(dataset.ndstTextTrackGuardEnabledCount || 0)
+    : null;
+  const trackStates = [];
+  for (const track of getVideoTextTracks()) {
+    if (!isSubtitleTextTrack(track)) continue;
+    let mode = "";
+    let activeCueCount = 0;
+    try {
+      mode = String(track.mode || "").toLowerCase();
+      activeCueCount = track.activeCues ? Number(track.activeCues.length || 0) : 0;
+    } catch (error) {
+      mode = "";
+    }
+    trackStates.push({
+      mode,
+      activeCueCount,
+      forcedHidden: mode === "hidden" && state.nativeTextTrackModeCache.get(track) === "showing"
+    });
+  }
+  return inferNativeSubtitleEnabledState({
+    guardEnabledCount,
+    trackStates,
+    hasMountedLayer: hasMountedNativeSubtitleLayer(),
+    hasSeenSubtitle: state.lastSubtitleAt > 0
+  });
+}
+
+function inferNativeSubtitleEnabledState(input) {
+  const {
+    guardEnabledCount = null,
+    trackStates = [],
+    hasMountedLayer = false,
+    hasSeenSubtitle = false
+  } = input || {};
+  if (Number(guardEnabledCount) > 0) return "enabled";
+  if (trackStates.some((track) =>
+    track.mode === "showing" || track.forcedHidden || Number(track.activeCueCount) > 0
+  )) {
+    return "enabled";
+  }
+  if (trackStates.length && trackStates.every((track) => track.mode === "disabled")) {
+    return "disabled";
+  }
+  if (hasMountedLayer || hasSeenSubtitle) return "enabled";
+  return "unknown";
+}
+
+function hasMountedNativeSubtitleLayer() {
+  const playerRoot = findPlayerRoot();
+  return Boolean(playerRoot && playerRoot.querySelector(SUBTITLE_ENABLEMENT_LAYER_SELECTOR));
+}
+
+function clearNoSubtitleHintOverlay() {
+  if (!state.overlay || state.overlay.dataset.status !== "hint") return;
+  const statusElement = state.overlay.querySelector(".ndst-status");
+  if (!statusElement || statusElement.textContent !== NO_SUBTITLE_HINT_TEXT) return;
+  updateOverlay("", "", "empty");
 }
 
 function shouldHideNativeSubtitles() {

@@ -30,14 +30,16 @@ vm.runInNewContext([
   extractFunction("isTrustedRecentlyHiddenSubtitleCandidate"),
   extractFunction("getSubtitleClearDelayMs"),
   extractFunction("getSubtitleMaxHoldMs"),
-  "globalThis.helpers = { isLikelyEpisodeMetadataText, isTrustedRecentlyHiddenSubtitleCandidate, getSubtitleClearDelayMs, getSubtitleMaxHoldMs };"
+  extractFunction("inferNativeSubtitleEnabledState"),
+  "globalThis.helpers = { isLikelyEpisodeMetadataText, isTrustedRecentlyHiddenSubtitleCandidate, getSubtitleClearDelayMs, getSubtitleMaxHoldMs, inferNativeSubtitleEnabledState };"
 ].join("\n"), sandbox);
 
 const {
   isLikelyEpisodeMetadataText,
   isTrustedRecentlyHiddenSubtitleCandidate,
   getSubtitleClearDelayMs,
-  getSubtitleMaxHoldMs
+  getSubtitleMaxHoldMs,
+  inferNativeSubtitleEnabledState
 } = sandbox.helpers;
 
 assert.equal(
@@ -63,9 +65,34 @@ assert.equal(getSubtitleMaxHoldMs("Hi"), 8000);
 assert.equal(getSubtitleMaxHoldMs("A normal subtitle"), 10000);
 assert.equal(getSubtitleMaxHoldMs("This subtitle is deliberately a little longer"), 14000);
 
+assert.equal(inferNativeSubtitleEnabledState({
+  guardEnabledCount: 1,
+  trackStates: [{ mode: "hidden" }]
+}), "enabled");
+assert.equal(inferNativeSubtitleEnabledState({
+  guardEnabledCount: 0,
+  trackStates: [{ mode: "disabled" }],
+  hasSeenSubtitle: true
+}), "disabled");
+assert.equal(inferNativeSubtitleEnabledState({
+  guardEnabledCount: 0,
+  trackStates: [{ mode: "hidden", forcedHidden: true }]
+}), "enabled");
+assert.equal(inferNativeSubtitleEnabledState({
+  guardEnabledCount: 0,
+  trackStates: [],
+  hasSeenSubtitle: true
+}), "enabled");
+assert.equal(inferNativeSubtitleEnabledState({
+  guardEnabledCount: null,
+  trackStates: []
+}), "unknown");
+
 assert.match(contentSource, /setInterval\(runLiveRecognitionWatchdog, 350\)/);
 assert.match(contentSource, /function runLiveRecognitionWatchdog\(\)[\s\S]*?startObserver\(\)/);
 assert.match(contentSource, /if \(!sourceText\)[\s\S]*?scheduleClear\(\)/);
+assert.match(contentSource, /enabledState !== "disabled"[\s\S]*?clearNoSubtitleHintOverlay\(\)/);
+assert.match(contentSource, /getNativeSubtitleEnabledState\(\) === "disabled"/);
 assert.match(contentSource, /cancelScheduledClear\(\)/);
 assert.match(contentSource, /advancedSubtitleFallback !== true\) return "";[\s\S]*?findFromRecentlyHiddenNativeSubtitleText/);
 assert.match(contentSource, /clearCurrentSubtitleState\(\{ ignoreSourceText: true \}\)/);

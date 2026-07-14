@@ -6,6 +6,9 @@ const path = require("node:path");
 const vm = require("node:vm");
 
 const source = fs.readFileSync(path.join(__dirname, "..", "src", "popup.js"), "utf8");
+const backgroundSource = fs.readFileSync(path.join(__dirname, "..", "src", "background.js"), "utf8");
+const contentSource = fs.readFileSync(path.join(__dirname, "..", "src", "content-netflix.js"), "utf8");
+const guardSource = fs.readFileSync(path.join(__dirname, "..", "src", "texttrack-guard-main.js"), "utf8");
 
 function extractFunction(name) {
   const start = source.indexOf(`function ${name}`);
@@ -32,5 +35,11 @@ assert.equal(sandbox.getPlatform("https://m.youtube.com/watch?v=abc"), "");
 assert.equal(sandbox.getPlatform("https://example.com/watch/123"), "");
 assert.match(source, /src\/content-youtube\.js/);
 assert.match(source, /src\/content-netflix\.js/);
+assert.match(source, /CONTENT_BUILD_ID = "2026-07-14-hint-1"/);
+assert.match(source, /TEXTTRACK_GUARD_BUILD_ID = "2026-07-14-hint-1"/);
+assert.match(backgroundSource, /CONTENT_BUILD_ID = "2026-07-14-hint-1"/);
+assert.match(backgroundSource, /TEXTTRACK_GUARD_BUILD_ID = "2026-07-14-hint-1"/);
+assert.match(contentSource, /BUILD_ID = "2026-07-14-hint-1"/);
+assert.match(guardSource, /BUILD_ID = "2026-07-14-hint-1"/);
 
 console.log("popup platform regression test passed");

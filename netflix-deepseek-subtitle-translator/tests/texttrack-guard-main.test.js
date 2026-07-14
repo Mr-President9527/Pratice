@@ -87,6 +87,7 @@ vm.runInNewContext(fs.readFileSync(guardPath, "utf8"), context, { filename: guar
 
 assert.equal(track.mode, "hidden", "an already-showing subtitle track should be hidden immediately");
 assert.equal(track.activeCues[0].text, "Readable cue", "active cues must remain readable while hidden");
+assert.equal(root.dataset.ndstTextTrackGuardEnabledCount, "1");
 
 track.mode = "showing";
 assert.equal(track.mode, "hidden", "later attempts to show native subtitles should be intercepted");
@@ -95,5 +96,9 @@ assert.ok(Number(root.dataset.ndstTextTrackGuardBlockedCount) >= 1);
 root.dataset.ndstHideNativeSubtitles = "false";
 windowEvents.get("ndst-texttrack-guard-sync")();
 assert.equal(track.mode, "showing", "turning native subtitle hiding off should restore the track");
+assert.equal(root.dataset.ndstTextTrackGuardEnabledCount, "1");
+
+track.mode = "disabled";
+assert.equal(root.dataset.ndstTextTrackGuardEnabledCount, "0");
 
 console.log("texttrack guard regression test passed");
