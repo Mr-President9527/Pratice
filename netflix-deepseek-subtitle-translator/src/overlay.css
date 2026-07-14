@@ -1,0 +1,265 @@
+html:not([data-ndst-hide-native-subtitles="false"]) .player-timedtext,
+html:not([data-ndst-hide-native-subtitles="false"]) .player-timedtext *,
+html:not([data-ndst-hide-native-subtitles="false"]) .player-timedtext-text-container,
+html:not([data-ndst-hide-native-subtitles="false"]) .player-timedtext-text-container *,
+html:not([data-ndst-hide-native-subtitles="false"]) .player-subtitle-text,
+html:not([data-ndst-hide-native-subtitles="false"]) .player-subtitle-text *,
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="player-timedtext" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="player-timedtext" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="player-subtitle" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="player-subtitle" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="timedtext" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="timedtext" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="timed-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="timed-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="texttrack" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="texttrack" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="text-track" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [class*="text-track" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="player-timedtext" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="player-timedtext" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="player-subtitle" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="player-subtitle" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="timedtext" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="timedtext" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="timed-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="timed-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="texttrack" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="texttrack" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="text-track" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia*="text-track" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player-subtitle-text"],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player-subtitle-text"] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="subtitle-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="subtitle-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="subtitle-container" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="subtitle-container" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="caption-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="caption-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="caption-container" i],
+html:not([data-ndst-hide-native-subtitles="false"]) [data-uia="player"] [class*="caption-container" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="subtitle-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="subtitle-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="subtitle-container" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="subtitle-container" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="caption-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="caption-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="caption-container" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .watch-video [class*="caption-container" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="subtitle-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="subtitle-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="subtitle-container" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="subtitle-container" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="caption-text" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="caption-text" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="caption-container" i],
+html:not([data-ndst-hide-native-subtitles="false"]) .nf-player-container [class*="caption-container" i] *,
+html:not([data-ndst-hide-native-subtitles="false"]) .ndst-native-subtitle-hidden,
+html:not([data-ndst-hide-native-subtitles="false"]) .ndst-native-subtitle-hidden * {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  filter: opacity(0) !important;
+  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::cue {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  text-shadow: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: scale(0) !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-container,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-display,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-region,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-region-container {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  background: transparent !important;
+  text-shadow: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: scale(0) !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-background {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  background: transparent !important;
+  text-shadow: none !important;
+  transform: scale(0) !important;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-cue,
+html:not([data-ndst-hide-native-subtitles="false"]) video::-webkit-media-text-track-cue-background {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  text-shadow: none !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: scale(0) !important;
+}
+
+#netflix-deepseek-native-subtitle-mask,
+#netflix-deepseek-native-subtitle-player-mask {
+  position: fixed;
+  left: 50%;
+  bottom: 6.5%;
+  width: min(72vw, 980px);
+  height: clamp(54px, 9vh, 112px);
+  transform: translateX(-50%);
+  z-index: 2147483646;
+  display: none;
+  pointer-events: none;
+  border-radius: 6px;
+  background: transparent;
+}
+
+#netflix-deepseek-native-subtitle-player-mask {
+  position: absolute;
+}
+
+html:not([data-ndst-hide-native-subtitles="false"]):not([data-ndst-native-mask="false"]) #netflix-deepseek-native-subtitle-mask,
+html:not([data-ndst-hide-native-subtitles="false"]):not([data-ndst-native-mask="false"]) #netflix-deepseek-native-subtitle-player-mask {
+  display: none;
+}
+
+#netflix-deepseek-subtitle-overlay {
+  --ndst-font-size: 30px;
+  --ndst-bottom: 9%;
+  --ndst-bg-opacity: 0;
+  position: fixed;
+  left: 50%;
+  bottom: var(--ndst-bottom);
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  max-width: 82vw;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0 8px;
+  border-radius: 3px;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff;
+  font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: var(--ndst-font-size);
+  font-weight: 700;
+  line-height: 1.22;
+  text-align: center;
+  -webkit-text-stroke: 0.55px rgba(0, 0, 0, 0.94);
+  text-shadow:
+    0 0 2px rgba(0, 0, 0, 1),
+    0 2px 3px rgba(0, 0, 0, 0.98),
+    2px 2px 3px rgba(0, 0, 0, 0.98),
+    -2px 2px 3px rgba(0, 0, 0, 0.98),
+    2px -2px 3px rgba(0, 0, 0, 0.98),
+    -2px -2px 3px rgba(0, 0, 0, 0.98);
+  pointer-events: none;
+  white-space: pre-line;
+}
+
+#netflix-deepseek-subtitle-overlay[data-status="empty"] {
+  display: none;
+}
+
+#netflix-deepseek-subtitle-overlay,
+#netflix-deepseek-subtitle-overlay * {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+#netflix-deepseek-subtitle-overlay .ndst-source {
+  display: none;
+  margin-bottom: 4px;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #f2f2f2;
+  font-size: 0.67em;
+  font-weight: 600;
+}
+
+#netflix-deepseek-subtitle-overlay[data-mode="bilingual"] .ndst-source {
+  display: block;
+}
+
+#netflix-deepseek-subtitle-overlay .ndst-source:empty {
+  display: none;
+}
+
+#netflix-deepseek-subtitle-overlay .ndst-translation {
+  display: block;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+#netflix-deepseek-subtitle-overlay[data-status="hint"],
+#netflix-deepseek-subtitle-overlay[data-status="error"] {
+  font-size: max(18px, calc(var(--ndst-font-size) * 0.72));
+  font-weight: 600;
+}
+
+#netflix-deepseek-subtitle-overlay[data-status="hint"] .ndst-source,
+#netflix-deepseek-subtitle-overlay[data-status="hint"] .ndst-translation,
+#netflix-deepseek-subtitle-overlay[data-status="error"] .ndst-source {
+  display: none;
+}
+
+#netflix-deepseek-subtitle-overlay[data-status="loading"] .ndst-status {
+  position: absolute;
+  right: 4px;
+  bottom: -18px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-shadow: none;
+}
+
+#netflix-deepseek-subtitle-overlay[data-status="error"] {
+  background: transparent !important;
+  color: #ffd9d9;
+}
+
+#netflix-deepseek-subtitle-overlay .ndst-status:empty {
+  display: none;
+}

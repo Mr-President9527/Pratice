@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Netflix subtitle translator icon">
+  <rect width="128" height="128" rx="24" fill="#141414"/>
+  <path d="M29 22h18l34 84H63L29 22Z" fill="#e50914"/>
+  <path d="M81 22h18v84H81V22Z" fill="#b20710"/>
+  <rect x="20" y="78" width="88" height="28" rx="8" fill="#ffffff" opacity="0.92"/>
+  <path d="M33 91h22M33 99h34M74 91h21M74 99h16" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+</svg>

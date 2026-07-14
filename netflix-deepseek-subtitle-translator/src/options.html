@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix & YouTube DeepSeek Subtitle Translator 设置</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      color: #202124;
+      background: #f6f7f9;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #dde1e6;
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(20, 28, 40, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: #5f6368;
+      line-height: 1.6;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 18px;
+      border: 1px solid #dde1e6;
+      border-radius: 8px;
+    }
+
+    legend {
+      padding: 0 8px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    label span {
+      color: #3c4043;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    button {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 38px;
+      border: 1px solid #c7cdd4;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font: inherit;
+    }
+
+    input[type="range"] {
+      padding: 0;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      min-height: 18px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      width: auto;
+      min-width: 130px;
+      cursor: pointer;
+      border-color: #1a73e8;
+      background: #1a73e8;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    button.secondary {
+      border-color: #c7cdd4;
+      background: #fff;
+      color: #202124;
+    }
+
+    button.danger {
+      border-color: #b3261e;
+      background: #b3261e;
+      color: #fff;
+    }
+
+    .status {
+      min-height: 24px;
+      color: #0b8043;
+      font-weight: 700;
+    }
+
+    .status.error {
+      color: #b3261e;
+    }
+
+    .range-value {
+      color: #5f6368;
+      font-weight: 400;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 16px;
+      }
+
+      main {
+        padding: 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Netflix & YouTube DeepSeek Subtitle Translator</h1>
+    <p class="subtitle">配置 DeepSeek API、字幕来源和覆盖字幕显示方式。API Key 只保存在本地浏览器存储中。</p>
+
+    <form id="options-form">
+      <fieldset>
+        <legend>翻译</legend>
+        <div class="grid">
+          <label>
+            <span>DeepSeek API Key</span>
+            <input id="apiKey" type="password" autocomplete="off" placeholder="sk-...">
+          </label>
+
+          <label>
+            <span>模型</span>
+            <select id="model">
+              <option value="deepseek-v4-flash">deepseek-v4-flash</option>
+              <option value="deepseek-v4-pro">deepseek-v4-pro</option>
+            </select>
+          </label>
+
+          <label>
+            <span>目标语言</span>
+            <select id="targetLanguage">
+              <option value="zh-CN">简体中文 zh-CN</option>
+              <option value="zh-TW">繁体中文 zh-TW</option>
+            </select>
+          </label>
+
+          <label>
+            <span>显示模式</span>
+            <select id="displayMode">
+              <option value="chinese">只显示中文</option>
+              <option value="bilingual">双语显示</option>
+            </select>
+          </label>
+
+          <label>
+            <span>字幕来源</span>
+            <select id="subtitleSourceMode">
+              <option value="live">实时识别当前平台字幕</option>
+              <option value="pretranslated">本地预翻译字幕</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>字幕样式</legend>
+        <div class="grid">
+          <label>
+            <span>字幕字号 <b id="fontSizeValue" class="range-value">30px</b></span>
+            <input id="fontSize" type="range" min="18" max="42" step="1">
+          </label>
+
+          <label>
+            <span>底部距离 <b id="bottomOffsetValue" class="range-value">9%</b></span>
+            <input id="bottomOffset" type="range" min="4" max="20" step="1">
+          </label>
+
+          <label>
+            <span>背景透明度 <b id="backgroundOpacityValue" class="range-value">0.00</b></span>
+            <input id="backgroundOpacity" type="range" min="0" max="0.8" step="0.05">
+          </label>
+
+          <label>
+            <span>字幕识别节流 <b id="scanDebounceMsValue" class="range-value">250ms</b></span>
+            <input id="scanDebounceMs" type="range" min="100" max="800" step="50">
+          </label>
+
+          <label>
+            <span>预翻译字幕偏移 <b id="subtitleOffsetMsValue" class="range-value">0ms</b></span>
+            <input id="subtitleOffsetMs" type="range" min="-10000" max="10000" step="100">
+          </label>
+        </div>
+      </fieldset>
+
+      <label class="checkbox-row">
+        <input id="enabled" type="checkbox">
+        <span>启用字幕翻译</span>
+      </label>
+
+      <label class="checkbox-row">
+        <input id="hideNativeSubtitles" type="checkbox">
+        <span>隐藏平台原生字幕</span>
+      </label>
+
+      <label class="checkbox-row">
+        <input id="advancedSubtitleFallback" type="checkbox">
+        <span>启用 Netflix 高级字幕 fallback</span>
+      </label>
+
+      <div class="actions">
+        <button type="submit">保存设置</button>
+        <button id="openPretranslate" type="button" class="secondary">打开整集预翻译</button>
+        <button id="testApi" type="button" class="secondary">测试 API</button>
+        <button id="clearApiKey" type="button" class="secondary">清空 API Key</button>
+        <button id="clearCache" type="button" class="danger">清空缓存</button>
+      </div>
+
+      <div id="status" class="status" role="status"></div>
+    </form>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>

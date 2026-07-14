@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Netflix & YouTube DeepSeek Subtitle Translator",
+  "description": "Translate visible Netflix and YouTube subtitles to Chinese with DeepSeek and show them as an overlay.",
+  "version": "0.2.3",
+  "permissions": ["storage", "scripting", "webNavigation"],
+  "host_permissions": [
+    "https://www.netflix.com/*",
+    "https://www.youtube.com/*",
+    "https://api.deepseek.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.netflix.com/*"],
+      "js": ["src/texttrack-guard-main.js"],
+      "run_at": "document_start",
+      "all_frames": false,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.netflix.com/*"],
+      "js": ["src/native-suppressor.js", "src/content-netflix.js"],
+      "css": ["src/overlay.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/content-youtube.js"],
+      "css": ["src/youtube-overlay.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "Netflix & YouTube Subtitle Translator",
+    "default_popup": "src/popup.html"
+  },
+  "options_page": "src/options.html",
+  "icons": {
+    "16": "assets/icon.svg",
+    "32": "assets/icon.svg",
+    "48": "assets/icon.svg",
+    "128": "assets/icon.svg"
+  }
+}
