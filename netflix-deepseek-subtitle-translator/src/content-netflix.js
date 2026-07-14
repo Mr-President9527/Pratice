@@ -2078,10 +2078,11 @@ function inferNativeSubtitleEnabledState(input) {
   )) {
     return "enabled";
   }
+  if (hasMountedLayer) return "enabled";
   if (trackStates.length && trackStates.every((track) => track.mode === "disabled")) {
     return "disabled";
   }
-  if (hasMountedLayer || hasSeenSubtitle) return "enabled";
+  if (hasSeenSubtitle) return "enabled";
   return "unknown";
 }
 

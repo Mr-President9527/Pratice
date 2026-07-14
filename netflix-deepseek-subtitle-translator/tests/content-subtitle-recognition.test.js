@@ -76,6 +76,11 @@ assert.equal(inferNativeSubtitleEnabledState({
 }), "disabled");
 assert.equal(inferNativeSubtitleEnabledState({
   guardEnabledCount: 0,
+  trackStates: [{ mode: "disabled" }],
+  hasMountedLayer: true
+}), "enabled");
+assert.equal(inferNativeSubtitleEnabledState({
+  guardEnabledCount: 0,
   trackStates: [{ mode: "hidden", forcedHidden: true }]
 }), "enabled");
 assert.equal(inferNativeSubtitleEnabledState({
