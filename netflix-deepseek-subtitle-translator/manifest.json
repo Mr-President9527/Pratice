@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Netflix & YouTube DeepSeek Subtitle Translator",
   "description": "Translate visible Netflix and YouTube subtitles to Chinese with DeepSeek and show them as an overlay.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "permissions": ["storage", "scripting", "webNavigation"],
   "host_permissions": [
     "https://www.netflix.com/*",

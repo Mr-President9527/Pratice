@@ -10,6 +10,9 @@ const STORAGE_KEYS = {
 const CACHE_VERSION = "v6";
 const CACHE_LIMIT = 1000;
 const DEEPSEEK_ENDPOINT = "https://api.deepseek.com/chat/completions";
+const API_REQUEST_TIMEOUT_MS = 8000;
+const API_MAX_ATTEMPTS = 2;
+const API_RETRYABLE_STATUS_CODES = new Set([408, 425, 429, 500, 502, 503, 504]);
 const TEXTTRACK_GUARD_BUILD_ID = "2026-07-10-audit-62";
 const CONTENT_BUILD_ID = "2026-07-10-audit-62";
 const NATIVE_SUPPRESSOR_BUILD_ID = "2026-07-10-audit-62";
@@ -420,41 +423,154 @@ async function translateWithSettings(normalizedSource, settings, forceNetwork = 
 }
 
 async function requestDeepSeek(sourceText, settings, context = []) {
-  const response = await fetch(DEEPSEEK_ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${settings.apiKey}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: settings.model,
-      thinking: { type: "disabled" },
-      temperature: 0.1,
-      max_tokens: 96,
-      stream: false,
-      messages: [
-        {
-          role: "system",
-          content: buildSystemPrompt(settings.targetLanguage)
-        },
-        {
-          role: "user",
-          content: buildUserPrompt(sourceText, context, settings.targetLanguage)
-        }
-      ]
-    })
-  });
-
-  if (!response.ok) {
-    const body = await response.text().catch(() => "");
-    throw new Error(`API_REQUEST_FAILED ${response.status}: ${body.slice(0, 300)}`);
-  }
-
-  const data = await response.json();
+  const data = await requestDeepSeekJson({
+    model: settings.model,
+    thinking: { type: "disabled" },
+    temperature: 0.1,
+    max_tokens: 96,
+    stream: false,
+    messages: [
+      {
+        role: "system",
+        content: buildSystemPrompt(settings.targetLanguage)
+      },
+      {
+        role: "user",
+        content: buildUserPrompt(sourceText, context, settings.targetLanguage)
+      }
+    ]
+  }, settings.apiKey, "API");
   const content = data && data.choices && data.choices[0] && data.choices[0].message
     ? data.choices[0].message.content
     : "";
   return typeof content === "string" ? content.trim() : "";
+}
+
+async function requestDeepSeekJson(payload, apiKey, requestKind) {
+  let lastError = null;
+  for (let attempt = 1; attempt <= API_MAX_ATTEMPTS; attempt += 1) {
+    try {
+      return await requestDeepSeekJsonAttempt(payload, apiKey, requestKind);
+    } catch (error) {
+      lastError = normalizeDeepSeekRequestError(error, requestKind);
+      if (attempt >= API_MAX_ATTEMPTS || !lastError.retryable) throw lastError;
+      await waitForRetry(getRetryDelayMs(lastError, attempt));
+    }
+  }
+  throw lastError || new Error(`${requestKind}_REQUEST_FAILED`);
+}
+
+async function requestDeepSeekJsonAttempt(payload, apiKey, requestKind) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), API_REQUEST_TIMEOUT_MS);
+  try {
+    let response;
+    try {
+      response = await fetch(DEEPSEEK_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+    } catch (error) {
+      if (error && error.name === "AbortError") {
+        throw createDeepSeekError(`${requestKind}_TIMEOUT`, "request timed out", {
+          retryable: true
+        });
+      }
+      throw createDeepSeekError(`${requestKind}_NETWORK_ERROR`, safeErrorMessage(error), {
+        retryable: true
+      });
+    }
+
+    const rawBody = await response.text().catch(() => "");
+    const data = parseJsonSafely(rawBody);
+    if (!response.ok) {
+      const apiMessage = extractDeepSeekErrorMessage(data, rawBody);
+      const status = Number(response.status) || 0;
+      throw createDeepSeekError(`${requestKind}_REQUEST_FAILED`, apiMessage, {
+        status,
+        retryable: API_RETRYABLE_STATUS_CODES.has(status),
+        retryAfterMs: readRetryAfterMs(response)
+      });
+    }
+    if (!data || typeof data !== "object") {
+      throw createDeepSeekError(`${requestKind}_INVALID_RESPONSE`, "response was not valid JSON", {
+        retryable: true
+      });
+    }
+    const finishReason = data.choices && data.choices[0] && data.choices[0].finish_reason;
+    if (finishReason === "insufficient_system_resource") {
+      throw createDeepSeekError(`${requestKind}_SERVER_BUSY`, finishReason, {
+        status: 503,
+        retryable: true
+      });
+    }
+    return data;
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+function createDeepSeekError(code, message, details = {}) {
+  const status = Number(details.status) || 0;
+  const cleanMessage = String(message || "unknown error").replace(/\s+/g, " ").slice(0, 240);
+  const error = new Error(`${code}${status ? ` ${status}` : ""}: ${cleanMessage}`);
+  error.code = code;
+  error.status = status;
+  error.retryable = details.retryable === true;
+  error.retryAfterMs = Number(details.retryAfterMs) || 0;
+  return error;
+}
+
+function normalizeDeepSeekRequestError(error, requestKind) {
+  if (error && typeof error === "object" && error.code) return error;
+  return createDeepSeekError(`${requestKind}_NETWORK_ERROR`, safeErrorMessage(error), {
+    retryable: true
+  });
+}
+
+function safeErrorMessage(error) {
+  return String(error && error.message ? error.message : error || "network request failed")
+    .replace(/\s+/g, " ")
+    .slice(0, 160);
+}
+
+function parseJsonSafely(text) {
+  if (!text) return null;
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    return null;
+  }
+}
+
+function extractDeepSeekErrorMessage(data, rawBody) {
+  const apiMessage = data && data.error && (data.error.message || data.error.code || data.error.type);
+  if (apiMessage) return String(apiMessage);
+  return String(rawBody || "DeepSeek API request failed").replace(/\s+/g, " ").slice(0, 240);
+}
+
+function readRetryAfterMs(response) {
+  if (!response || !response.headers || typeof response.headers.get !== "function") return 0;
+  const value = response.headers.get("Retry-After");
+  if (!value) return 0;
+  const seconds = Number(value);
+  if (Number.isFinite(seconds)) return Math.min(1500, Math.max(0, seconds * 1000));
+  const dateMs = Date.parse(value);
+  return Number.isFinite(dateMs) ? Math.min(1500, Math.max(0, dateMs - Date.now())) : 0;
+}
+
+function getRetryDelayMs(error, attempt) {
+  if (error && error.retryAfterMs > 0) return error.retryAfterMs;
+  return Math.min(800, 250 * attempt);
+}
+
+function waitForRetry(delayMs) {
+  return new Promise((resolve) => setTimeout(resolve, delayMs));
 }
 
 function buildSystemPrompt(targetLanguage) {
@@ -771,37 +887,23 @@ function sanitizeBatchOptions(options) {
 }
 
 async function requestDeepSeekBatch(items, settings) {
-  const response = await fetch(DEEPSEEK_ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${settings.apiKey}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: settings.model,
-      thinking: { type: "disabled" },
-      temperature: 0.1,
-      max_tokens: Math.min(1200, Math.max(120, items.length * 80)),
-      stream: false,
-      messages: [
-        {
-          role: "system",
-          content: buildBatchSystemPrompt(settings.targetLanguage)
-        },
-        {
-          role: "user",
-          content: JSON.stringify(items.map(({ id, text }) => ({ id, text })))
-        }
-      ]
-    })
-  });
-
-  if (!response.ok) {
-    const body = await response.text().catch(() => "");
-    throw new Error(`BATCH_API_REQUEST_FAILED ${response.status}: ${body.slice(0, 300)}`);
-  }
-
-  const data = await response.json();
+  const data = await requestDeepSeekJson({
+    model: settings.model,
+    thinking: { type: "disabled" },
+    temperature: 0.1,
+    max_tokens: Math.min(1200, Math.max(120, items.length * 80)),
+    stream: false,
+    messages: [
+      {
+        role: "system",
+        content: buildBatchSystemPrompt(settings.targetLanguage)
+      },
+      {
+        role: "user",
+        content: JSON.stringify(items.map(({ id, text }) => ({ id, text })))
+      }
+    ]
+  }, settings.apiKey, "BATCH_API");
   const content = data && data.choices && data.choices[0] && data.choices[0].message
     ? data.choices[0].message.content
     : "";
@@ -848,6 +950,7 @@ async function getStatus() {
 
 function toUserError(error) {
   const message = error && error.message ? error.message : String(error);
+  const status = Number(error && error.status) || Number((message.match(/(?:FAILED|ERROR)\s+(\d{3})/) || [])[1]) || 0;
   if (message.includes("NO_API_KEY")) {
     return "请先在插件设置中填写 DeepSeek API Key";
   }
@@ -858,11 +961,38 @@ function toUserError(error) {
     return "当前没有可翻译的字幕";
   }
   if (message.includes("EMPTY_TRANSLATION")) {
-    return "API 返回内容无效，已跳过";
+    return "DeepSeek 没有返回有效译文，已跳过";
   }
-  if (message.includes("API_REQUEST_FAILED") || message.includes("BATCH_API_REQUEST_FAILED")) {
-    return "翻译请求失败，请检查网络或 API Key";
+  if (status === 400) {
+    return "DeepSeek 请求格式错误（400），请更新插件或切换模型";
   }
-  return "翻译请求失败，请检查网络或 API Key";
+  if (status === 401) {
+    return "DeepSeek API Key 无效或已失效（401）";
+  }
+  if (status === 402) {
+    return "DeepSeek 账户余额不足（402），请充值后重试";
+  }
+  if (status === 403) {
+    return "DeepSeek 拒绝访问（403），请检查账户或 Key 权限";
+  }
+  if (status === 422) {
+    return "DeepSeek 请求参数不兼容（422），请更新插件或切换模型";
+  }
+  if (status === 429) {
+    return "DeepSeek 请求过于频繁（429），已重试，请稍后再试";
+  }
+  if (status >= 500) {
+    return `DeepSeek 服务繁忙（${status}），已重试，请稍后再试`;
+  }
+  if (message.includes("_TIMEOUT")) {
+    return "DeepSeek 响应超时，已自动重试";
+  }
+  if (message.includes("_NETWORK_ERROR")) {
+    return "无法连接 DeepSeek API，请检查代理、防火墙或 DNS";
+  }
+  if (message.includes("_INVALID_RESPONSE")) {
+    return "DeepSeek 返回了无效数据，已自动重试";
+  }
+  return "翻译请求失败，请打开设置页测试 API 查看原因";
 }
 
